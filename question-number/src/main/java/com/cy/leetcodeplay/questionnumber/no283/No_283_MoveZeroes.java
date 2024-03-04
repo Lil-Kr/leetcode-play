@@ -1,6 +1,7 @@
 package com.cy.leetcodeplay.questionnumber.no283;
 
-import com.cy.algorithm.common.util.CommonUtil;
+import com.cy.common.util.CommonUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 

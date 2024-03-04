@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.cy.algorithm</groupId>
+            <groupId>com.cy.leetcodeplay</groupId>
             <artifactId>common</artifactId>
             <version>1.0.0</version>
         </dependency>
@@ -30,6 +30,21 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
         </dependency>
     </dependencies>
 

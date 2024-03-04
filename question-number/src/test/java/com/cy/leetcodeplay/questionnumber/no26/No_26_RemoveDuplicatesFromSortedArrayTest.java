@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.questionnumber.no26;
 
-import com.cy.algorithm.common.util.StringPrint;
+import com.cy.common.util.StringPrint;
 import org.junit.jupiter.api.Test;
 
 import static com.cy.leetcodeplay.questionnumber.no26.No_26_RemoveDuplicatesFromSortedArray.removeDuplicates;

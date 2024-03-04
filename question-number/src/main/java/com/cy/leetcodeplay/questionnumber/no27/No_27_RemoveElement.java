@@ -1,6 +1,7 @@
 package com.cy.leetcodeplay.questionnumber.no27;
 
-import com.cy.algorithm.common.util.CommonUtil;
+
+import com.cy.common.util.CommonUtil;
 
 /**
  * @Author: Lil-K
