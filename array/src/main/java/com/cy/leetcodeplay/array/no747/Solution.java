@@ -45,7 +45,7 @@ public class Solution {
      * @param nums
      * @return
      */
-    public int dominantIndex2(int [] nums) {
+    public int dominantIndex2(int[] nums) {
 
         int first = -1;
         int second = -1;
