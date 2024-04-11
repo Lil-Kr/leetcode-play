@@ -18,9 +18,6 @@ public class QuickSort3Ways {
     }
 
     public static void quicksort(Comparable[] arr, int l, int r) {
-//        if (l >= r)
-//            return;
-
         /**
          * 对于小规模数组, 使用插入排序
          */

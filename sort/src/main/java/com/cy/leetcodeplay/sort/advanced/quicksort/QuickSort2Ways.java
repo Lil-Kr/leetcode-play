@@ -2,6 +2,7 @@ package com.cy.leetcodeplay.sort.advanced.quicksort;
 
 
 import com.cy.common.util.CommonUtil;
+import com.cy.common.util.StringPrint;
 
 /**
  * @Author: Lil-K
@@ -10,15 +11,21 @@ import com.cy.common.util.CommonUtil;
  */
 public class QuickSort2Ways {
 
+    public static void main(String[] args) {
+        Comparable[] nums = {3, 2, 3, 1, 2, 4, 5, 5, 6, 5};
+        quicksort(nums);
+        System.out.println(StringPrint.printArray(nums));
+    }
+
     public static void quicksort(Comparable[] arr) {
         if(null == arr)
             return;
 
-        int length = arr.length;
+        int length = arr.length - 1;
         /**
          * arr[l ... r]
          */
-        quicksort(arr, 0, length - 1);
+        quicksort(arr, 0, length);
     }
 
     /**
@@ -32,7 +39,7 @@ public class QuickSort2Ways {
             return;
 
         int p = partition(arr, l, r);
-        quicksort(arr, l, p-1);
+        quicksort(arr, l, p-1); // 注意是 p - 1
         quicksort(arr, p+1, r);
     }
 
