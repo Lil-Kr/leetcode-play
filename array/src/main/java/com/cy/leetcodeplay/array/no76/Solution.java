@@ -25,7 +25,7 @@ public class Solution {
    * @param t
    * @return
    */
-  public static String minWindow(String s, String t) {
+  public String minWindow(String s, String t) {
     if (s.length() < t.length()) {
       return "";
     }
@@ -59,7 +59,7 @@ public class Solution {
       slideWindowCount.put(c, slideWindowCount.getOrDefault(c, 0) + 1);
 
       /**
-       * 当前r的位置的字符在freqT 出现过
+       * 当前r的位置的字符在 freqT 出现过
        * 并且: 与freqT中出现的频率一致, 则记录下符合题意的规则,
        * 以下写法包括了 t 中 包含重复字符的情况
        */
@@ -68,7 +68,7 @@ public class Solution {
       }
 
       /**
-       * 当 [l ... r]之间的字符种类 与 freqT 中的一致时, 才对 [l ... r]范围内的字符遍历
+       * 当 [l ... r]之间的字符种类 与 freqT 中的一致时, 才对 [l ... r] 范围内的字符遍历
        * 循环遍历 [l ... r] 之间的字符, 看是否还有 与 t 中的字符
        */
       while (l <= r && freqSize == ruleCount) {
@@ -93,7 +93,6 @@ public class Solution {
         if (freqT.containsKey(c) && slideWindowCount.get(c).intValue() < freqT.get(c).intValue()) {
           ruleCount --;
         }
-
         l++;
       }
       r++;

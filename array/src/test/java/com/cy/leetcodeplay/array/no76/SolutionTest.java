@@ -11,7 +11,7 @@ class SolutionTest {
   public void test1() {
     String s = "ADOBECODEBANC", t = "ABC";
 
-    String res = Solution.minWindow(s, t);
+    String res = solution.minWindow(s, t);
     Assertions.assertEquals("BANC", res);
   }
 
@@ -19,7 +19,7 @@ class SolutionTest {
   public void test2() {
     String s = "a", t = "a";
 
-    String res = Solution.minWindow(s, t);
+    String res = solution.minWindow(s, t);
     Assertions.assertEquals("a", res);
   }
 
@@ -27,7 +27,7 @@ class SolutionTest {
   public void test3() {
     String s = "a", t = "aa";
 
-    String res = Solution.minWindow(s, t);
+    String res = solution.minWindow(s, t);
     Assertions.assertEquals("", res);
   }
 
@@ -35,7 +35,7 @@ class SolutionTest {
   public void test4() {
     String s = "cabwefgewcwaefgcf", t = "cae";
 
-    String res = Solution.minWindow(s, t);
+    String res = solution.minWindow(s, t);
     Assertions.assertEquals("cwae", res);
   }
 
