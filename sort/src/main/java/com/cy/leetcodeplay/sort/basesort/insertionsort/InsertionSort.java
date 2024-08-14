@@ -16,7 +16,7 @@ import com.cy.common.util.CommonUtil;
 public class InsertionSort<E extends Comparable<E>> {
 
     /**
-     *
+     * 插入排序 未优化版本
      * @param arr
      */
     public static void sort(Comparable[] arr) {
@@ -35,6 +35,10 @@ public class InsertionSort<E extends Comparable<E>> {
         }
     }
 
+    /**
+     * optimization after method
+     * @param arr
+     */
     public static void sortOptimization(Comparable[] arr) {
         if(arr == null) {
             return;
@@ -53,7 +57,6 @@ public class InsertionSort<E extends Comparable<E>> {
             int j = i;
             /**
              * 与选择排序不同的是, 第二层循环是可以提前结束的
-             * 所以
              */
             for (; j > 0 && arr[j - 1].compareTo(temp) > 0; j--) {
                 arr[j] = arr[j - 1];

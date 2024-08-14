@@ -78,7 +78,7 @@ public class Helper {
     /**
      * 测试sortClassName所对应的排序算法排序arr数组所得到结果的正确性和算法运行时间
      */
-    public static void testSort(String sortClassName, Comparable[] arr, String methodName) {
+    public static void testSort(Comparable[] arr, String sortClassName, String methodName) {
 
         // 通过Java的反射机制, 通过排序的类名, 运行排序函数
         try{
