@@ -1,6 +1,5 @@
 package com.cy.leetcodeplay.sort.basesort.selectionsort;
 
-
 import com.cy.common.util.CommonUtil;
 
 /**
@@ -11,36 +10,11 @@ import com.cy.common.util.CommonUtil;
  */
 public class SelectionSort<E extends Comparable<E>> {
 
-//    public static void main(String[] args) {
-//        Comparable[] arr = {3,2,6,1,9};
-//        selectionSort_toMax(arr, arr.length);
-//
-//        StringBuilder res = new StringBuilder();
-//        res.append("[");
-//        for (int i = 0; i < arr.length; i++) {
-//            res.append(arr[i] + ",");
-//        }
-//        res.replace(0, res.length(), StringUtils.removeEnd(res.toString(),","));
-//        res.append("]");
-//        System.out.println(res);
-//
-//        /** ================================================ **/
-//        selectionSort_toMin(arr);
-//        res.replace(0, res.length(), "");
-//        res.append("[");
-//        for (int i = 0; i < arr.length; i++) {
-//            res.append(arr[i] + ",");
-//        }
-//        res.replace(0, res.length(), StringUtils.removeEnd(res.toString(),","));
-//        res.append("]");
-//        System.out.println(res);
-//    }
-
     /**
      * 选择排序, find min value
      * @param arr
      */
-    public static void selectionSort_toMin(Comparable[] arr) {
+    public static void selectionSortToMin(Comparable[] arr) {
         int length = arr.length;
         /**
          * 寻找 [i...n) 区间里的最小值
@@ -60,7 +34,7 @@ public class SelectionSort<E extends Comparable<E>> {
      * @param arr
      * @param range
      */
-    public static void selectionSort_toMax(Comparable[] arr, int range) {
+    public static void selectionSortToMax(Comparable[] arr, int range) {
         /**
          * 寻找 [i...n) 区间里的最大值
          */
