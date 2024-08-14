@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.sort.heapsort;
+package com.cy.leetcodeplay.sort.advanced.heapsort;
 
 /**
  * @Author: Lil-K
