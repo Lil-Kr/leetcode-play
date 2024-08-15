@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.array.no80;
 
-import com.cy.common.util.StringPrint;
+import com.cy.common.util.PrintString;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -20,27 +20,27 @@ class SolutionTest {
     @Test
     public void test1() {
         int res1 = solution.removeDuplicates(nums1);
-        System.out.println(StringPrint.printIntArray(nums1));
+        System.out.println(PrintString.printIntArray(nums1));
         Assertions.assertEquals(5, res1);
 
         int res2 = solution.removeDuplicates(nums2);
-        System.out.println(StringPrint.printIntArray(nums2));
+        System.out.println(PrintString.printIntArray(nums2));
         Assertions.assertEquals(7, res2);
 
         int res3 = solution.removeDuplicates(nums3);
-        System.out.println(StringPrint.printIntArray(nums3));
+        System.out.println(PrintString.printIntArray(nums3));
         Assertions.assertEquals(2, res3);
 
         int res4 = solution.removeDuplicates(nums4);
-        System.out.println(StringPrint.printIntArray(nums4));
+        System.out.println(PrintString.printIntArray(nums4));
         Assertions.assertEquals(2, res4);
 
         int res5 = solution.removeDuplicates(nums5);
-        System.out.println(StringPrint.printIntArray(nums5));
+        System.out.println(PrintString.printIntArray(nums5));
         Assertions.assertEquals(2, res5);
 
         int res6 = solution.removeDuplicates(nums6);
-        System.out.println(StringPrint.printIntArray(nums6));
+        System.out.println(PrintString.printIntArray(nums6));
         Assertions.assertEquals(1, res6);
     }
 

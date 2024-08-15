@@ -1,14 +1,23 @@
 package com.cy.leetcodeplay.sort.advanced.merge;
 
+import com.cy.common.util.PrintString;
+
 import java.util.Arrays;
 
 /**
  * @Author: Lil-K
  * @Date: 2023/8/31
  * @Description: 自底向上归并排序
+ * 不需要递归的方式
+ * 从始至终没有使用数组随机访问元素, 没有交换元素
  */
 public class MergeSortBU {
 
+    public static void main(String[] args) {
+        Integer[] arr = new Integer[]{8, 6, 2, 3, 1, 5, 7, 4};
+        sort(arr);
+        System.out.println(PrintString.printArray(arr));
+    }
 
     public static void sort(Comparable[] arr) {
         if (null == arr) {
@@ -31,8 +40,8 @@ public class MergeSortBU {
         /**
          * 从 索引为 1 的位置开始
          * 第一层for循环:
-         *  * 计算每次参与归并的 左(右)半边的元素个数, 默认从开始时, 左(右)半边有1个元素参与归并(也就是它自身)
-         *  * 从 1(参与的元素个数) 开始, 一直循环到 参与排序的元素 <= 有边界 r
+         *  * 计算每次参与归并的 左(右)半边的元素个数, 默认从1开始时, 左(右)半边有1个元素参与归并(也就是它自身)
+         *  * 从 1(参与的元素个数) 开始, 一直循环到 参与排序的元素 <= 右边界 r
          *
          *  第二层循环:
          *  * 计算出归并的元素范围: [l...r]
@@ -40,7 +49,6 @@ public class MergeSortBU {
          *  * 最后一次循环计算的右边界: 有可能会超出整个数组的范围
          */
         for (int mergeSize = 1; mergeSize <= r; mergeSize = 2 * mergeSize) {
-            System.out.println(mergeSize);
 
             /**
              * 这里的i是当前待归并的范围元素的 左边界 l
@@ -49,13 +57,12 @@ public class MergeSortBU {
             for (int i = 0; i + mergeSize < r; i += 2 * mergeSize) {
                 int l1 = i;
                 int mid = i + mergeSize - 1;
-                int r1 = Math.min(i + 2 * mergeSize - 1, r - 1);
+                int r1 = Math.min(i + 2 * mergeSize - 1, r - 1);// 计算归并子数组的右边界
                 if (arr[mid].compareTo(arr[mid + 1]) > 0)
                     merge(arr, l1, mid, r1);
             }
         }
     }
-
 
     private static void merge(Comparable[] arr, int l, int mid, int r) {
         /**
@@ -64,7 +71,7 @@ public class MergeSortBU {
         Comparable[] aux = Arrays.copyOfRange(arr, l, r + 1);
 
         /**
-         *
+         * 锁定左部分的开始位置(i)和右部分的开始位置(j)
          */
         int i = l, j = mid + 1;
 
@@ -72,7 +79,7 @@ public class MergeSortBU {
          *
          */
         for (int k = l; k <= r; k++) {
-            if (i > mid) {// 当k还没结束时, i > mid, 说明
+            if (i > mid) {
                 arr[k] = aux[j - l];
                 j++;
             } else if (j > r) {

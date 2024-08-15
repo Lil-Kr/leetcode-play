@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.array.no26;
 
-import com.cy.common.util.StringPrint;
+import com.cy.common.util.PrintString;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -16,15 +16,15 @@ class SolutionTest {
     @Test
     public void test1() {
         int res1 = solution.removeDuplicates(nums1);
-        System.out.println(StringPrint.printIntArray(nums1));
+        System.out.println(PrintString.printIntArray(nums1));
         Assertions.assertEquals(2, res1);
 
         int res2 = solution.removeDuplicates(nums2);
-        System.out.println(StringPrint.printIntArray(nums2));
+        System.out.println(PrintString.printIntArray(nums2));
         Assertions.assertEquals(5, res2);
 
         int res3 = solution.removeDuplicates(nums3);
-        System.out.println(StringPrint.printIntArray(nums3));
+        System.out.println(PrintString.printIntArray(nums3));
         Assertions.assertEquals(1, res3);
     }
 

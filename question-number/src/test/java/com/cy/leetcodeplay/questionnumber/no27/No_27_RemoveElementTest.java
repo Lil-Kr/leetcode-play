@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.questionnumber.no27;
 
-import com.cy.common.util.StringPrint;
+import com.cy.common.util.PrintString;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ class No_27_RemoveElementTest {
         int val = 2;
 
         int res = No_27_RemoveElement.removeElement(nums, val);
-        System.out.println(StringPrint.printIntArray(nums));
+        System.out.println(PrintString.printIntArray(nums));
         Assertions.assertEquals(5, res);
     }
 
@@ -22,7 +22,7 @@ class No_27_RemoveElementTest {
         int val = 3;
 
         int res = No_27_RemoveElement.removeElement(nums, val);
-        System.out.println(StringPrint.printIntArray(nums));
+        System.out.println(PrintString.printIntArray(nums));
         Assertions.assertEquals(2, res);
     }
 
@@ -32,7 +32,7 @@ class No_27_RemoveElementTest {
         int val = 3;
 
         int res = No_27_RemoveElement.removeElement(nums, val);
-        System.out.println(StringPrint.printIntArray(nums));
+        System.out.println(PrintString.printIntArray(nums));
         Assertions.assertEquals(0, res);
     }
 
@@ -42,7 +42,7 @@ class No_27_RemoveElementTest {
         int val = 2;
 
         int res = No_27_RemoveElement.removeElement(nums, val);
-        System.out.println(StringPrint.printIntArray(nums));
+        System.out.println(PrintString.printIntArray(nums));
         Assertions.assertEquals(1, res);
     }
 

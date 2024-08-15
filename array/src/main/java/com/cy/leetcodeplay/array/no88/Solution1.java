@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.array.no88;
 
-import com.cy.common.util.StringPrint;
+import com.cy.common.util.PrintString;
 
 /**
  * @Author: Lil-K
@@ -17,7 +17,7 @@ public class Solution1 {
 
     merge(nums1, m, nums2, n);
 
-    System.out.println(StringPrint.printIntArray(nums1));
+    System.out.println(PrintString.printIntArray(nums1));
   }
 
   /**

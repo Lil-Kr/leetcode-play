@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.array.no34;
 
-import com.cy.common.util.StringPrint;
+import com.cy.common.util.PrintString;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -22,26 +22,26 @@ class SolutionTest {
     @Test
     public void test1() {
         int[] indexs1 = solution.searchRange(nums1, target1);
-        String res1 = StringPrint.printIntArray(indexs1);
+        String res1 = PrintString.printIntArray(indexs1);
         Assertions.assertEquals("[-1,-1]", res1);
 
         int[] indexs2 = solution.searchRange(nums1, target2);
-        String res2 = StringPrint.printIntArray(indexs2);
+        String res2 = PrintString.printIntArray(indexs2);
         Assertions.assertEquals("[3,4]", res2);
 
         int[] indexs3 = solution.searchRange(nums2, target3);
-        String res3 = StringPrint.printIntArray(indexs3);
+        String res3 = PrintString.printIntArray(indexs3);
         Assertions.assertEquals("[-1,-1]", res3);
     }
 
     @Test
     public void test2() {
         int[] indexs1 = solution.searchRange(nums3, target4);
-        String res1 = StringPrint.printIntArray(indexs1);
+        String res1 = PrintString.printIntArray(indexs1);
         Assertions.assertEquals("[0,0]", res1);
 
         int[] indexs2 = solution.searchRange(nums3, target3);
-        String res2 = StringPrint.printIntArray(indexs2);
+        String res2 = PrintString.printIntArray(indexs2);
         Assertions.assertEquals("[-1,-1]", res2);
     }
 
@@ -49,14 +49,14 @@ class SolutionTest {
     @Test
     public void test3() {
         int[] indexs1 = solution.searchRange(nums4, target1);
-        String res1 = StringPrint.printIntArray(indexs1);
+        String res1 = PrintString.printIntArray(indexs1);
         Assertions.assertEquals("[-1,-1]", res1);
     }
 
     @Test
     public void test4() {
         int[] indexs1 = solution.searchRange(nums5, target3);
-        String res1 = StringPrint.printIntArray(indexs1);
+        String res1 = PrintString.printIntArray(indexs1);
         Assertions.assertEquals("[-1,-1]", res1);
     }
 }

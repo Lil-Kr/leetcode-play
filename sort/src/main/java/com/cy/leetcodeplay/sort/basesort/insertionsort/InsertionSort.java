@@ -48,7 +48,7 @@ public class InsertionSort<E extends Comparable<E>> {
     }
 
     /**
-     * 改良版
+     * 优化版
      * @param arr
      */
     public static void sortOptimization(Comparable[] arr, int l, int r) {

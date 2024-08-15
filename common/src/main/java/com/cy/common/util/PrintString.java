@@ -8,7 +8,7 @@ import org.apache.commons.lang3.StringUtils;
  * @Date: 2023/8/27
  * @Description: print
  */
-public class StringPrint {
+public class PrintString {
 
     public static String printArray(Comparable[] arr) {
         if (arr == null || arr.length <= 0)
