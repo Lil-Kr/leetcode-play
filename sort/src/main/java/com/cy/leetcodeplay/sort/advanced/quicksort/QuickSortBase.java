@@ -31,7 +31,7 @@ public class QuickSortBase {
     }
 
     /**
-     * arr[l ... r]
+     * arr[l ... r] 部分进行快速排序
      * @param arr
      * @param l
      * @param r
@@ -42,15 +42,21 @@ public class QuickSortBase {
         }
 
         /**
-         * 计算每次 partition 之后, 排好序的位置
+         * 计算每次 partition 之后, 得到的 p 就是排好序的位置
          */
         int p = partition(arr, l, r);
 
-        quicksort(arr, l, p-1);
+        quicksort(arr, l, p-1); // p 不参与排序(已经排好序), 固: p - 1
         quicksort(arr, p+1, r);
     }
 
-
+    /**
+     * 返回p, 使得 arr[l ... p-1] < arr[p]; arr[p+1 ... r] > arr[p]
+     * @param arr
+     * @param l
+     * @param r
+     * @return
+     */
     private static int partition(Comparable[] arr, int l, int r) {
         /**
          * 定于数组的第一个元素
