@@ -17,15 +17,24 @@ public class QuickSort3Ways {
         quicksort(arr, 0, n-1);
     }
 
-    public static void quicksort(Comparable[] arr, int l, int r) {
+    private static void quicksort(Comparable[] arr, int l, int r) {
         /**
          * 对于小规模数组, 使用插入排序
          */
+//        if (l >= r) {
+//            return;
+//        }
         if(r - l <= 15) {
             InsertionSort.sortOptimization(arr, l, r);
             return;
         }
 
+        int[] p = partition(arr, l, r);
+        quicksort(arr, l, p[0]);
+        quicksort(arr, p[1], r);
+    }
+
+    private static int[] partition(Comparable[] arr, int l, int r) {
         /**
          * 随机在 arr[l...r] 的范围中, 选择一个数值作为标定点 pivot
          */
@@ -52,7 +61,6 @@ public class QuickSort3Ways {
         if(l != lt)
             CommonUtil.swap( arr, l, lt);
 
-        quicksort(arr, l, lt-1);
-        quicksort(arr, gt, r);
+        return new int[]{lt, gt};
     }
 }

@@ -21,11 +21,11 @@ public class QuickSort2Ways {
         if(null == arr)
             return;
 
-        int length = arr.length - 1;
+        int n = arr.length ;
         /**
          * arr[l ... r]
          */
-        quicksort(arr, 0, length);
+        quicksort(arr, 0, n - 1);
     }
 
     /**
@@ -35,6 +35,7 @@ public class QuickSort2Ways {
      * @param r
      */
     private static void quicksort(Comparable[] arr, int l, int r) {
+        // 可使用插入排序优化
         if (l >= r)
             return;
 
