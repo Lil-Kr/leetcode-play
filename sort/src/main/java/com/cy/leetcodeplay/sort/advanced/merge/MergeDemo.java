@@ -12,35 +12,30 @@ import java.util.Arrays;
 public class MergeDemo {
 
 	public static void main(String[] args) {
-		int[] arr = new int[]{8, 6, 2, 3, 1, 5, 7, 4};
-		mergeSort(arr);
-		System.out.println(PrintString.printIntArray(arr));
+		Integer[] arr = new Integer[]{8, 6, 2, 3, 1, 5, 7, 4};
+		mergesort(arr);
+		System.out.println(PrintString.printArray(arr));
 	}
 
-	public static void mergeSort(int[] arr) {
+	public static void mergesort(Integer[] arr) {
 		int n = arr.length;
-
-		sort(arr, 0, n - 1);
+		mergesort(arr, 0, n - 1);
 	}
 
-	private static void sort(int[] arr, int l, int r) {
+	private static void mergesort(Integer[] arr, int l, int r) {
 		if (l >= r) {
 			return;
 		}
 
 		int mid = l + (r - l) / 2;
+		mergesort(arr, l, mid);
+		mergesort(arr, mid + 1, r);
 
-		sort(arr, l, mid);
-		sort(arr, mid + 1, r);
-
-		if (arr[mid] > arr[mid + 1]) {
-			merge(arr, l, mid, r);
-		}
+		sort(arr, l, mid, r);
 	}
 
-
-	private static void merge(int[] arr, int l, int mid, int r) {
-		int[] aux = Arrays.copyOfRange(arr, l, r + 1);
+	private static void sort(Integer[] arr, int l, int mid, int r) {
+		Integer[] aux = Arrays.copyOfRange(arr, l, r + 1);
 
 		int i = l, j = mid + 1;
 
@@ -60,5 +55,4 @@ public class MergeDemo {
 			}
 		}
 	}
-
 }

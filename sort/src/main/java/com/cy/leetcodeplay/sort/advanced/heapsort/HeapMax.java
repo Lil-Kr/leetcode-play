@@ -98,7 +98,7 @@ public class HeapMax<E extends Comparable> {
     }
 
     public void heapify(Comparable[] arr) {
-        for (int i = this.parentIndex(arr.length - 1); i >= 0; i--){
+        for (int i = this.parentIndex(arr.length - 1); i >= 0; i--) {
             shiftDown(i);
         }
     }

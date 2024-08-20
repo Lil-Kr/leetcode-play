@@ -23,8 +23,7 @@ public class QuickSortDemo {
 	}
 	public static void quicksort(Integer[] arr) {
 		int n = arr.length;
-
-		quicksort(arr, 0, n - 1); // arr[0 ... r];
+		quicksort(arr, 0, n - 1);
 	}
 
 	private static void quicksort(Integer[] arr, int l, int r) {
@@ -32,23 +31,20 @@ public class QuickSortDemo {
 			return ;
 		}
 
-		// partition 操作
 		int[] p = partition(arr, l, r);
 		quicksort(arr, l, p[0]);
 		quicksort(arr, p[1], r);
 	}
 
 	private static int[] partition(Integer[] arr, int l, int r) {
-
 		CommonUtil.swap(arr, l, (int)(Math.random() * (r - l + 1)) + l);
-
 		int v = arr[l];
 
-		int lt = l; // arr[l + 1 ... lt] < v
+		int lt = l; // arr[l+1 ... lt] < v
+		int i = l + 1; // arr[lt+1 ... i) == v
 		int gt = r + 1; // arr[gt ... r] > v
-		int i = l + 1; // arr[lt + 1 ... i) == v
 
-		while ( i < gt ) {
+		while (i < gt) {
 			if (arr[i] < v) {
 				CommonUtil.swap(arr, i, lt + 1);
 				lt++;
@@ -63,7 +59,6 @@ public class QuickSortDemo {
 
 		if (l != lt) {
 			CommonUtil.swap(arr, l, lt);
-			lt--;
 		}
 		return new int[]{lt, gt};
 	}

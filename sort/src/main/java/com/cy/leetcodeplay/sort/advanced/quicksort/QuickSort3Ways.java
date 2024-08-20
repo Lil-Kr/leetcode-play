@@ -58,8 +58,12 @@ public class QuickSort3Ways {
             }
         }
 
-        if(l != lt)
+        /**
+         *
+         */
+        if(l != lt) {
             CommonUtil.swap( arr, l, lt);
+        }
 
         return new int[]{lt, gt};
     }

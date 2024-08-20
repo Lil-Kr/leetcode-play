@@ -72,12 +72,17 @@ public class QuickSort2Ways {
                 i++;
             while (j > l + 1 && arr[j].compareTo(v) > 0)
                 j--;
-            if (i > j)
+            if (i > j) {  // i 与 j 是有可能重合的
                 break;
+            }
             CommonUtil.swap(arr, i, j);
             i++;
             j--;
         }
+
+        /**
+         * 此时, arr[j] 的位置就是 >= v 的所有元素的左边界
+         */
         CommonUtil.swap(arr, l, j);
         return j;
     }
