@@ -45,4 +45,28 @@ public class Solution {
         return k;
     }
 
+    /**
+     * 结果正确, 但处理后的数组不符合题意
+     * @param nums
+     * @return
+     */
+    public int removeDuplicates2(int[] nums) {
+        if (null == nums) {
+            return 0;
+        } else if (nums.length <= 1) {
+            return 1;
+        }
+
+        int count = 1;
+        int j = 0;
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[j]) {
+                count ++;
+                j = i;
+            }
+        }
+        return count;
+    }
+
 }

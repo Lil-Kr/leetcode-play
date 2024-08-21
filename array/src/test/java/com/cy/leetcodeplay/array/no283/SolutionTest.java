@@ -11,6 +11,7 @@ class SolutionTest {
     static int[] nums1 = {0, 1, 0, 3, 12};
     static int[] nums2 = {0};
     static int[] nums3 = {4,3,9,7};
+    static int[] nums4 = {3, 1, 0, 2, 0, 6};
 
     @Test
     public void test1() {
@@ -72,4 +73,12 @@ class SolutionTest {
         Assertions.assertEquals("[4,3,9,7]", res3);
     }
 
+
+    @Test
+    public void test5() {
+        Solution.moveZeroes4(nums4);
+        String res1 = PrintString.printIntArray(nums4);
+        System.out.println(res1);
+        Assertions.assertEquals("[3,1,2,6,0,0]", res1);
+    }
 }

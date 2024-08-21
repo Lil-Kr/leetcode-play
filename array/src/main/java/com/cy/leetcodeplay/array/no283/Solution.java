@@ -25,8 +25,8 @@ import java.util.List;
  *
  *
  */
-public class Solution {
-
+public class Solution
+{
 
     /**
      * solution 1
@@ -106,7 +106,7 @@ public class Solution {
     public static void moveZeroes4(int[] nums) {
         if (nums.length == 0) return;
 
-        int j = 0; // nums[0...k)的元素均为非0元素
+        int j = 0; // nums[0...j)的元素均为非0元素
 
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
