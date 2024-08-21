@@ -23,7 +23,6 @@ package com.cy.leetcodeplay.array.no26;
  */
 public class Solution {
 
-
     /**
      * 前提: 数组是有序的
      * 第一个元素肯定是不重复的, 所以 k 从索引 1 的位置开始
@@ -43,30 +42,6 @@ public class Solution {
             }
         }
         return k;
-    }
-
-    /**
-     * 结果正确, 但处理后的数组不符合题意
-     * @param nums
-     * @return
-     */
-    public int removeDuplicates2(int[] nums) {
-        if (null == nums) {
-            return 0;
-        } else if (nums.length <= 1) {
-            return 1;
-        }
-
-        int count = 1;
-        int j = 0;
-
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] != nums[j]) {
-                count ++;
-                j = i;
-            }
-        }
-        return count;
     }
 
 }

@@ -28,11 +28,4 @@ class SolutionTest {
         Assertions.assertEquals(1, res3);
     }
 
-    @Test
-    public void test2() {
-        int res2 = solution.removeDuplicates2(nums2);
-        System.out.println(PrintString.printIntArray(nums2));
-        Assertions.assertEquals(5, res2);
-    }
-
 }

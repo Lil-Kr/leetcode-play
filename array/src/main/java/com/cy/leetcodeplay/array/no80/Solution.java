@@ -51,4 +51,29 @@ public class Solution {
         return k;
     }
 
+    /**
+     * 解法二, 此方法更清晰
+     * @param nums
+     * @return
+     */
+    public int removeDuplicates2(int[] nums) {
+        if (nums.length <= 2) {
+            return nums.length;
+        }
+
+        int k = 2;
+        for (int i = 2; i < nums.length; i++) {
+            if (nums[k - 2] != nums[i]) {
+                if (i != k) {
+                    nums[k] = nums[i];
+                    k++;
+                } else {
+                    k++;
+                }
+            }
+        }
+
+        return k;
+    }
+
 }
