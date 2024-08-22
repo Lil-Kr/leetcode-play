@@ -1,6 +1,7 @@
 package com.cy.leetcodeplay.sort.advanced.quicksort;
 
 
+import com.cy.common.helper.Helper;
 import com.cy.common.util.CommonUtil;
 import com.cy.common.util.PrintString;
 
@@ -15,13 +16,19 @@ public class QuickSort2Ways {
         Comparable[] nums = {3, 2, 3, 1, 2, 4, 5, 5, 6, 5};
         quicksort(nums);
         System.out.println(PrintString.printArray(nums));
+
+
+        int n = 1_000_000;
+        Integer[] arr2 = Helper.generateRandomNumbers(n, 0, 4); // 大量重复元素
+        quicksort(arr2);
+        System.out.println(Helper.isSorted(arr2));
     }
 
     public static void quicksort(Comparable[] arr) {
         if(null == arr)
             return;
 
-        int n = arr.length ;
+        int n = arr.length;
         /**
          * arr[l ... r]
          */
