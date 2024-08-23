@@ -22,8 +22,16 @@ class SolutionTest {
 
     @Test
     public void test2() {
-        int res1 = solution.dominantIndex2(nums3);
-        Assertions.assertEquals(0, res1);
+
+        int res1 = solution.dominantIndex2(nums1);
+        Assertions.assertEquals(1, res1);
+
+        int res2 = solution.dominantIndex2(nums2);
+        Assertions.assertEquals(-1, res2);
+
+        int res3 = solution.dominantIndex2(nums3);
+        Assertions.assertEquals(0, res3);
     }
+
 
 }

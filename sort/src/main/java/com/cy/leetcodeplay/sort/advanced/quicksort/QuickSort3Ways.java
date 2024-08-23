@@ -2,7 +2,6 @@ package com.cy.leetcodeplay.sort.advanced.quicksort;
 
 
 import com.cy.common.util.CommonUtil;
-import com.cy.leetcodeplay.sort.basesort.insertionsort.InsertionSort;
 
 /**
  * @Author: Lil-K
@@ -21,13 +20,13 @@ public class QuickSort3Ways {
         /**
          * 对于小规模数组, 使用插入排序
          */
-//        if (l >= r) {
-//            return;
-//        }
-        if(r - l <= 15) {
-            InsertionSort.sortOptimization(arr, l, r);
+        if (l >= r) {
             return;
         }
+//        if(r - l <= 15) {
+//            InsertionSort.sortOptimization(arr, l, r);
+//            return;
+//        }
 
         int[] p = partition(arr, l, r);
         quicksort(arr, l, p[0]);
@@ -41,7 +40,7 @@ public class QuickSort3Ways {
         CommonUtil.swap(arr, l, (int) (Math.random() * (r - l + 1)) + l);
         Comparable v = arr[l];
 
-        int lt = l;     // arr[l+1...lt] < v
+        int lt = l;     // arr[l+1...lt] < v, 排序后: arr[l ... lt] < v
         int gt = r + 1; // arr[gt...r] > v
         int i = l + 1;    // arr[lt+1...i) == v
 
