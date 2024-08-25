@@ -8,12 +8,15 @@ package com.cy.leetcodeplay.array.no125;
  * A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
  *
  * Given a string s, return true if it is a palindrome, or false otherwise.
+ *
+ * 对撞指针:
+ *  创建两个收尾指针,
  */
 public class Solution {
 
-
   public static void main(String[] args) {
-
+    String s = "A man, a plan, a canal: Panama";
+    isPalindrome2(s);
   }
 
   /**
@@ -55,5 +58,32 @@ public class Solution {
 
   private boolean isCharOrNumber(int s) {
     return (s >= 48 && s <= 57) || (s >= 65 && s <= 90) || (s >= 97 && s <= 122);
+  }
+
+  /**
+   * 解法二, 对撞指针
+   * @param s
+   * @return
+   */
+  public static boolean isPalindrome2(String s) {
+    int l = 0;
+    int r = s.length() - 1;
+
+    while (l < r) {
+      // 跳过非字母数字字符
+      while (l < r && !Character.isLetterOrDigit(s.charAt(l))) {
+        l++;
+      }
+      while (l < r && !Character.isLetterOrDigit(s.charAt(r))) {
+        r--;
+      }
+      // 比较字符，忽略大小写
+      if (Character.toLowerCase(s.charAt(l)) != Character.toLowerCase(s.charAt(r))) {
+        return false;
+      }
+      l++;
+      r--;
+    }
+    return true; // 如果所有字符都匹配
   }
 }

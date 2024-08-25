@@ -9,6 +9,11 @@ package com.cy.leetcodeplay.array.no11;
  */
 public class Solution {
 
+    /**
+     * 解法一:
+     * @param height
+     * @return
+     */
     public static int maxArea(int[] height) {
         int l = 0, r = height.length - 1;
         int maxArea = 0;
@@ -29,5 +34,36 @@ public class Solution {
         return maxArea;
     }
 
+    /**
+     * 优化之后
+     * @param height
+     * @return
+     */
+    public int maxArea2(int[] height) {
+        int n = height.length;
+        if (n == 2) {
+            return 1 * Math.min(height[0], height[1]);
+        }
+
+        int l = 0, r = n - 1, max = -1;
+
+        while (l < r) {
+            int gap = r - l;
+            int minHeight = Math.min(height[l], height[r]);
+            int currentArea = gap * minHeight;
+            max = Math.max(max, currentArea);
+
+            /**
+             * skip
+             */
+            while (l < r && height[l] <= minHeight) {
+                l++;
+            }
+            while (l < r && height[r] <= minHeight) {
+                r--;
+            }
+        }
+        return max;
+    }
 
 }
