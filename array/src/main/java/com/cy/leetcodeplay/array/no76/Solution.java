@@ -18,9 +18,15 @@ import java.util.TreeMap;
  */
 public class Solution {
 
+  public static void main(String[] args) {
+    Map<Character, Integer> slideWindowCount = new TreeMap<>();
+    slideWindowCount.put('c', 3);
+    int i = slideWindowCount.get('c').intValue();
+    System.out.println(i);
+  }
 
   /**
-   *
+   * 解法一
    * @param s
    * @param t
    * @return
@@ -30,6 +36,9 @@ public class Solution {
       return "";
     }
 
+    /**
+     * 定义 模板 t 字符串中字母出现的频率
+     */
     Map<Character, Integer> freqT = new TreeMap<>();
     char[] charArray = t.toCharArray();
     for (int i = 0; i < charArray.length; i++) {
@@ -44,7 +53,8 @@ public class Solution {
     Map<Character, Integer> slideWindowCount = new TreeMap<>();
 
     /**
-     * 定义记录符合题意规则的标志, 比如: t: "ABB", freqT: [A -> 1, B -> 2]
+     * 定义记录符合题意规则的标志,
+     * 比如: t: "ABB", freqT: [A -> 1, B -> 2] --> ruleCount: 2, 意味着freqT中有2种元素, B是重复
      */
     int ruleCount = 0;
 
@@ -60,7 +70,7 @@ public class Solution {
 
       /**
        * 当前r的位置的字符在 freqT 出现过
-       * 并且: 与freqT中出现的频率一致, 则记录下符合题意的规则,
+       * 并且: 与freqT中出现的频率一致, 则记录下符合题意的规则
        * 以下写法包括了 t 中 包含重复字符的情况
        */
       if (freqT.containsKey(c) && freqT.get(c).intValue() == slideWindowCount.get(c).intValue()) {
@@ -87,7 +97,7 @@ public class Solution {
         }
 
         /**
-         * 这里即将要移除 l 位置的元素, 让 l 位置的元素频率 - 1, 做一个复位
+         * 这里即将要移除 l 位置的元素, 让 l 位置的元素频率 - 1, 做复位
          */
         slideWindowCount.put(c, slideWindowCount.get(c) - 1);
         if (freqT.containsKey(c) && slideWindowCount.get(c).intValue() < freqT.get(c).intValue()) {

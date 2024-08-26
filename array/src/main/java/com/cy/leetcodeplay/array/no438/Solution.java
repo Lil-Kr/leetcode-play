@@ -37,7 +37,7 @@ public class Solution {
 
     int l = 0, r = p.length();
 
-    while (r < s.length()) {
+    while (r < s.length()) { // r < s.length() 表示 判断的长度为p的长度, r == s.length() - 1 就已经完成比较了
       freqS[s.charAt(l) - 'a']--;
       freqS[s.charAt(r) - 'a']++;
 
