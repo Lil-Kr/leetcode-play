@@ -38,7 +38,33 @@ public class Solution {
         }else {
             return res;
         }
+    }
 
+    /**
+     * 解法二:
+     * 以 右边界 r 为基准
+     * @param target
+     * @param nums
+     * @return
+     */
+    public int minSubArrayLen2(int target, int[] nums) {
+        if (nums.length == 1 && nums[0] < target) {
+            return 0;
+        }
+
+        int l = 0, r = 0; // nums[l ... r] >= target
+        int sum = 0;
+        int length = nums.length + 1;
+        while (r < nums.length) {
+            sum += nums[r];
+
+            while (r < nums.length && sum >= target) {
+                length = Math.min(length, r - l + 1);
+                sum -= nums[l++];
+            }
+            r++;
+        }
+        return length == nums.length + 1 ? 0 : length;
     }
 
 }
