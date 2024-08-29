@@ -18,13 +18,6 @@ import java.util.TreeMap;
  */
 public class Solution {
 
-  public static void main(String[] args) {
-    Map<Character, Integer> slideWindowCount = new TreeMap<>();
-    slideWindowCount.put('c', 3);
-    int i = slideWindowCount.get('c').intValue();
-    System.out.println(i);
-  }
-
   /**
    * 解法一
    * @param s
@@ -59,10 +52,10 @@ public class Solution {
     int ruleCount = 0;
 
     // 定义记录符合条件字符串的索引
-    int l2 = -1, r2 = -1, gapLength = -1;
+    int l2 = -1, r2 = -1, minLength = -1;
 
     // 获取 t 中有多少种字符
-    int freqSize = freqT.size();
+    int freqTSize = freqT.size();
 
     while (r < s.length()) {
       char c = s.charAt(r);
@@ -81,17 +74,14 @@ public class Solution {
        * 当 [l ... r]之间的字符种类 与 freqT 中的一致时, 才对 [l ... r] 范围内的字符遍历
        * 循环遍历 [l ... r] 之间的字符, 看是否还有 与 t 中的字符
        */
-      while (l <= r && freqSize == ruleCount) {
+      while (l <= r && freqTSize == ruleCount) {
         c = s.charAt(l);
 
         /**
-         * 记录当前符合 题意的信息
-         * 记录当前的 [l ... r]的长度
-         * 记录 当前 l 的位置, 记录 当前 r 的位置
-         * 与上一次的 间距 比较取最小间距
+         * this if() judgment is record min length, then change l2 and r2
          */
-        if (gapLength == -1 || r - l + 1 < gapLength) {
-          gapLength = r - l + 1;
+        if (minLength == -1 || r - l + 1 < minLength) {
+          minLength = r - l + 1;
           l2 = l;
           r2 = r;
         }
@@ -100,6 +90,10 @@ public class Solution {
          * 这里即将要移除 l 位置的元素, 让 l 位置的元素频率 - 1, 做复位
          */
         slideWindowCount.put(c, slideWindowCount.get(c) - 1);
+
+        /**
+         * remove l info, if s.charAt(l) not include t, so freqCount can`t change
+         */
         if (freqT.containsKey(c) && slideWindowCount.get(c).intValue() < freqT.get(c).intValue()) {
           ruleCount --;
         }
@@ -108,11 +102,11 @@ public class Solution {
       r++;
     }
 
-    if (l2 == -1 && r2 == -1) {
-      return "";
-    }else {
-      return s.substring(l2, r2+1);
-    }
-
+//    if (l2 == -1 && r2 == -1) {
+//      return "";
+//    }else {
+//      return s.substring(l2, r2+1);
+//    }
+    return minLength == -1 ? "" : s.substring(l2, r2 + 1);
   }
 }
