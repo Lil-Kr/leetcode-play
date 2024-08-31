@@ -19,7 +19,7 @@ public class Solution {
 				i++;
 			}
 		}
-		// 如果循环结束时指针指向最后一个元素，则返回true
+		// 如果循环结束时指针指向最后一个元素, 则返回true
 		return i == bits.length - 1;
 	}
 }
