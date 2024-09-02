@@ -14,6 +14,9 @@ public class Solution {
 	 * @return
 	 */
 	public static int countBinarySubstrings(String s) {
+		/**
+		 * prev: 前一组相同数字的数量
+		 */
 		int prev = 0, curr = 1, count = 0;
 
 		for (int i = 1; i < s.length(); i++) {
