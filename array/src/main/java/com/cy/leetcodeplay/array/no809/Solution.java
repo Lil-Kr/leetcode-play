@@ -39,6 +39,7 @@ public class Solution {
 					return false;
 				}
 
+				// 更新指针位置
 				i += len1;
 				j += len2;
 			} else {
@@ -46,6 +47,9 @@ public class Solution {
 			}
 		}
 
+		/**
+		 * 各自的指针都到了最后一个位置, 说明过程中没有偏差
+		 */
 		return i == s.length() && j == word.length();
 	}
 
