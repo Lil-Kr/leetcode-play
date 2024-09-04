@@ -10,6 +10,7 @@ import java.util.TreeMap;
  */
 public class Solution {
 
+
 	/**
 	 * 解法一: 效率最高
 	 * @param order 不重复
@@ -31,11 +32,18 @@ public class Solution {
 		for (char c : order.toCharArray()) {
 			while (freqS[c - 'a'] > 0) {
 				result.append(c);
+				/**
+				 * 这个操作是关键，它保证了在最后构建结果字符串时，
+				 * 每个字符只被添加到 res 中正确的次数。如果不减少频率计数，那么相同的字符可能会被重复添加到 res 中，导致结果错误。
+				 * 原因: order中的字符串是唯一的, 所以要把s中的相同的元素全部移除
+				 */
 				freqS[c - 'a']--;
 			}
 		}
 
-		// 添加 s 中 order 未出现的字符
+		/**
+		 * 添加 s 中 order 未出现的字符
+		 */
 		for (char c = 'a'; c <= 'z'; c++) {
 			while (freqS[c - 'a'] > 0) {
 				result.append(c);

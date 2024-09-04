@@ -36,7 +36,6 @@ public class Solution {
 		}
 
 		res.add(currentInterval);
-
 		return res.toArray(new int[res.size()][]);
 	}
 }

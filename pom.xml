@@ -20,6 +20,7 @@
         <module>array</module>
         <module>question-number</module>
         <module>sort</module>
+        <module>find</module>
     </modules>
 
     <properties>
