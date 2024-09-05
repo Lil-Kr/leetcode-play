@@ -10,14 +10,6 @@ import java.util.Comparator;
  */
 public class Solution {
 
-	public static void main(String[] args) {
-		int target = 12;
-		int[] position = new int[]{10,8,0,5,3};
-		int[] speed = new int[]{2,4,1,1,3};
-		int i = carFleet(target, position, speed);
-		System.out.println(i);
-	}
-
 	public static int carFleet(int target, int[] position, int[] speed) {
 		if (position.length == 1) {
 			return position.length;
@@ -43,7 +35,7 @@ public class Solution {
 			double currentTime = cars[i][1];
 			/**
 			 * 如果当前车的到达时间比前一车的时间晚, 形成一个新的车队
-			 * 快车一定会追上慢车
+			 * 快车一定会追上慢车, 时间慢的一定追不上
 			 */
 			if (currentTime > lastTime) {
 				fleets++;
