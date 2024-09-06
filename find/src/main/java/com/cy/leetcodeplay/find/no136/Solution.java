@@ -18,7 +18,7 @@ public class Solution {
 	 */
 	public int singleNumber(int[] nums) {
 		if (nums.length < 2) {
-			return 0;
+			return nums[0];
 		}
 		Map<Integer, Integer> map = new HashMap<>();
 

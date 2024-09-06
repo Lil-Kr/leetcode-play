@@ -13,18 +13,16 @@ public class Solution {
 	public int[] twoSum(int[] nums, int target) {
 		if (nums.length < 1) return new int[]{};
 
-		int[] res = new int[2];
-		Map<Integer, Integer> map = new HashMap<>();
-
+		Map<Integer, Integer> res = new HashMap<>();
 		for (int i = 0; i < nums.length; i++) {
 			int j = target - nums[i];
-			map.put(j, i);
-			if (map.getOrDefault(j, 0) + nums[i] == target) {
-				res[0] = map.get(j);
-				res[1] = i;
+			if (res.containsKey(j)) { // 这样写包括了有两个重复的元素 相加得到 target的情况
+				return new int[]{res.get(j), i};
+			} else {
+				res.put(nums[i], i);
 			}
 		}
 
-		return res;
+		return new int[]{};
 	}
 }

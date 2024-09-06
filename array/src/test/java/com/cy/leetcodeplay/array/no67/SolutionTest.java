@@ -35,4 +35,9 @@ class SolutionTest {
 		System.out.println(res1);
 		Assertions.assertEquals("11101", res1);
 	}
+
+	@Test
+	public void test4 () {
+
+	}
 }

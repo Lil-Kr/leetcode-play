@@ -2,6 +2,7 @@ package com.cy.leetcodeplay.find.no1;
 
 
 import com.cy.common.util.PrintString;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class SolutionTest {
@@ -13,6 +14,7 @@ class SolutionTest {
 		int target = 9;
 		int[] res1 = solution.twoSum(nums, target);
 		System.out.println(PrintString.printIntArray(res1));
+		Assertions.assertEquals("[0,1]", PrintString.printIntArray(res1));
 	}
 
 	@Test
@@ -21,5 +23,6 @@ class SolutionTest {
 		int target = 6;
 		int[] res1 = solution.twoSum(nums, target);
 		System.out.println(PrintString.printIntArray(res1));
+		Assertions.assertEquals("[1,2]", PrintString.printIntArray(res1));
 	}
 }

@@ -7,10 +7,6 @@ package com.cy.leetcodeplay.array.no67;
  */
 public class Solution {
 
-	public static void main(String[] args) {
-		System.out.println(2 % 2);
-	}
-
 	/**
 	 * 算上前一位进位, 后一位也需要进位的情况: 1110 + 1111, 单位数字最多为3
 	 * 取余操作表示当前为的数字:
