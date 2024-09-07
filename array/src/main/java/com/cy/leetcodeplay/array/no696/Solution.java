@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no696;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/1
- * @Description:
+ * @Description: no.696
  */
 public class Solution {
 

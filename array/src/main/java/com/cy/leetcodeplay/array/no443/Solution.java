@@ -1,23 +1,11 @@
 package com.cy.leetcodeplay.array.no443;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @Author: Lil-K
  * @Date: 2024/9/1
  * @Description:
  */
 public class Solution {
-
-	public static void main(String[] args) {
-		List<Integer> ar = new ArrayList<>();
-		ar.add(1);
-		ar.add(2);
-
-		int sum = ar.stream().mapToInt((item) -> item).sum();
-		System.out.println(sum);
-	}
 
 	public int compress(char[] chars) {
 		if (chars.length <= 1) return chars.length;
