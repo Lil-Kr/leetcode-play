@@ -21,6 +21,7 @@
         <module>question-number</module>
         <module>sort</module>
         <module>find</module>
+        <module>linked-list</module>
     </modules>
 
     <properties>
