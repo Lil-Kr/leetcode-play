@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no209;
 /**
  * @Author: Lil-K
  * @Date: 2024/4/11
- * @Description: 209. Minimum Size Subarray Sum
+ * @Description: no.209. Minimum Size Subarray Sum
  */
 public class Solution {
 
@@ -14,7 +14,7 @@ public class Solution {
      * @param nums 给定数组
      * @return
      */
-    public static int minSubArrayLen(int target, int[] nums) {
+    public int minSubArrayLen(int target, int[] nums) {
         int l = 0, r = -1; // nums[l ... r] 为滑动窗口
         int sum = 0; //
         int res = nums.length + 1; // 记录子数组的长度, 初始值为一个不可能达到的长度, 这里为整个数组长度 + 1
@@ -58,7 +58,7 @@ public class Solution {
         while (r < nums.length) {
             sum += nums[r];
 
-            while (r < nums.length && sum >= target) {
+            while (l <= r && sum >= target) {
                 length = Math.min(length, r - l + 1);
                 sum -= nums[l++];
             }

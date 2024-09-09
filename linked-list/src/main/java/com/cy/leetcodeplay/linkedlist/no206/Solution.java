@@ -1,5 +1,7 @@
 package com.cy.leetcodeplay.linkedlist.no206;
 
+import com.cy.leetcodeplay.classes.ListNode;
+
 /**
  * @Author: Lil-K
  * @Date: 2024/9/8
@@ -24,12 +26,4 @@ public class Solution {
 		}
 		return prev;
 	}
-}
-
-class ListNode {
-	int val;
-	ListNode next;
-	ListNode() {}
-	ListNode(int val) { this.val = val; }
-	ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
