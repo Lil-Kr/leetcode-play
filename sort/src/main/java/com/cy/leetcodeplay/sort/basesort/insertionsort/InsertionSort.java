@@ -19,7 +19,7 @@ public class InsertionSort<E extends Comparable<E>> {
      * 插入排序 未优化版本
      * @param arr
      */
-    public static void sort(Comparable[] arr) {
+    public void sort(Comparable[] arr) {
         if(arr == null) {
             return;
         }
@@ -39,7 +39,7 @@ public class InsertionSort<E extends Comparable<E>> {
      * optimization after method
      * @param arr
      */
-    public static void sortOptimization(Comparable[] arr) {
+    public void sortOptimization(Comparable[] arr) {
         if(arr == null) {
             return;
         }
