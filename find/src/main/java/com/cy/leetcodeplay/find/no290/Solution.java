@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.find.no209;
+package com.cy.leetcodeplay.find.no290;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/5
- * @Description:
+ * @Description: no.290. Word Pattern
  */
 public class Solution {
 

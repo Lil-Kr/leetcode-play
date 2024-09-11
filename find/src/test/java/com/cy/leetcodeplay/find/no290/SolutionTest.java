@@ -1,9 +1,7 @@
-package com.cy.leetcodeplay.find.no209;
+package com.cy.leetcodeplay.find.no290;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
 

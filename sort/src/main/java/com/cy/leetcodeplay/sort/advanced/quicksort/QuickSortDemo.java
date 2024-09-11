@@ -20,15 +20,17 @@ public class QuickSortDemo {
 		quicksort(arr2);
 		System.out.println(Helper.isSorted(arr2));
 	}
-	public static void quicksort(Integer[] arr) {
-		int n = arr.length - 1;
 
-		quicksort(arr, 0, n);
+	// 三路快排
+
+	public static void quicksort(Integer[] arr) {
+		int n = arr.length;
+		quicksort(arr, 0, n - 1);
 	}
 
-	private static void quicksort(Integer[] arr, int l, int r) {
+	public static void quicksort(Integer[] arr, int l, int r) {
 		if (l >= r) {
-			return ;
+			return;
 		}
 
 		int[] p = partition(arr, l, r);
@@ -36,13 +38,13 @@ public class QuickSortDemo {
 		quicksort(arr, p[1], r);
 	}
 
-	private static int[] partition(Integer[] arr, int l, int r) {
+	public static int[] partition(Integer[] arr, int l, int r) {
 		swap(arr, l, (int)(Math.random() * (r - l + 1)) + l);
 		int v = arr[l];
 
-		int lt = l; // arr[l + 1 ... lt] < v
-		int gt = r + 1; // arr[gt ... r] > v
-		int i = l + 1; // arr[lt+1 ... i) == v
+		int lt = l;
+		int gt = r + 1;
+		int i = l + 1;
 
 		while (i < gt) {
 			if (arr[i] < v) {
@@ -57,14 +59,16 @@ public class QuickSortDemo {
 			}
 		}
 
-		if (lt != l) {
+		if (l != lt) {
 			swap(arr, l, lt);
 		}
+
 		return new int[]{lt, gt};
 	}
 
-	private static void swap(Integer[] arr, int i, int j) {
-		Integer temp = arr[i];
+
+	public static void swap(Integer[] arr, int i, int j) {
+		int temp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = temp;
 	}

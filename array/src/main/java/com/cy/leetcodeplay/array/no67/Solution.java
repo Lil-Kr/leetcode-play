@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no67;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/2
- * @Description:
+ * @Description: no.67. Add Binary
  */
 public class Solution {
 
