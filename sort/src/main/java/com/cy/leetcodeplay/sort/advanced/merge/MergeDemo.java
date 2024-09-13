@@ -21,17 +21,18 @@ public class MergeDemo {
 
 	public static void mergesort(Integer[] arr) {
 		int n = arr.length - 1;
-
 		mergesort(arr, 0, n);
 	}
 
 	private static void mergesort(Integer[] arr, int l, int r) {
 		if (l >= r) {
-			return ;
+			return;
 		}
+
 		int mid = l + (r - l) / 2;
 		mergesort(arr, l, mid);
 		mergesort(arr, mid + 1, r);
+
 		if (arr[mid] > arr[mid + 1]) {
 			merge(arr, l, mid, r);
 		}
@@ -40,8 +41,7 @@ public class MergeDemo {
 	private static void merge(Integer[] arr, int l, int mid, int r) {
 		Integer[] aux = Arrays.copyOfRange(arr, l, r + 1);
 
-		int i = l, j = mid+1;
-
+		int i = l, j = mid + 1;
 		for (int k = l; k <= r; k++) {
 			if (i > mid) {
 				arr[k] = aux[j - l];
@@ -51,7 +51,7 @@ public class MergeDemo {
 				i++;
 			} else if (aux[i - l] < aux[j - l]) {
 				arr[k] = aux[i - l];
-				i++;
+				j++;
 			} else {
 				arr[k] = aux[j - l];
 				j++;

@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no696;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/1
- * @Description: no.696
+ * @Description: no.696. Count Binary Substrings
  */
 public class Solution {
 
@@ -13,7 +13,7 @@ public class Solution {
 	 * @param s
 	 * @return
 	 */
-	public static int countBinarySubstrings(String s) {
+	public int countBinarySubstrings(String s) {
 		/**
 		 * prev: 前一组相同数字的数量
 		 */

@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/7
- * @Description: no.128. Longest Consecutive Sequence
+ * @Description: no.->. Longest Consecutive Sequence
  */
 public class Solution {
 

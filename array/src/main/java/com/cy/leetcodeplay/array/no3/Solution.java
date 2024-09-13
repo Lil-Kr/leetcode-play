@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no3;
 /**
  * @Author: Lil-K
  * @Date: 2024/4/12
- * @Description: 3. Longest Substring Without Repeating Characters
+ * @Description: no.3. Longest Substring Without Repeating Characters
  * 题目: 在一个字符串中寻找没有重复字母的最长子串
  */
 public class Solution {

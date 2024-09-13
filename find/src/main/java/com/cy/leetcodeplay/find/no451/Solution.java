@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/5
- * @Description: 451. Sort Characters By Frequency
+ * @Description: no.451. Sort Characters By Frequency
  */
 public class Solution {
 
