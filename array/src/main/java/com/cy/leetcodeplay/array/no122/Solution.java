@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no122;
 /**
  * @Author: Lil-K
  * @Date: 2024/8/30
- * @Description:
+ * @Description: no.122. Best Time to Buy and Sell Stock II
  * 只有 prices[i] > prices[i-1], 就可以进行交易
  */
 public class Solution {

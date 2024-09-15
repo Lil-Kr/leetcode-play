@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no809;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/2
- * @Description:
+ * @Description: no.809. Expressive Words
  */
 public class Solution {
 

@@ -22,4 +22,9 @@ class SolutionTest {
 		System.out.println(res1);
 		Assertions.assertEquals(3, res1);
 	}
+
+	@Test
+	public void test3() {
+		System.out.println(5 % 2);
+	}
 }

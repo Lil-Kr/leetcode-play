@@ -15,5 +15,6 @@ class SolutionTest {
 		solution.reorderList(nodes);
 		System.out.println(nodes.toString());
 		Assertions.assertEquals("1 -> 4 -> 2 -> 3 -> null", nodes.toString());
+
 	}
 }
