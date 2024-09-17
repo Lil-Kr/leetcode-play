@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no28;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/3
- * @Description:
+ * @Description: no.28. Find the Index of the First Occurrence in a String
  */
 public class Solution {
 

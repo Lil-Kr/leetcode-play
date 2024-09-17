@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no303;
 /**
  * @Author: Lil-K
  * @Date: 2024/8/29
- * @Description:
+ * @Description: no.303. Range Sum Query - Immutable
  */
 public class NumArray {
 

@@ -22,6 +22,7 @@
         <module>sort</module>
         <module>find</module>
         <module>linked-list</module>
+        <module>stack-queue</module>
     </modules>
 
     <properties>

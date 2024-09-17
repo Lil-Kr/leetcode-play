@@ -6,7 +6,7 @@ import java.util.TreeMap;
 /**
  * @Author: Lil-K
  * @Date: 2024/4/13
- * @Description: 76. Minimum Window Substring
+ * @Description: no.76. Minimum Window Substring
  *
  * Given two strings s and t of lengths m and n respectively, return the minimum window
  * substring
@@ -38,6 +38,8 @@ public class Solution {
       Integer freqCount = freqT.getOrDefault(charArray[i], 0);
       freqT.put(charArray[i], freqCount + 1);
     }
+    // 获取 t 中有多少种字符
+    int freqTSize = freqT.size();
 
     // 定义滑动窗口的左右边界
     int l = 0, r = 0;
@@ -53,9 +55,6 @@ public class Solution {
 
     // 定义记录符合条件字符串的索引
     int l2 = -1, r2 = -1, minLength = -1;
-
-    // 获取 t 中有多少种字符
-    int freqTSize = freqT.size();
 
     while (r < s.length()) {
       char c = s.charAt(r);
@@ -73,6 +72,7 @@ public class Solution {
       /**
        * 当 [l ... r]之间的字符种类 与 freqT 中的一致时, 才对 [l ... r] 范围内的字符遍历
        * 循环遍历 [l ... r] 之间的字符, 看是否还有 与 t 中的字符
+       * l <= r 这个条件必须加上
        */
       while (l <= r && freqTSize == ruleCount) {
         c = s.charAt(l);
