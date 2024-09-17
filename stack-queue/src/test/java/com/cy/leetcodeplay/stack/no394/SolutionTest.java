@@ -29,4 +29,11 @@ class SolutionTest {
 		String res1 = solution.decodeString(s);
 		Assertions.assertEquals("accaccacc", res1);
 	}
+
+//	@Test
+//	public void test4() {
+//		String s = "3[a2[b4[c]]]";
+//		String res1 = solution.decodeString(s);
+//		Assertions.assertEquals("abccccbccccabccccbccccabccccbcccc", res1);
+//	}
 }
