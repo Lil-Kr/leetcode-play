@@ -6,7 +6,7 @@ import java.util.TreeSet;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/4
- * @Description:
+ * @Description: no.349. Intersection of Two Arrays
  */
 public class Solution {
 

@@ -70,9 +70,9 @@ public class LRUCache {
 		} else {
 			if (map.size() == capacity) {
 				// 淘汰最后一个
-				Node IruNode = tail.prev;
-				removeNode(IruNode);
-				map.remove(IruNode.key);
+				Node last = tail.prev;
+				removeNode(last);
+				map.remove(last.key);
 			}
 			Node newNode = new Node(key, value);
 			insertToHead(newNode);
