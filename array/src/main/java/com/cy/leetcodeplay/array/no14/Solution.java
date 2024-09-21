@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no14;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/3
- * @Description:
+ * @Description: no.14. Longest Common Prefix
  * 公共前缀就意味着:
  *  1. 给出的字符串数组中, 一定会在最短的字符串中得到公共前缀
  */
