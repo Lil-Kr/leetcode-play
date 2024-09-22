@@ -9,7 +9,8 @@ import java.util.Stack;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/21
- * @Description: no.145-2. Binary Tree Postorder Traversal
+ * @Description: no.145. Binary Tree Postorder Traversal
+ * 解法二:
  * 利用指令步骤模拟出栈调用关系
  */
 public class Solution2 {

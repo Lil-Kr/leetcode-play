@@ -59,4 +59,47 @@ public class Solution {
 		}
 		return res;
 	}
+
+	/** ================ 解法三 ================ **/
+
+	private class Command {
+		public String s;
+		public TreeNode node;
+
+		public Command(String commend, TreeNode node) {
+			this.s = commend;
+			this.node = node;
+		}
+	}
+
+	/**
+	 *
+	 * @param root
+	 * @return
+	 */
+	public List<Integer> preorderTraversal3(TreeNode root) {
+		List<Integer> res = new ArrayList<>();
+		if (root == null) return res;
+
+		Stack<Command> stack = new Stack<>();
+		stack.push(new Command("go", root));
+		while (!stack.isEmpty()) {
+			Command command = stack.pop();
+			if (command.s.equals("print")) {
+				res.add(command.node.val);
+			} else {
+				assert command.s.equals("go"); // 运行到这里一定要为 "go"
+				if (command.node.right != null) {
+					stack.push(new Command("go", command.node.right));
+				}
+
+				if (command.node.left != null) {
+					stack.push(new Command("go", command.node.left));
+				}
+
+				stack.push(new Command("print", command.node));
+			}
+		}
+		return res;
+	}
 }
