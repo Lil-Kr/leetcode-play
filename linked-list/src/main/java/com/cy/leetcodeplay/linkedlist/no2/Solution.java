@@ -20,11 +20,11 @@ public class Solution {
 			return null;
 		}
 
-		int curry = 0;
+		int carry = 0;
 		ListNode dummy = new ListNode(-1);
 		ListNode cur = dummy;
 		while (l1 != null || l2 != null) {
-			int sum = curry;
+			int sum = carry;
 
 			if (l1 != null) {
 				sum += l1.val;
@@ -35,12 +35,12 @@ public class Solution {
 				sum += l2.val;
 				l2 = l2.next;
 			}
-			curry = sum / 10;
+			carry = sum / 10;
 			cur.next = new ListNode(sum % 10);
 			cur = cur.next;
 		}
 
-		if (curry > 0) cur.next = new ListNode(curry);
+		if (carry > 0) cur.next = new ListNode(carry);
 		return dummy.next;
 	}
 

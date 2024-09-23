@@ -15,4 +15,5 @@ class SolutionTest {
 		System.out.println(JSONArray.toJSONString(res1));
 		Assertions.assertEquals("[1,1,4,2,1,1,0,0]", JSONArray.toJSONString(res1));
 	}
+
 }
