@@ -3,8 +3,6 @@ package com.cy.leetcodeplay.stack.no84;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class SolutionTest {
 
 	private Solution solution = new Solution();
@@ -24,4 +22,5 @@ class SolutionTest {
 		System.out.println(res1);
 		Assertions.assertEquals(8, res1);
 	}
+
 }
