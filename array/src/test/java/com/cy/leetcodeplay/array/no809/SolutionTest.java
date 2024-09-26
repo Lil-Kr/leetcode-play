@@ -10,7 +10,7 @@ class SolutionTest {
 	private Solution solution = new Solution();
 
 	@Test
-	public void test_1() {
+	public void test1() {
 		String s = "heeellooo";
 		String[] words = {"hello", "hi", "helo"};
 
@@ -19,7 +19,7 @@ class SolutionTest {
 	}
 
 	@Test
-	public void test_2() {
+	public void test2() {
 		String s = "heellooo";
 		String[] words = {"hello", "hi", "helo"};
 
@@ -28,7 +28,7 @@ class SolutionTest {
 	}
 
 	@Test
-	public void test_3() {
+	public void test3() {
 		String s = "zzzzzyyyyy";
 		String[] words = {"zzyy", "zy", "zyy"};
 

@@ -27,7 +27,7 @@ public class Solution {
 		 * 创建最小堆, 根据Map的 value 从小到大入队
 		 */
 		PriorityQueue<Map.Entry<Integer, Integer>> minHeap = new PriorityQueue<>(
-			(a, b) -> a.getValue() - b.getValue()
+			(a, b) -> Integer.compare(a.getValue(), b.getValue())
 		);
 
 		/**
