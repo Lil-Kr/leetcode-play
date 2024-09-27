@@ -23,6 +23,7 @@
         <module>find</module>
         <module>linked-list</module>
         <module>stack-queue</module>
+        <module>binary-tree</module>
     </modules>
 
     <properties>
