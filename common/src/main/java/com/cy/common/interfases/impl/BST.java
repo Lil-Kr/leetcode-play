@@ -10,7 +10,7 @@ import java.util.*;
  * @Date: 2024/9/27
  * @Description: 二分搜索树
  */
-public class BST<E extends Comparable<E>> implements BSTService<E> {
+public class BST<E extends Integer> implements BSTService<E> {
 
 
 	private TreeNode<E> root;

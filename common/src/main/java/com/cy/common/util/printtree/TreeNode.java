@@ -5,7 +5,7 @@ package com.cy.common.util.printtree;
  * @Date: 2024/9/21
  * @Description:
  */
-public class TreeNode<E extends Comparable<E>> {
+public class TreeNode<E extends Integer> {
 
 	public E val;
 	public TreeNode left, right;

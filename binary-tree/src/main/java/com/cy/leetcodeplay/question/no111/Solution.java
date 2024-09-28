@@ -14,7 +14,7 @@ import java.util.Queue;
 public class Solution {
 
 	/**
-	 *
+	 * 利用队列
 	 * @param root
 	 * @return
 	 */
@@ -46,4 +46,26 @@ public class Solution {
 
 		return depth;
 	}
+
+	/**
+	 * 递归
+	 * @param root
+	 * @return
+	 */
+	public int minDepth2(TreeNode root) {
+		if (root == null) return 0;
+
+		if (root.left == null && root.right == null) return 1;
+
+		if (root.left == null) {
+			return 1 + minDepth2(root.right);
+		}
+
+		if (root.right == null) {
+			return 1 + minDepth2(root.left);
+		}
+
+		return 1 + Math.min(minDepth2(root.left), minDepth2(root.right));
+	}
+
 }
