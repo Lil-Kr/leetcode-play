@@ -20,14 +20,14 @@ public class Solution {
 	 * @return
 	 */
 	public int romanToInt(String s) {
-		Map<Character, Integer> romanToInt = new HashMap<>();
-		romanToInt.put('I', 1);
-		romanToInt.put('V', 5);
-		romanToInt.put('X', 10);
-		romanToInt.put('L', 50);
-		romanToInt.put('C', 100);
-		romanToInt.put('D', 500);
-		romanToInt.put('M', 1000);
+		Map<Character, Integer> romanMap = new HashMap<>();
+		romanMap.put('I', 1);
+		romanMap.put('V', 5);
+		romanMap.put('X', 10);
+		romanMap.put('L', 50);
+		romanMap.put('C', 100);
+		romanMap.put('D', 500);
+		romanMap.put('M', 1000);
 
 		int total = 0;
 		int prevValue = 0;
@@ -35,7 +35,7 @@ public class Solution {
 		// 从右向左遍历罗马数字字符串
 		for (int i = s.length() - 1; i >= 0; i--) {
 			char currentChar = s.charAt(i);
-			int currentValue = romanToInt.get(currentChar);
+			int currentValue = romanMap.get(currentChar);
 
 			// 如果当前值小于之前的值, 表示要减去
 			if (currentValue < prevValue) {
