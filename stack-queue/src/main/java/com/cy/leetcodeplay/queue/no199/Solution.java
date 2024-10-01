@@ -30,6 +30,10 @@ public class Solution {
 			int k = queue.size();
 			for (int i = 0; i < k; i++) {
 				TreeNode node = queue.poll();
+				/**
+				 * 1. 按照先左再右的顺序入队
+				 * 2. 获取最后一个元素的值, 只有left, 就只获取left的值
+				 */
 				if (i + 1 == k) {
 					res.add(node.val);
 				}

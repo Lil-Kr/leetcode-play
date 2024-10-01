@@ -19,6 +19,9 @@ public class Solution {
 		if (heights.length == 1) return heights[0];
 		int n = heights.length;
 
+		/**
+		 * 单调栈: 栈中的元素是递增的
+		 */
 		Stack<Integer> stack = new Stack<>();
 		int maxArea = 0;
 
