@@ -22,6 +22,10 @@ public class Solution {
 			res.add(num);
 		}
 
+//		Set<Integer> set = Arrays.stream(nums)
+//			.boxed()
+//			.collect(Collectors.toSet());
+
 		int longestStreak = 0;
 
 		for (int num : res) {

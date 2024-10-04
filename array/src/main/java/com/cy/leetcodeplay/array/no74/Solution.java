@@ -25,18 +25,21 @@ public class Solution {
 
 		int m = matrix.length; // 列数
 		int n = matrix[0].length; // fix 每行的长度
-		int left = 0, right = m * n - 1;
+		int l = 0, r = m * n - 1;
 
-		while (left <= right) {
-			int mid = left + (right - left) / 2; // 防止溢出
+		/**
+		 * r <= r: 表示最后找到这一个元素
+		 */
+		while (l <= r) {
+			int mid = l + (r - l) / 2; // 防止溢出
 			int midValue = matrix[mid / n][mid % n]; // 计算中间值
 
 			if (midValue == target) {
 				return true; // 找到目标值
 			} else if (midValue < target) {
-				left = mid + 1; // 在右侧继续查找
+				l = mid + 1; // 在右侧继续查找
 			} else {
-				right = mid - 1; // 在左侧继续查找
+				r = mid - 1; // 在左侧继续查找
 			}
 		}
 		return false;

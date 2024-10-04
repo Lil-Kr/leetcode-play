@@ -27,7 +27,6 @@ public class Solution {
 	}
 
 	private void buildPath(TreeNode node, String path, List<String> res) {
-
 		if (node.left == null && node.right == null) {
 			res.add(path);
 			return;
