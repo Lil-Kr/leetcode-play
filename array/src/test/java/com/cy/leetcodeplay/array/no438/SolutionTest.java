@@ -39,4 +39,12 @@ class SolutionTest {
     Assertions.assertEquals("[0,2]", JSONArray.toJSONString(anagrams));
   }
 
+  @Test
+  public void test4() {
+    String s = "aa";
+    String p = "bb";
+
+    List<Integer> anagrams = Solution.findAnagrams(s, p);
+    Assertions.assertEquals("[]", JSONArray.toJSONString(anagrams));
+  }
 }
