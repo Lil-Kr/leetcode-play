@@ -12,7 +12,7 @@ class SolutionTest {
 	@Test
 	public void test1() {
 		Integer[] nums = {4, 2, 7, 1, 3, 6, 9};
-		BST<Integer> bst = new BST<>(nums);
+		BST bst = new BST(nums);
 		PrintTree.printTree2(bst.getRoot());
 
 		TreeNode res1 = solution.invertTree(bst.getRoot());

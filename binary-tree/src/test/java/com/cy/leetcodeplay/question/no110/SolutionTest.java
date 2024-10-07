@@ -12,7 +12,7 @@ class SolutionTest {
 	@Test
 	public void test1() {
 		Integer[] nums = {2, 1, 3};
-		BST<Integer> bst1 = new BST<>(nums);
+		BST bst1 = new BST(nums);
 		PrintTree.printTree2(bst1.getRoot());
 
 		boolean res1 = solution.isBalanced(bst1.getRoot());
@@ -22,7 +22,7 @@ class SolutionTest {
 	@Test
 	public void test2() {
 		Integer[] nums = {1, 2, 3};
-		BST<Integer> bst1 = new BST<>(nums);
+		BST bst1 = new BST(nums);
 		PrintTree.printTree2(bst1.getRoot());
 
 		boolean res1 = solution.isBalanced(bst1.getRoot());

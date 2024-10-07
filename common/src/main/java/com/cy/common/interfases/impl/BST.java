@@ -10,13 +10,13 @@ import java.util.*;
  * @Date: 2024/9/27
  * @Description: 二分搜索树
  */
-public class BST<E extends Integer> implements BSTService<E> {
+public class BST implements BSTService {
 
 
-	private TreeNode<E> root;
+	private TreeNode root;
 	private int size;
 
-	private List<E> list;
+	private List<Integer> list;
 
 	public BST() {
 		this.root = null;
@@ -24,7 +24,7 @@ public class BST<E extends Integer> implements BSTService<E> {
 		this.size = 0;
 	}
 
-	public BST(E[] arr) {
+	public BST(Integer[] arr) {
 		this.root = null;
 		this.list = new ArrayList<>();
 		this.size = 0;
@@ -33,7 +33,7 @@ public class BST<E extends Integer> implements BSTService<E> {
 			return;
 		}
 
-		for (E e : arr) {
+		for (Integer e : arr) {
 			add(e);
 		}
 	}
@@ -43,7 +43,7 @@ public class BST<E extends Integer> implements BSTService<E> {
 	 * @param e
 	 */
 	@Override
-	public void add(E e) {
+	public void add(Integer e) {
 //        if (root == null) {
 //            root = new Node(e);
 //            size ++;
@@ -60,23 +60,23 @@ public class BST<E extends Integer> implements BSTService<E> {
 	 * @param node
 	 * @param e
 	 */
-	private void add1(TreeNode node, E e) {
+	private void add1(TreeNode node, Integer e) {
 		/**
 		 * 终止条件
 		 */
 		if (e.equals(node.val)){
 			return;
-		} else if (e.compareTo((E) node.val) < 0 && node.left == null) {
+		} else if (e.compareTo((Integer) node.val) < 0 && node.left == null) {
 			node.left = new TreeNode(e);
 			size++;
 			return;
-		}else if (e.compareTo((E) node.val) > 0 && node.right == null) {
+		}else if (e.compareTo((Integer) node.val) > 0 && node.right == null) {
 			node.right = new TreeNode(e);
 			size++;
 			return;
 		}
 
-		if (e.compareTo((E) node.val) < 0){
+		if (e.compareTo((Integer) node.val) < 0){
 			add1(node.left, e);
 		}else{ // e.compareTo(node.e) > 0
 			add1(node.right, e);
@@ -89,15 +89,15 @@ public class BST<E extends Integer> implements BSTService<E> {
 	 * @param e
 	 * @return
 	 */
-	private TreeNode add2(TreeNode node, E e){
+	private TreeNode add2(TreeNode node, Integer e){
 		if (node == null){
 			size++;
 			return new TreeNode(e);
 		}
 
-		if (e.compareTo((E) node.val) < 0){
+		if (e.compareTo((Integer) node.val) < 0){
 			node.left = add2(node.left, e);
-		}else if (e.compareTo((E) node.val) > 0){
+		}else if (e.compareTo((Integer) node.val) > 0){
 			node.right = add2(node.right, e);
 		}
 
@@ -110,18 +110,18 @@ public class BST<E extends Integer> implements BSTService<E> {
 	 * @return
 	 */
 	@Override
-	public boolean contains(E e) {
+	public boolean contains(Integer e) {
 		return contains(root, e);
 	}
 
-	private boolean contains(TreeNode node, E e) {
+	private boolean contains(TreeNode node, Integer e) {
 		if(node == null) {
 			return false;
 		}
 
-		if(e.compareTo((E) node.val) == 0) {
+		if(e.compareTo((Integer) node.val) == 0) {
 			return true;
-		}else if(e.compareTo((E) node.val) < 0) {
+		}else if(e.compareTo((Integer) node.val) < 0) {
 			return contains(node.left, e);
 		}else {
 			return contains(node.right, e);
@@ -129,7 +129,7 @@ public class BST<E extends Integer> implements BSTService<E> {
 	}
 
 	@Override
-	public void update(E e) {
+	public void update(Integer e) {
 		// todo BST修改元素
 	}
 
@@ -140,7 +140,7 @@ public class BST<E extends Integer> implements BSTService<E> {
 	 * @return
 	 */
 	@Override
-	public void remove(E e) {
+	public void remove(Integer e) {
 		if (size == 0) {
 			throw new IllegalArgumentException("BST is empty!");
 		}
@@ -154,7 +154,7 @@ public class BST<E extends Integer> implements BSTService<E> {
 	 * @param e
 	 * @return
 	 */
-	private TreeNode remove(TreeNode node, E e) {
+	private TreeNode remove(TreeNode node, Integer e) {
 		if (node == null) {
 			return null;
 		}
@@ -162,10 +162,10 @@ public class BST<E extends Integer> implements BSTService<E> {
 		/**
 		 * 寻找需要删除的位置
 		 */
-		if (e.compareTo((E) node.val) < 0) {
+		if (e.compareTo((Integer) node.val) < 0) {
 			node.left = remove(node.left, e);
 			return node;
-		} else if (e.compareTo((E) node.val) > 0) {
+		} else if (e.compareTo((Integer) node.val) > 0) {
 			node.right = remove(node.right, e);
 			return node;
 		}else {// e == node.e
@@ -199,8 +199,8 @@ public class BST<E extends Integer> implements BSTService<E> {
 	 * 删除最小值, 并返回
 	 * @return
 	 */
-	public E removeMin() {
-		E ret = getMin();
+	public Integer removeMin() {
+		Integer ret = getMin();
 		/**
 		 * 找到待删除元素的位置
 		 */
@@ -228,8 +228,8 @@ public class BST<E extends Integer> implements BSTService<E> {
 		return node;
 	}
 
-	public E removeMax() {
-		E ret = getMax();
+	public Integer removeMax() {
+		Integer ret = getMax();
 		root = removeMax(root);
 		return ret;
 	}
@@ -334,7 +334,7 @@ public class BST<E extends Integer> implements BSTService<E> {
 		}
 
 		inOrderOutputList(node.left);
-		list.add((E) node.val);
+		list.add((Integer) node.val);
 		inOrderOutputList(node.right);
 	}
 	/** =========================== end ===========================**/
@@ -385,11 +385,11 @@ public class BST<E extends Integer> implements BSTService<E> {
 	/** =========================== end ===========================**/
 
 	/** =========================== 获取最大值 =========================== **/
-	public E getMax() {
+	public Integer getMax() {
 		if (size == 0){
 			throw new IllegalArgumentException("BST is empty!");
 		}
-		return (E) getMax(root).val;
+		return (Integer) getMax(root).val;
 	}
 
 	private TreeNode getMax(TreeNode node) {
@@ -403,7 +403,7 @@ public class BST<E extends Integer> implements BSTService<E> {
 	 * 非递归实现, 获取最大值
 	 * @return
 	 */
-	public E getMax1() {
+	public Integer getMax1() {
 		if (size == 0){
 			throw new IllegalArgumentException("BST is empty!");
 		}
@@ -421,16 +421,16 @@ public class BST<E extends Integer> implements BSTService<E> {
 				max = cur;
 			}
 		}
-		return (E) max.val;
+		return (Integer) max.val;
 	}
 	/** =========================== end =========================== **/
 
 	/** =========================== 获取最小值 ===========================**/
-	public E getMin() {
+	public Integer getMin() {
 		if (size == 0){
 			throw new IllegalArgumentException("BST is empty!");
 		}
-		return (E) getMin(root).val;
+		return (Integer) getMin(root).val;
 	}
 
 	private TreeNode getMin(TreeNode node) {
@@ -444,11 +444,11 @@ public class BST<E extends Integer> implements BSTService<E> {
 	 * 获取最小值, 非递归写法
 	 * @return
 	 */
-	public E getMin1() {
+	public Integer getMin1() {
 		if (size == 0){
 			throw new IllegalArgumentException("BST is empty!");
 		}
-		return (E) getMin1(root).val;
+		return (Integer) getMin1(root).val;
 	}
 
 	private TreeNode getMin1(TreeNode node) {

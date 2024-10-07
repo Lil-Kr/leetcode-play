@@ -5,20 +5,20 @@ package com.cy.common.util.printtree;
  * @Date: 2024/9/21
  * @Description:
  */
-public class TreeNode<E extends Integer> {
+public class TreeNode {
 
-	public E val;
+	public Integer val;
 	public TreeNode left, right;
 
 	public TreeNode() {
 		this(null,null,null);
 	}
 
-	public TreeNode(E val) {
+	public TreeNode(Integer val) {
 		this(val,null,null);
 	}
 
-	public TreeNode(E val, TreeNode left, TreeNode right) {
+	public TreeNode(Integer val, TreeNode left, TreeNode right) {
 		this.val = val;
 		this.left = left;
 		this.right = right;

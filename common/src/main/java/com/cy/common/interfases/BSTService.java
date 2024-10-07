@@ -4,15 +4,15 @@ package com.cy.common.interfases;
  * @Date: 2023/2/23
  * @Description:
  */
-public interface BSTService<E>{
+public interface BSTService{
 
-    void add(E e);
+    void add(Integer e);
 
-    boolean contains(E e);
+    boolean contains(Integer e);
 
-    void update(E e);
+    void update(Integer e);
 
-    void remove(E e);
+    void remove(Integer e);
 
     int getSize();
 

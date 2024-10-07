@@ -11,8 +11,8 @@ class SolutionTest {
 	@Test
 	public void test1() {
 		Integer[] nums1 = {1,2,3};
-		BST<Integer> bst1 = new BST<>(nums1);
-		BST<Integer> bst2 = new BST<>(nums1);
+		BST bst1 = new BST(nums1);
+		BST bst2 = new BST(nums1);
 
 //		PrintTree.printTree2(bst1.getRoot());
 //		PrintTree.printTree2(bst2.getRoot());
