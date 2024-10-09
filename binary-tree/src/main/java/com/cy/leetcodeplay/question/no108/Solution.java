@@ -26,7 +26,7 @@ public class Solution {
 		int mid = l + (r - l) / 2;
 		TreeNode root = new TreeNode(nums[mid]);
 
-		// 递归构建左子树和右子树
+		// 递归构建左子树和右子树1
 		root.left = buildTree(nums, l, mid - 1);
 		root.right = buildTree(nums, mid + 1, r);
 

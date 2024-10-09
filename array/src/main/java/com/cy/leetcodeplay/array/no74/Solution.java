@@ -32,7 +32,7 @@ public class Solution {
 		 */
 		while (l <= r) {
 			int mid = l + (r - l) / 2; // 防止溢出
-			int midValue = matrix[mid / n][mid % n]; // 计算中间值
+			int midValue = matrix[mid / n][mid % n]; // 计算中间值, 通过每行的长度
 
 			if (midValue == target) {
 				return true; // 找到目标值

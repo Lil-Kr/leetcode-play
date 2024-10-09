@@ -54,6 +54,7 @@ public class Solution {
 
 	/**
 	 * 解法二: 前缀和 + hash table
+	 * 二叉树前序遍历
 	 * @param root
 	 * @param targetSum
 	 * @return
