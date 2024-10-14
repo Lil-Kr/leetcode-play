@@ -4,8 +4,6 @@ import com.cy.leetcodeplay.classes.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class SolutionTest {
 
 	private Solution solution = new Solution();
@@ -24,6 +22,16 @@ class SolutionTest {
 	public void test2() {
 		int[] head = {7,7,7,7};
 		int val = 7;
+		ListNode linked = new ListNode(head);
+		ListNode res1 = solution.removeElements(linked, val);
+		System.out.println(res1);
+		Assertions.assertEquals("null", String.valueOf(res1));
+	}
+
+	@Test
+	public void test3() {
+		int[] head = {1};
+		int val = 1;
 		ListNode linked = new ListNode(head);
 		ListNode res1 = solution.removeElements(linked, val);
 		System.out.println(res1);

@@ -16,21 +16,19 @@ public class Solution {
 	 * @return
 	 */
 	public ListNode removeElements(ListNode head, int val) {
-		if (head == null) {
-			return head;
-		}
+		if (head == null) return head;
 
 		ListNode dummy = new ListNode(0);
 		dummy.next = head;
-		ListNode cur = dummy;
+		ListNode prev = dummy;
 
-		while (cur.next != null) {
-			if (cur.next.val != val) {
-				cur = cur.next;
+		while (prev.next != null) {
+			if (prev.next.val != val) {
+				prev = prev.next;
 				continue;
 			}
-			ListNode delNode = cur.next;
-			cur.next = delNode.next;
+			ListNode delNode = prev.next;
+			prev.next = delNode.next;
 			delNode = null;
 		}
 		return dummy.next;
