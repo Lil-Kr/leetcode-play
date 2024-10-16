@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.question.no226;
+package com.cy.leetcodeplay.question.bt.no226;
 
 import com.cy.common.util.printtree.PrintTree;
 import com.cy.common.util.printtree.TreeNode;

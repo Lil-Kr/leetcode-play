@@ -1,6 +1,6 @@
-package com.cy.leetcodeplay.question.no257;
+package com.cy.leetcodeplay.question.bt.no129;
 
-import com.cy.leetcodeplay.question.bt.no257.Solution;
+import com.cy.leetcodeplay.question.bt.no129.Solution;
 import org.junit.jupiter.api.Test;
 
 class SolutionTest {
@@ -9,5 +9,6 @@ class SolutionTest {
 
 	@Test
 	public void test1() {
+
 	}
 }
