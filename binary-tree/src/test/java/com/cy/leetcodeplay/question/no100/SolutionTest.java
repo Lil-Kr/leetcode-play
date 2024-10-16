@@ -1,6 +1,7 @@
 package com.cy.leetcodeplay.question.no100;
 
 import com.cy.common.interfases.impl.BST;
+import com.cy.leetcodeplay.question.bt.no100.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
