@@ -33,10 +33,8 @@ public class Solution {
      * 定义 模板 t 字符串中字母出现的频率
      */
     Map<Character, Integer> freqT = new TreeMap<>();
-    char[] charArray = t.toCharArray();
-    for (int i = 0; i < charArray.length; i++) {
-      Integer freqCount = freqT.getOrDefault(charArray[i], 0);
-      freqT.put(charArray[i], freqCount + 1);
+    for (char ch : t.toCharArray()) {
+      freqT.put(ch, freqT.getOrDefault(ch, 0) + 1);
     }
     // 获取 t 中有多少种字符
     int freqTSize = freqT.size();
@@ -101,12 +99,6 @@ public class Solution {
       }
       r++;
     }
-
-//    if (l2 == -1 && r2 == -1) {
-//      return "";
-//    }else {
-//      return s.substring(l2, r2+1);
-//    }
     return minLength == -1 ? "" : s.substring(l2, r2 + 1);
   }
 }

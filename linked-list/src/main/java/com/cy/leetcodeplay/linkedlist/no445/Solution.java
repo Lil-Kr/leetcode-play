@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.linkedlist.no445;
 
-import com.cy.leetcodeplay.classes.ListNode;
+import com.cy.common.entity.ListNode;
 
 /**
  * @Author: Lil-K

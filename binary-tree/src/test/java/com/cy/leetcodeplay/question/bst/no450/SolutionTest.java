@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.question.bst.no450;
 import com.alibaba.fastjson2.JSONArray;
 import com.cy.common.helper.Helper;
 import com.cy.common.interfases.impl.BST;
-import com.cy.common.util.printtree.TreeNode;
+import com.cy.common.entity.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -33,5 +33,6 @@ class SolutionTest {
 		String jsonString = JSONArray.toJSONString(Helper.getBSTArray(res1));
 		System.out.println(jsonString);
 		Assertions.assertEquals("[2,3,4,5,6,7]",jsonString);
+
 	}
 }

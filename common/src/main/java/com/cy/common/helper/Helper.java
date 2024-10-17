@@ -1,6 +1,6 @@
 package com.cy.common.helper;
 
-import com.cy.common.util.printtree.TreeNode;
+import com.cy.common.entity.TreeNode;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;

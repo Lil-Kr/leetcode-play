@@ -1,9 +1,9 @@
-package com.cy.leetcodeplay.classes;
+package com.cy.common.entity;
 
 /**
  * @Author: Lil-K
  * @Date: 2024/9/9
- * @Description:
+ * @Description: leetcode ListNode template
  */
 public class ListNode {
 	public int val;
@@ -17,7 +17,7 @@ public class ListNode {
 
 	// 根据n个元素的数组arr创建一个链表
 	// 使用arr为参数，创建另外一个ListNode的构造函数
-	public ListNode (int[] arr){
+	public ListNode(int[] arr){
 
 		if(arr == null || arr.length == 0)
 			throw new IllegalArgumentException("arr can not be empty");

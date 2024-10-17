@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.question.bt.no129;
 
-import com.cy.common.util.printtree.TreeNode;
+import com.cy.common.entity.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

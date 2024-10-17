@@ -1,11 +1,9 @@
 package com.cy.leetcodeplay.question.bst.no783;
 
 import com.cy.common.interfases.impl.BST;
-import com.cy.common.util.printtree.TreeNode;
+import com.cy.common.entity.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
 

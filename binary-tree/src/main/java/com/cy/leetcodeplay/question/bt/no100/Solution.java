@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.question.bt.no100;
 
-import com.cy.common.util.printtree.TreeNode;
+import com.cy.common.entity.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

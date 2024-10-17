@@ -1,7 +1,7 @@
 package com.cy.leetcodeplay.question.bt.no104;
 
 
-import com.cy.common.util.printtree.TreeNode;
+import com.cy.common.entity.TreeNode;
 
 /**
  * @Author: Lil-K

@@ -1,4 +1,4 @@
-package com.cy.common.util.printtree;
+package com.cy.common.entity;
 
 /**
  * @Author: Lil-K

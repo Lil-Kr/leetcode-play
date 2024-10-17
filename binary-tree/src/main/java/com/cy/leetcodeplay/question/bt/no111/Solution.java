@@ -1,7 +1,7 @@
 package com.cy.leetcodeplay.question.bt.no111;
 
 
-import com.cy.common.util.printtree.TreeNode;
+import com.cy.common.entity.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

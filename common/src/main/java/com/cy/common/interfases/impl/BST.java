@@ -1,7 +1,7 @@
 package com.cy.common.interfases.impl;
 
 import com.cy.common.interfases.BSTService;
-import com.cy.common.util.printtree.TreeNode;
+import com.cy.common.entity.TreeNode;
 
 import java.util.*;
 
