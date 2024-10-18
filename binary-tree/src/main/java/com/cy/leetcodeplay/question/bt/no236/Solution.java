@@ -21,7 +21,7 @@ public class Solution {
 	 * @return
 	 */
 	public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-		if (root == null || root == p || root == q) {
+		if (root == null || root.val == p.val || root.val == q.val) {
 			return root;
 		}
 
