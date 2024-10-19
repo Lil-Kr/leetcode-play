@@ -18,7 +18,7 @@ class SolutionTest {
 		BST bst = new BST(nums1);
 		TreeNode root = bst.getRoot();
 		TreeNode res1 = solution.deleteNode(root, key);
-		String jsonString = JSONArray.toJSONString(Helper.getBSTArray(res1));
+		String jsonString = JSONArray.toJSONString(Helper.getInOrderArray(res1));
 		System.out.println(jsonString);
 		Assertions.assertEquals("[2,4,5,6,7]",jsonString);
 	}
@@ -30,7 +30,7 @@ class SolutionTest {
 		BST bst = new BST(nums1);
 		TreeNode root = bst.getRoot();
 		TreeNode res1 = solution.deleteNode(root, key);
-		String jsonString = JSONArray.toJSONString(Helper.getBSTArray(res1));
+		String jsonString = JSONArray.toJSONString(Helper.getInOrderArray(res1));
 		System.out.println(jsonString);
 		Assertions.assertEquals("[2,3,4,5,6,7]",jsonString);
 

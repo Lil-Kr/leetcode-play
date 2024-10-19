@@ -137,9 +137,9 @@ public class Helper {
 	}
 
 	/**
-	 * 顺序输出BST中元素
+	 * 中序遍历输出元素
 	 */
-	public static List<Integer> getBSTArray(TreeNode root) {
+	public static List<Integer> getInOrderArray(TreeNode root) {
 		List<Integer> res = new ArrayList<>();
 		inOrderGetBSTArray(root, res);
 		return res;
