@@ -24,6 +24,7 @@
         <module>linked-list</module>
         <module>stack-queue</module>
         <module>binary-tree</module>
+        <module>math</module>
     </modules>
 
     <properties>

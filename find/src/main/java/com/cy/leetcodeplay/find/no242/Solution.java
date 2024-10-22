@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/5
- * @Description:
+ * @Description: no.242. Valid Anagram
  */
 public class Solution {
 
