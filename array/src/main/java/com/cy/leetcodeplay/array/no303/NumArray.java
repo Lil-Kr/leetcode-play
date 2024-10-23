@@ -7,13 +7,25 @@ package com.cy.leetcodeplay.array.no303;
  */
 public class NumArray {
 
+	public static void main(String[] args) {
+		int[] nums = {-2, 0, 3, -5, 2, -1};
+		int[] prefixSum = new int[nums.length + 1];
+
+		for (int i = 0; i < nums.length; i++) {
+			prefixSum[i + 1] = prefixSum[i] + nums[i];
+		}
+	}
+
 	private int[] prefixSum;
 
 	public NumArray() {
+
 	}
 
+	/**
+	 * 初始化前缀和数组
+	 */
 	public NumArray(int[] nums) {
-		// 初始化前缀和数组
 		prefixSum = new int[nums.length + 1];
 		for (int i = 0; i < nums.length; i++) {
 			prefixSum[i + 1] = prefixSum[i] + nums[i];

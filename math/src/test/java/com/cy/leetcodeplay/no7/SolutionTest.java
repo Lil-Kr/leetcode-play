@@ -2,8 +2,8 @@ package com.cy.leetcodeplay.no7;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
 class SolutionTest {
 
 	private Solution solution = new Solution();
@@ -20,5 +20,7 @@ class SolutionTest {
 		int x = -123;
 		int res1 = solution.reverse(x);
 		Assertions.assertEquals(-321, res1);
+
+		Arrays.sort("abc".toCharArray());
 	}
 }

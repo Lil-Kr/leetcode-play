@@ -25,6 +25,7 @@
         <module>stack-queue</module>
         <module>binary-tree</module>
         <module>math</module>
+        <module>string</module>
     </modules>
 
     <properties>

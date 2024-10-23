@@ -33,10 +33,10 @@ public class Solution {
 		/**
 		 * 后缀积: 再从右边遍历, 同时计算右边所有元素的乘积
 		 */
-		int suffixProduct = 1;
+		int right = 1;
 		for (int i = n - 1; i >= 0; i--) {
-			res[i] = res[i] * suffixProduct;
-			suffixProduct *= nums[i];
+			res[i] = res[i] * right;
+			right *= nums[i];
 		}
 		return res;
 	}
