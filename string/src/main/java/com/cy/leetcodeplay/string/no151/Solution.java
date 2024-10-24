@@ -20,16 +20,16 @@ public class Solution {
 		String[] words = s.trim().split("\\s+");
 
 		// 使用 StringBuilder 来反转单词顺序并拼接
-		StringBuilder sb = new StringBuilder();
+		StringBuilder res = new StringBuilder();
 
 		// 反向遍历单词数组
 		for (int i = words.length - 1; i >= 0; i--) {
-			sb.append(words[i]);
+			res.append(words[i]);
 			if (i != 0) {  // 单词之间加空格, 最后一个单词后面不加空格
-				sb.append(" ");
+				res.append(" ");
 			}
 		}
 
-		return sb.toString();
+		return res.toString();
 	}
 }

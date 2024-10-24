@@ -9,11 +9,6 @@ package com.cy.leetcodeplay.array.no14;
  */
 public class Solution {
 
-	public static void main(String[] args) {
-		String a = "flower";
-		System.out.println(a.indexOf("fl"));
-	}
-
 	public String longestCommonPrefix(String[] strs) {
 		if (strs == null || strs.length == 0) {
 			return "";

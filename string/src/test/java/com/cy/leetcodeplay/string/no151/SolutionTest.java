@@ -21,4 +21,11 @@ class SolutionTest {
 		String res1 = solution.reverseWords(s);
 		Assertions.assertEquals("world hello", res1);
 	}
+
+	@Test
+	public void test3() {
+		String s = "t ";
+		String res1 = solution.reverseWords(s);
+		Assertions.assertEquals("t", res1);
+	}
 }

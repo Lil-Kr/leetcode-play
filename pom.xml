@@ -26,6 +26,7 @@
         <module>binary-tree</module>
         <module>math</module>
         <module>string</module>
+        <module>backtracking</module>
     </modules>
 
     <properties>

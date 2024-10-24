@@ -1,5 +1,6 @@
 package com.cy.leetcodeplay.no7;
 
+import com.cy.leetcodeplay.math.no7.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
