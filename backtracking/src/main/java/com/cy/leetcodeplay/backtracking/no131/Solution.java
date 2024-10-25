@@ -9,8 +9,6 @@ import java.util.List;
  * @Description: no.131. Palindrome Partitioning
  *
  * 使用回溯法:
- *  1.
- *
  */
 public class Solution {
 
