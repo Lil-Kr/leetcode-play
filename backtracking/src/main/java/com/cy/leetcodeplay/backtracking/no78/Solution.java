@@ -7,6 +7,10 @@ import java.util.List;
  * @Author: Lil-K
  * @Date: 2024/10/26
  * @Description: no.78. Subsets
+ * todo: 未录入题库
+ *
+ * 求一个数组的所有子集: [1,2]
+ * 得到: [], [1], [1,2], [2]
  */
 public class Solution {
 

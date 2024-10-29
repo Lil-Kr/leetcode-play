@@ -27,6 +27,7 @@
         <module>math</module>
         <module>string</module>
         <module>backtracking</module>
+        <module>graph</module>
     </modules>
 
     <properties>

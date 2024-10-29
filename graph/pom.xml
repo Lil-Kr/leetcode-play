@@ -9,8 +9,8 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>binary-tree</artifactId>
-    <name>binary-tree</name>
+    <artifactId>graph</artifactId>
+    <name>graph</name>
     <version>1.0.0</version>
 
     <dependencies>
@@ -46,7 +46,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.cy.leetcodeplay.binarytree.BinaryTreeApplication</mainClass>
+                    <mainClass>com.cy.leetcodeplay.graph.GraphApplication</mainClass>
                     <!--<layout>ZIP</layout>-->
                     <skip>true</skip>
                 </configuration>

@@ -130,7 +130,6 @@ public class BST implements BSTService {
 
 	@Override
 	public void update(Integer e) {
-		// todo BST修改元素
 	}
 
 	/**
