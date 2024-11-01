@@ -52,7 +52,7 @@ public class Solution {
 				row.add(i);
 
 				col[i] = true;
-				dia1[index+i] = true;
+				dia1[index + i] = true;
 				dia2[index - i + n - 1] = true;
 				putQueen(n, index + 1, row);
 

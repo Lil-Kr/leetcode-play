@@ -25,6 +25,10 @@ class SolutionTest {
 		printNQueens(res1);
 	}
 
+	/**
+	 * 打印
+	 * @param res
+	 */
 	private static void printNQueens(List<List<String>> res) {
 		for(List<String> board: res)
 			printBoard(board);
