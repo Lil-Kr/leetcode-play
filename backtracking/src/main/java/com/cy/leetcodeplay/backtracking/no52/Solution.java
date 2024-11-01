@@ -11,7 +11,7 @@ import java.util.List;
 public class Solution {
 
 	private int count = 0;
-	private boolean[] col, dia1, dia2;
+	private boolean[] cols, dia1, dia2;
 
 	/**
 	 *
@@ -19,7 +19,7 @@ public class Solution {
 	 * @return
 	 */
 	public int totalNQueens(int n) {
-		col = new boolean[n];
+		cols = new boolean[n];
 		dia1 = new boolean[2 * n - 1];
 		dia2 = new boolean[2 * n - 1];
 
@@ -29,8 +29,8 @@ public class Solution {
 		return count;
 	}
 
-	private void putQueen(int n, int index, List<Integer> row) {
-		if (index == n) {
+	private void putQueen(int n, int row, List<Integer> col) {
+		if (row == n) {
 			count++;
 			return;
 		}
@@ -39,21 +39,21 @@ public class Solution {
 		 * 尝试将第index行的皇后摆放在第 i 列
 		 */
 		for (int i = 0; i < n; i++) {
-			if (!col[i] && !dia1[index + i] && !dia2[index - i + n - 1]) {
-				row.add(i);
+			if (!cols[i] && !dia1[row + i] && !dia2[row - i + n - 1]) {
+				col.add(i);
 
-				col[i] = true;
-				dia1[index + i] = true;
-				dia2[index - i + n - 1] = true;
-				putQueen(n, index + 1, row);
+				cols[i] = true;
+				dia1[row + i] = true;
+				dia2[row - i + n - 1] = true;
+				putQueen(n, row + 1, col);
 
 				/**
 				 * 回溯
 				 */
-				col[i] = false;
-				dia1[index+i] = false;
-				dia2[index - i + n - 1] = false;
-				row.remove(row.size() - 1);
+				cols[i] = false;
+				dia1[row + i] = false;
+				dia2[row - i + n - 1] = false;
+				col.remove(col.size() - 1);
 			}
 		}
 	}

@@ -14,15 +14,27 @@ public class Solution {
 
 	private List<List<String>> res = new ArrayList<>();
 
-	private boolean[] col, dia1, dia2;
+	/**
+	 * cols: 竖向 占用情况
+	 * dia1: 对角线1 撇
+	 * dia2: 对角线2 捺
+	 */
+	private boolean[] cols, dia1, dia2;
 
 	/**
 	 *
-	 * @param n
+	 * @param n 皇后数
 	 * @return
 	 */
 	public List<List<String>> solveNQueens(int n) {
-		col = new boolean[n];
+		/**
+		 * 皇后数
+		 */
+		cols = new boolean[n];
+
+		/**
+		 * 2 * n - 1 : 对角线的条数
+		 */
 		dia1 = new boolean[2 * n - 1];
 		dia2 = new boolean[2 * n - 1];
 
@@ -35,34 +47,42 @@ public class Solution {
 	/**
 	 * 尝试在一个n皇后问题中, 摆放第 index 行的皇后位置
 	 * @param n
-	 * @param index 当前处理第几行, 用 index 表示
-	 * @param row
+	 * @param row 当前处理第几行, 用 row 表示 行数, 从0开始
+	 * @param col
 	 */
-	private void putQueen(int n, int index, List<Integer> row) {
-		if (index == n) {
-			res.add(generateBoard(n, row));
+	private void putQueen(int n, int row, List<Integer> col) {
+		if (row == n) {
+			res.add(generateBoard(n, col));
 			return;
 		}
 
 		/**
-		 * 尝试将第index行的皇后摆放在第 i 列
+		 * 尝试将第 row 行的皇后摆放在第 i 列
 		 */
 		for (int i = 0; i < n; i++) {
-			if (!col[i] && !dia1[index + i] && !dia2[index - i + n - 1]) {
-				row.add(i);
+			/**
+			 * 判断第row行第i列的位置, 是否符合摆放皇后的位置
+			 */
+			if (!cols[i] && !dia1[row + i] && !dia2[row - i + n - 1]) {
+				col.add(i);
 
-				col[i] = true;
-				dia1[index + i] = true;
-				dia2[index - i + n - 1] = true;
-				putQueen(n, index + 1, row);
+				cols[i] = true; // 所在列
+				dia1[row + i] = true; // 对角线1
+				dia2[row - i + n - 1] = true; // 对角线2
+
+				/**
+				 *
+				 */
+				putQueen(n, row + 1, col);
 
 				/**
 				 * 回溯
 				 */
-				col[i] = false;
-				dia1[index+i] = false;
-				dia2[index - i + n - 1] = false;
-				row.remove(row.size() - 1);
+				cols[i] = false;
+				dia1[row+i] = false;
+				dia2[row - i + n - 1] = false;
+
+				col.remove(col.size() - 1);
 			}
 		}
 	}

@@ -22,9 +22,8 @@ public class Solution {
 	 * @return
 	 */
 	public int numIslands(char[][] grid) {
-		if (grid == null || grid.length == 0) return 0;
+		if (grid == null || grid.length == 0 || grid[0].length == 0) return 0;
 		rows = grid.length;
-		assert (rows > 0);
 		cols = grid[0].length;
 
 		/**
