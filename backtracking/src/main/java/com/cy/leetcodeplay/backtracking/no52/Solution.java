@@ -12,6 +12,7 @@ public class Solution {
 
 	private int count = 0;
 	private boolean[] cols, dia1, dia2;
+	private List<Integer> col = new ArrayList<>();
 
 	/**
 	 *
@@ -23,8 +24,7 @@ public class Solution {
 		dia1 = new boolean[2 * n - 1];
 		dia2 = new boolean[2 * n - 1];
 
-		List<Integer> row = new ArrayList<>();
-		putQueen(n,0, row);
+		putQueen(n,0, col);
 
 		return count;
 	}

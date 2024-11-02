@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.sort.basesort.selectionsort;
 
-import com.cy.common.helper.Helper;
+import com.cy.leetcodeplay.common.helper.Helper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 

@@ -1,7 +1,7 @@
 package com.cy.leetcodeplay.questionnumber.no27;
 
 
-import com.cy.common.util.CommonUtil;
+import com.cy.leetcodeplay.common.util.CommonUtil;
 
 /**
  * @Author: Lil-K

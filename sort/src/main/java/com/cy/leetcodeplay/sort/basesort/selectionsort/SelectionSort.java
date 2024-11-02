@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.sort.basesort.selectionsort;
 
-import com.cy.common.util.CommonUtil;
+import com.cy.leetcodeplay.common.util.CommonUtil;
 
 /**
  * @Author: Lil-K

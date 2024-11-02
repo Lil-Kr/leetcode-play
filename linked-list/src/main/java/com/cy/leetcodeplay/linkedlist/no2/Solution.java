@@ -1,7 +1,7 @@
 package com.cy.leetcodeplay.linkedlist.no2;
 
 
-import com.cy.common.entity.ListNode;
+import com.cy.leetcodeplay.common.entity.ListNode;
 
 /**
  * @Author: Lil-K

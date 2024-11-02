@@ -1,9 +1,9 @@
 package com.cy.leetcodeplay.binarytree.bst.no450;
 
 import com.alibaba.fastjson2.JSONArray;
-import com.cy.common.helper.Helper;
-import com.cy.common.interfases.impl.BST;
-import com.cy.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.helper.Helper;
+import com.cy.leetcodeplay.common.interfases.impl.BST;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

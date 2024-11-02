@@ -1,8 +1,8 @@
 package com.cy.leetcodeplay.binarytree.bst.no235;
 
 
-import com.cy.common.interfases.impl.BST;
-import com.cy.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.interfases.impl.BST;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

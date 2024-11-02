@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.binarytree.bt.no105;
 
-import com.cy.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;

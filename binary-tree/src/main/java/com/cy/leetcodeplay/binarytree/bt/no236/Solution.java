@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.binarytree.bt.no236;
 
-import com.cy.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 
 /**
  * @Author: Lil-K

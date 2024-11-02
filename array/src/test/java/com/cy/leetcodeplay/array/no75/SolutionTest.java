@@ -1,7 +1,7 @@
 package com.cy.leetcodeplay.array.no75;
 
 
-import com.cy.common.util.PrintString;
+import com.cy.leetcodeplay.common.util.PrintString;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

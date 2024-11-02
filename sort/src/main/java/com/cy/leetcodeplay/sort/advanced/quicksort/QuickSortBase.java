@@ -1,7 +1,7 @@
 package com.cy.leetcodeplay.sort.advanced.quicksort;
 
 
-import com.cy.common.util.CommonUtil;
+import com.cy.leetcodeplay.common.util.CommonUtil;
 
 /**
  * @Author: Lil-K

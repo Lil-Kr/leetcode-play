@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.binarytree.bt.no113;
 
-import com.cy.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

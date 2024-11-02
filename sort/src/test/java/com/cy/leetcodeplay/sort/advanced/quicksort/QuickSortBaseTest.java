@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.sort.advanced.quicksort;
 
-import com.cy.common.util.PrintString;
+import com.cy.leetcodeplay.common.util.PrintString;
 import org.junit.jupiter.api.Test;
 
 class QuickSortBaseTest {

@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.questionnumber.no283;
 
-import com.cy.common.util.PrintString;
+import com.cy.leetcodeplay.common.util.PrintString;
 import org.junit.jupiter.api.Test;
 
 class No_283_MoveZeroesTest {

@@ -20,7 +20,7 @@
         <module>array</module>
         <module>question-number</module>
         <module>sort</module>
-        <module>find</module>
+        <module>find-table</module>
         <module>linked-list</module>
         <module>stack-queue</module>
         <module>binary-tree</module>
@@ -28,6 +28,7 @@
         <module>string</module>
         <module>backtracking</module>
         <module>graph</module>
+        <module>dp</module>
     </modules>
 
     <properties>

@@ -8,6 +8,7 @@
         <artifactId>leetcode-play</artifactId>
         <version>1.0.0</version>
     </parent>
+
     <artifactId>stack-queue</artifactId>
     <name>stack-queue</name>
     <version>1.0.0</version>
@@ -36,4 +37,29 @@
             <artifactId>fastjson2</artifactId>
         </dependency>
     </dependencies>
+
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- 指定该Main Class为全局的唯一入口 -->
+                    <mainClass>com.cy.leetcodeplay.stackandqueue.StackAndQueueApplication</mainClass>
+                    <!--<layout>ZIP</layout>-->
+                    <skip>true</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!--可以把依赖的包都打包到生成的Jar包中 -->
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

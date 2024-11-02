@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.array.no75;
 
-import com.cy.common.util.CommonUtil;
+import com.cy.leetcodeplay.common.util.CommonUtil;
 
 /**
  * @Author: Lil-K

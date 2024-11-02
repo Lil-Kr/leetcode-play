@@ -1,10 +1,8 @@
 package com.cy.leetcodeplay.linkedlist.no2;
 
-import com.cy.common.entity.ListNode;
+import com.cy.leetcodeplay.common.entity.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
 

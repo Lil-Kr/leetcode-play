@@ -1,7 +1,7 @@
 package com.cy.leetcodeplay.sort.basesort.selectionsort;
 
-import com.cy.common.util.CommonUtil;
-import com.cy.common.util.PrintString;
+import com.cy.leetcodeplay.common.util.CommonUtil;
+import com.cy.leetcodeplay.common.util.PrintString;
 
 public class SelectionSortDemo {
 

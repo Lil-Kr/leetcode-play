@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.sort.advanced.merge;
 
-import com.cy.common.util.PrintString;
+import com.cy.leetcodeplay.common.util.PrintString;
 
 import java.util.Arrays;
 

@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.linkedlist.no23;
 
-import com.cy.common.entity.ListNode;
+import com.cy.leetcodeplay.common.entity.ListNode;
 
 import java.util.PriorityQueue;
 

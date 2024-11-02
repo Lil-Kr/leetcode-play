@@ -1,7 +1,7 @@
 package com.cy.leetcodeplay.binarytree.bt.no111;
 
 
-import com.cy.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

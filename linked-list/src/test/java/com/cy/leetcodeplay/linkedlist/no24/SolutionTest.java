@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.linkedlist.no24;
 
-import com.cy.common.entity.ListNode;
+import com.cy.leetcodeplay.common.entity.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

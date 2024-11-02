@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.sort.basesort.insertionsort;
 
-import com.cy.common.util.PrintString;
+import com.cy.leetcodeplay.common.util.PrintString;
 
 /**
  * @Author: Lil-K
