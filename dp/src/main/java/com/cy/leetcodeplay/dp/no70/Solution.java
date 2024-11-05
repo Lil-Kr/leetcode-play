@@ -8,7 +8,6 @@ import java.util.Arrays;
  * @Description: no.70. Climbing Stairs
  * 题意: 爬楼梯, 给定n阶台阶, 可以每次上1阶台阶, 或者每次上2阶台阶, 爬完这n阶台阶, 有多少种方法
  *
- * todo: 待完成
  * todo: 未录入题库
  */
 public class Solution {
@@ -55,7 +54,7 @@ public class Solution {
 	}
 
 	/**
-	 * 解法三:
+	 * 解法三: 动态规划
 	 * @param n
 	 * @return
 	 */

@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Solution {
 
 	/**
-	 *
+	 * 自顶向下
 	 * @param n
 	 * @return
 	 */
@@ -18,8 +18,6 @@ public class Solution {
 		int[] memo = new int[n + 1];
 		Arrays.fill(memo, -1);
 		return fib(n, memo);
-
-
 	}
 
 	private int fib(int n, int[] memo) {
@@ -53,7 +51,7 @@ public class Solution {
 	}
 
 	/**
-	 * 再优化
+	 * 再优化: 动态规划
 	 * @param n
 	 * @return
 	 */

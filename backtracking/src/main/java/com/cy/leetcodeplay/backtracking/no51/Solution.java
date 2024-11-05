@@ -71,7 +71,7 @@ public class Solution {
 				dia2[row - i + n - 1] = true; // 对角线2
 
 				/**
-				 *
+				 * 递归
 				 */
 				putQueen(n, row + 1, col);
 

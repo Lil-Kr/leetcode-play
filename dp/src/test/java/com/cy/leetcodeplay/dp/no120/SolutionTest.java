@@ -34,4 +34,15 @@ class SolutionTest {
 		int res1 = solution.minimumTotal(triangle);
 		Assertions.assertEquals(11, res1);
 	}
+
+	@Test
+	public void test2() {
+		int [][] nums = {{2},{3,4},{6,5,1}};
+		List<List<Integer>> triangle = build(nums);
+
+		System.out.println(JSONArray.toJSONString(triangle));
+
+		int res1 = solution.minimumTotal(triangle);
+		Assertions.assertEquals(7, res1);
+	}
 }

@@ -3,8 +3,6 @@ package com.cy.leetcodeplay.dp.no213;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class SolutionTest {
 	private Solution solution = new Solution();
 
