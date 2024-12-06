@@ -15,7 +15,7 @@ package com.cy.leetcodeplay.dp.no940;
 public class Solution {
 
 	/**
-	 *
+	 * 动态规划
 	 * @param s
 	 * @return
 	 */
