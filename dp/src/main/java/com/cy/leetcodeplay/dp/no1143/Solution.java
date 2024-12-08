@@ -7,6 +7,10 @@ package com.cy.leetcodeplay.dp.no1143;
  * link: https://leetcode.com/problems/longest-common-subsequence/description/
  *
  * todo: 未录入题库
+ *
+ * 解题思路:
+ *  1. 定好范围之后, 过结尾作为开始来讨论
+ *  2. 这道题还有一个重要的性质, 字符串的范围
  */
 public class Solution {
 
@@ -95,6 +99,9 @@ public class Solution {
 		int n = s1.length;
 		int m = s2.length;
 
+		/**
+		 * dp表 需要容纳下以长度来计算的数据
+		 */
 		int[][] dp = new int[n + 1][m + 1];
 		for (int i = 0; i <= n; i++) {
 			for (int j = 0; j <= m; j++) {
@@ -154,7 +161,8 @@ public class Solution {
 	}
 
 	/**
-	 * 解法五: 动态规划 + 空间压缩
+	 * 解法五: 严格位置依赖的动态规划 + 空间压缩
+	 * dp 表 变为 一维的
 	 * @param text1
 	 * @param text2
 	 * @return
@@ -177,9 +185,9 @@ public class Solution {
 
 		int[] dp = new int[m + 1];
 
-		for (int len1 = 1; len1 <= n; len1 ++) {
+		for (int len1 = 1; len1 <= n; len1++) {
 			int leftUp = 0, backUp;
-			for (int len2 = 1; len2 <= m; len2 ++) {
+			for (int len2 = 1; len2 <= m; len2++) {
 				backUp = dp[len2];
 				if (s1[len1 - 1] == s2[len2 - 1]) {
 					dp[len2] = 1 + leftUp;
