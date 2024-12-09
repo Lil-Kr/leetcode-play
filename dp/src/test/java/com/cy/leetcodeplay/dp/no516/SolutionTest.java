@@ -27,4 +27,11 @@ class SolutionTest {
 		int res1 = solution.longestPalindromeSubseq3(s);
 		Assertions.assertEquals(4, res1);
 	}
+
+	@Test
+	public void test4() {
+		String s = "rabeba";
+		int res1 = solution.longestPalindromeSubseq3(s);
+		Assertions.assertEquals(5, res1);
+	}
 }

@@ -68,16 +68,11 @@ public class Solution {
 	}
 
 	private int f2(char[] s, int l, int r, int[][] dp) {
-		if (l == r) {
-			return 1;
-		}
-		if (l + 1 == r) {
-			return s[l] == s[r] ? 2 : 1;
-		}
+		if (l == r) return 1;
 
-		if (dp[l][r] != 0) {
-			return dp[l][r];
-		}
+		if (l + 1 == r) return s[l] == s[r] ? 2 : 1;
+
+		if (dp[l][r] != 0) return dp[l][r];
 
 		int ans;
 		if (s[l] == s[r]) {
@@ -99,10 +94,15 @@ public class Solution {
 		int[][] dp = new int[n][n];
 
 		for (int l = n - 1; l >= 0; l--) {
+			/**
+			 * 行列表达: n - 1, 这个格子只需要填 1
+			 */
 			dp[l][l] = 1;
+
 			if (l + 1 < n) {
 				dp[l][l + 1] = chs[l] == chs[l + 1] ? 2 : 1;
 			}
+
 			for (int r = l + 2; r < n; r++) {
 				if (chs[l] == chs[r]) {
 					dp[l][r] = 2 + dp[l + 1][r - 1];
