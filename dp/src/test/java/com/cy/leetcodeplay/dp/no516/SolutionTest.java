@@ -10,28 +10,28 @@ class SolutionTest {
 	@Test
 	public void test1() {
 		String s = "bbbab";
-		int res1 = solution.longestPalindromeSubseq(s);
+		int res1 = solution.longestPalindromeSubSeq(s);
 		Assertions.assertEquals(4, res1);
 	}
 
 	@Test
 	public void test2() {
 		String s = "bbbab";
-		int res1 = solution.longestPalindromeSubseq2(s);
+		int res1 = solution.longestPalindromeSubSeq2(s);
 		Assertions.assertEquals(4, res1);
 	}
 
 	@Test
 	public void test3() {
 		String s = "bbbab";
-		int res1 = solution.longestPalindromeSubseq3(s);
+		int res1 = solution.longestPalindromeSubSeq3(s);
 		Assertions.assertEquals(4, res1);
 	}
 
 	@Test
 	public void test4() {
 		String s = "rabeba";
-		int res1 = solution.longestPalindromeSubseq3(s);
+		int res1 = solution.longestPalindromeSubSeq3(s);
 		Assertions.assertEquals(5, res1);
 	}
 }

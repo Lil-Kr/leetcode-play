@@ -19,7 +19,7 @@ public class Solution {
 	 * @param s
 	 * @return
 	 */
-	public int longestPalindromeSubseq(String s) {
+	public int longestPalindromeSubSeq(String s) {
 		char[] chs = s.toCharArray();
 		int n = chs.length;
 
@@ -57,7 +57,7 @@ public class Solution {
 	 * @param s
 	 * @return
 	 */
-	public int longestPalindromeSubseq2(String s) {
+	public int longestPalindromeSubSeq2(String s) {
 		char[] chs = s.toCharArray();
 		int n = chs.length;
 
@@ -87,7 +87,7 @@ public class Solution {
 	/**
 	 * 解法三: 严格位置依赖的动态规划
 	 */
-	public int longestPalindromeSubseq3(String s) {
+	public int longestPalindromeSubSeq3(String s) {
 		char[] chs = s.toCharArray();
 		int n = chs.length;
 
