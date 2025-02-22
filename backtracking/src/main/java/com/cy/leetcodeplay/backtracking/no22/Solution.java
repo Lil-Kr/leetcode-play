@@ -7,7 +7,8 @@ import java.util.List;
  * @Author: Lil-K
  * @Date: 2024/10/29
  * @Description: no. 22. Generate Parentheses
- * todo: 未录入题库
+ *
+ * link: https://leetcode.com/problems/generate-parentheses/description/
  */
 public class Solution {
 

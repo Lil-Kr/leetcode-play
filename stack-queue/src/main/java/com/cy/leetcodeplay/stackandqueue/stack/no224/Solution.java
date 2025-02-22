@@ -40,14 +40,17 @@ public class Solution {
 				res += sign * number;
 				number = 0;
 
-				// 然后将栈顶的符号取出并应用
+				// 先出栈符号, 修改res符号
 				res *= stack.pop();
 
-				// 再将栈顶的结果加回来
+				// 后出栈之前的结构, 做运算
 				res += stack.pop();
 			}
 		}
 
+		/**
+		 * 处理最后一个数字
+		 */
 		if (number != 0) {
 			res += sign * number;
 		}

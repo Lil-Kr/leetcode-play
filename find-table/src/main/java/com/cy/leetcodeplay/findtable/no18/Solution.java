@@ -7,12 +7,15 @@ import java.util.List;
 /**
  * @Author: Lil-K
  * @Date: 2024/9/6
- * @Description: no.18.4Sum
+ * @Description: no.18. 4Sum
+ * link: https://leetcode.com/problems/4sum/description/
+ *
+ * 思路: 与 3sum 类似
  */
 public class Solution {
 
 	/**
-	 *
+	 * 题解
 	 * @param nums
 	 * @param target
 	 * @return
@@ -54,7 +57,6 @@ public class Solution {
 				}
 			}
 		}
-
 		return res;
 	}
 }

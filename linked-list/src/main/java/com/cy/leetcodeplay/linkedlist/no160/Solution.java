@@ -7,6 +7,8 @@ import com.cy.leetcodeplay.common.entity.ListNode;
  * @Date: 2024/9/18
  * @Description: no.160. Intersection of Two Linked Lists
  *
+ * link: https://leetcode.com/problems/intersection-of-two-linked-lists/
+ *
  * 如果链表 A 和链表 B 有交点, 那么指针在某一时刻将会在交点相遇。
  * 如果链表 A 和链表 B 没有交点, 指针会同时到达链表的末尾, 指向 null。
  * 通过交替遍历 A 和 B, 两个指针会同步前进, 并且如果存在交点, 会在交点相遇；如果不存在交点, 则同时为 null, 结束循环。

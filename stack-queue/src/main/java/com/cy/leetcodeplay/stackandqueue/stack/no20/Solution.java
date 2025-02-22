@@ -6,6 +6,8 @@ import java.util.Stack;
  * @Author: Lil-K
  * @Date: 2024/9/17
  * @Description: no.20. Valid Parentheses
+ *
+ * link: https://leetcode.com/problems/valid-parentheses/description/
  */
 public class Solution {
 

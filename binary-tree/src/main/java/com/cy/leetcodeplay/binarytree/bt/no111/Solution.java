@@ -10,15 +10,37 @@ import java.util.Queue;
  * @Author: Lil-K
  * @Date: 2024/9/27
  * @Description: no.111. Minimum Depth of Binary Tree
+ * link: https://leetcode.com/problems/minimum-depth-of-binary-tree/description/
  */
 public class Solution {
+
+	/**
+	 * 递归
+	 * @param root
+	 * @return
+	 */
+	public int minDepth(TreeNode root) {
+		if (root == null) return 0;
+
+		if (root.left == null && root.right == null) return 1;
+
+		if (root.left == null) {
+			return 1 + minDepth(root.right);
+		}
+
+		if (root.right == null) {
+			return 1 + minDepth(root.left);
+		}
+
+		return 1 + Math.min(minDepth(root.left), minDepth(root.right));
+	}
 
 	/**
 	 * 利用队列
 	 * @param root
 	 * @return
 	 */
-	public int minDepth(TreeNode root) {
+	public int minDepth2(TreeNode root) {
 		if (root == null) return 0;
 
 		Queue<TreeNode> queue = new ArrayDeque<>();
@@ -45,27 +67,6 @@ public class Solution {
 		}
 
 		return depth;
-	}
-
-	/**
-	 * 递归
-	 * @param root
-	 * @return
-	 */
-	public int minDepth2(TreeNode root) {
-		if (root == null) return 0;
-
-		if (root.left == null && root.right == null) return 1;
-
-		if (root.left == null) {
-			return 1 + minDepth2(root.right);
-		}
-
-		if (root.right == null) {
-			return 1 + minDepth2(root.left);
-		}
-
-		return 1 + Math.min(minDepth2(root.left), minDepth2(root.right));
 	}
 
 }

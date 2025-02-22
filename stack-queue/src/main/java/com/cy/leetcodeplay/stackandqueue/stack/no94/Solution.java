@@ -10,6 +10,8 @@ import java.util.Stack;
  * @Author: Lil-K
  * @Date: 2024/9/21
  * @Description: no.94. Binary Tree Inorder Traversal
+ *
+ * link: https://leetcode.com/problems/binary-tree-inorder-traversal/
  */
 public class Solution {
 
@@ -26,11 +28,6 @@ public class Solution {
 		return res;
 	}
 
-	/**
-	 *
-	 * @param node
-	 * @param res
-	 */
 	private void inorderTraversal(TreeNode node, List<Integer> res) {
 		if (node == null) return;
 
@@ -40,7 +37,7 @@ public class Solution {
 	}
 
 	/**
-	 * 解法二: 递归
+	 * 解法二: 使用栈
 	 * @param root
 	 * @return
 	 */

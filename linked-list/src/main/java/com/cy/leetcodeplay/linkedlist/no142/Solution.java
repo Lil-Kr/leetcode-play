@@ -6,6 +6,9 @@ import com.cy.leetcodeplay.common.entity.ListNode;
  * @Author: Lil-K
  * @Date: 2024/9/11
  * @Description: no.142. Linked List Cycle II
+ *
+ * link: https://leetcode.com/problems/linked-list-cycle-ii/description/
+ *
  * 环的特点:
  *  当链表中存在环时，环的部分形成了一个闭合的循环。假设环的起始节点为 C，环的长度为 L
  *  当快慢指针相遇的时候:
@@ -27,8 +30,7 @@ public class Solution {
 	public ListNode detectCycle(ListNode head) {
 		if (head == null || head.next == null) return null;
 
-		ListNode slow = head;
-		ListNode fast = head;
+		ListNode slow = head, fast = head;
 
 		while (fast != null && fast.next != null) {
 			slow = slow.next;
