@@ -7,6 +7,7 @@ import java.util.Map;
  * @Author: Lil-K
  * @Date: 2024/9/6
  * @Description: no.219. Contains Duplicate II
+ * link: https://leetcode.com/problems/contains-duplicate-ii/description/
  */
 public class Solution {
 

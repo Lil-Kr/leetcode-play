@@ -6,6 +6,7 @@ import com.cy.leetcodeplay.common.entity.ListNode;
  * @Author: Lil-K
  * @Date: 2024/9/9
  * @Description: no.203. Remove Linked List Elements
+ * link: https://leetcode.com/problems/remove-linked-list-elements/
  */
 public class Solution {
 

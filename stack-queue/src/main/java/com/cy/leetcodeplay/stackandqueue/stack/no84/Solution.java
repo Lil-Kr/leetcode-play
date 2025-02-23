@@ -6,6 +6,7 @@ import java.util.Stack;
  * @Author: Lil-K
  * @Date: 2024/9/23
  * @Description: no.84. Largest Rectangle in Histogram
+ * link: https://leetcode.com/problems/largest-rectangle-in-histogram/description/
  */
 public class Solution {
 
@@ -26,9 +27,9 @@ public class Solution {
 		int maxArea = 0;
 
 		for (int i = 0; i < n; i++) {
-			// 如果当前柱子高度小于栈顶柱子的高度, 计算以栈顶为高的矩形面积
+			// 如果当前柱子高度小于栈顶柱子的高度, 计算以栈顶索引位置元素的高度的矩形面积
 			while (!stack.isEmpty() && heights[i] < heights[stack.peek()]) {
-				int height = heights[stack.pop()];  // 栈顶的高度
+				int height = heights[stack.pop()];  // 栈顶索引元素的高度
 				int width = stack.isEmpty() ? i : i - stack.peek() - 1;  // 计算宽度
 				maxArea = Math.max(maxArea, height * width);  // 更新最大面积
 			}

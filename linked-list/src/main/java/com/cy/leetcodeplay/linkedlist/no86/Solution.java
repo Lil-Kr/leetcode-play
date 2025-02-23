@@ -6,6 +6,7 @@ import com.cy.leetcodeplay.common.entity.ListNode;
  * @Author: Lil-K
  * @Date: 2024/9/9
  * @Description: no.86. Partition List
+ * link: https://leetcode.com/problems/partition-list/
  */
 public class Solution {
 
