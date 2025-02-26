@@ -28,4 +28,11 @@ class SolutionTest {
 		int[] res1 = solution.plusOne(digits);
 		Assertions.assertEquals("[1,0]", PrintString.printIntArray(res1));
 	}
+
+	@Test
+	public void test4() {
+		int[] digits = {9,9};
+		int[] res1 = solution.plusOne(digits);
+		Assertions.assertEquals("[1,0,0]", PrintString.printIntArray(res1));
+	}
 }

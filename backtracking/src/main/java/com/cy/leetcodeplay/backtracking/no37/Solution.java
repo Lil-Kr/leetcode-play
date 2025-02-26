@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.backtracking.no37;
 /**
  * @Author: Lil-K
  * @Date: 2024/11/1
- * @Description: no. 37. Sudoku Solver
+ * @Description: no.37. Sudoku Solver
  * todo: 未录入题库
  *
  */

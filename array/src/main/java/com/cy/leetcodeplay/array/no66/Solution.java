@@ -4,10 +4,15 @@ package com.cy.leetcodeplay.array.no66;
  * @Author: Lil-K
  * @Date: 2024/9/29
  * @Description: no.66. Plus One
+ * link: https://leetcode.com/problems/plus-one/
  */
 public class Solution {
 
-
+	/**
+	 * 处理特殊情况: [9,9]
+	 * @param digits
+	 * @return
+	 */
 	public int[] plusOne(int[] digits) {
 		int n = digits.length - 1;
 

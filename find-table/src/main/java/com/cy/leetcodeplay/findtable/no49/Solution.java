@@ -6,6 +6,12 @@ import java.util.*;
  * @Author: Lil-K
  * @Date: 2024/9/6
  * @Description: no.49. Group Anagrams
+ * link: https://leetcode.com/problems/group-anagrams/description/
+ *
+ * 思路:
+ *  1. 为每个字符串中的字符排序
+ *  2. 把相同顺序的字符串作为key存入Map, value存入对应的原始字符串
+ *  3. 输出 map的所有values
  */
 public class Solution {
 

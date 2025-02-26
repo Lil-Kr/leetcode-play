@@ -5,7 +5,7 @@ import com.cy.leetcodeplay.common.entity.TreeNode;
 /**
  * @Author: Lil-K
  * @Date: 2024/10/16
- * @Description: no. 114. Flatten Binary Tree to Linked List
+ * @Description: no.114. Flatten Binary Tree to Linked List
  */
 public class Solution {
 

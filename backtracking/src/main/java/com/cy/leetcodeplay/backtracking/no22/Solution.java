@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @Author: Lil-K
  * @Date: 2024/10/29
- * @Description: no. 22. Generate Parentheses
+ * @Description: no.22. Generate Parentheses
  *
  * link: https://leetcode.com/problems/generate-parentheses/description/
  */

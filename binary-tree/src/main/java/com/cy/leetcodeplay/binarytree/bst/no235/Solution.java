@@ -5,7 +5,8 @@ import com.cy.leetcodeplay.common.entity.TreeNode;
 /**
  * @Author: Lil-K
  * @Date: 2024/10/16
- * @Description: no. 235. Lowest Common Ancestor of a Binary Search Tree
+ * @Description: no.235. Lowest Common Ancestor of a Binary Search Tree
+ * link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
  *
  * 公共 root的情况为以下
  *  1. p q 其中一个就是公共root

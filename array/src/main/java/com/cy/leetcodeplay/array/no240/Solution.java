@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no240;
 /**
  * @Author: Lil-K
  * @Date: 2024/10/20
- * @Description: no. 240. Search a 2D Matrix II
+ * @Description: no.240. Search a 2D Matrix II
  *
  */
 public class Solution {

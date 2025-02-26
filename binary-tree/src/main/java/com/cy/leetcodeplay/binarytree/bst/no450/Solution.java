@@ -5,7 +5,7 @@ import com.cy.leetcodeplay.common.entity.TreeNode;
 /**
  * @Author: Lil-K
  * @Date: 2024/10/16
- * @Description: no. 450. Delete Node in a BST
+ * @Description: no.450. Delete Node in a BST
  */
 public class Solution {
 
