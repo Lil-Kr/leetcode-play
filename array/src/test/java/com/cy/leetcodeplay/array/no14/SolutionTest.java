@@ -1,9 +1,8 @@
 package com.cy.leetcodeplay.array.no14;
 
+import com.cy.leetcodeplay.array.no14.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
 

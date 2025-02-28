@@ -29,6 +29,7 @@
         <module>backtracking</module>
         <module>graph</module>
         <module>dp</module>
+        <module>matrix</module>
     </modules>
 
     <properties>

@@ -1,6 +1,7 @@
 package com.cy.leetcodeplay.array.no167;
 
 import com.alibaba.fastjson2.JSONArray;
+import com.cy.leetcodeplay.array.no167.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

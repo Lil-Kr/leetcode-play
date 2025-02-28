@@ -1,5 +1,6 @@
 package com.cy.leetcodeplay.array.no713;
 
+import com.cy.leetcodeplay.array.no713.Solution;
 import org.junit.jupiter.api.Test;
 
 class SolutionTest {

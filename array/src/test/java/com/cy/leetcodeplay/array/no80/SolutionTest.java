@@ -1,6 +1,7 @@
 package com.cy.leetcodeplay.array.no80;
 
-import com.cy.leetcodeplay.common.util.PrintString;
+import com.cy.leetcodeplay.array.no80.Solution;
+import com.cy.leetcodeplay.matrix.common.util.PrintString;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
