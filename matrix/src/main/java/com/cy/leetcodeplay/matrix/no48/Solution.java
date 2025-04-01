@@ -8,13 +8,25 @@ package com.cy.leetcodeplay.matrix.no48;
  *
  * 将一个矩阵顺时针旋转 90 度, 要求空间复杂度为: O(1)
  *
- * 对于每一个 (i, j) 位置的元素，它会被 四次交换
+ * 对于每一个 (i, j) 位置的元素, 每次处理4个对称点, 逐层遍历，完成旋转
  * matrix[i][j] → matrix[j][n-1-i] → matrix[n-1-i][n-1-j] → matrix[n-1-j][i] → matrix[i][j]
+ *
+ * 定义四个点:
+ * matrix[i][j]（左上角）
+ *
+ * matrix[j][n - i - 1]（右上角）
+ *
+ * matrix[n - i - 1][n - j - 1]（右下角）
+ *
+ * matrix[n - j - 1][i]（左下角）
  */
 public class Solution {
 
 	/**
 	 * 解法一: 四个点旋转
+	 * 要点:
+	 *  计算行: 需要用 j 来计算
+	 *  计算列: 需要用 i 来计算
 	 * @param matrix
 	 */
 	public void rotate(int[][] matrix) {
@@ -33,6 +45,5 @@ public class Solution {
 			}
 		}
 	}
-
 
 }

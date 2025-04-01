@@ -10,11 +10,6 @@ import java.util.Map;
  */
 public class Solution {
 
-	public static void main(String[] args) {
-		char c = 's';
-		System.out.println(String.valueOf(c));
-	}
-
 	/**
 	 *
 	 * @param pattern
