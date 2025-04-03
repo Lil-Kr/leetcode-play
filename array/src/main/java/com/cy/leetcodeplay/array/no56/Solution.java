@@ -7,7 +7,8 @@ import java.util.List;
 /**
  * @Author: Lil-K
  * @Date: 2024/8/30
- * @Description:
+ * @Description: no. 56. Merge Intervals
+ * link: https://leetcode.com/problems/merge-intervals/description/
  */
 public class Solution {
 
