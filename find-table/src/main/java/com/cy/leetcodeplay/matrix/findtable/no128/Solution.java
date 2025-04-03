@@ -11,23 +11,16 @@ import java.util.Set;
 public class Solution {
 
 	/**
-	 *
+	 * 当前解法已不能通过 leetcode 平台所有 case
 	 * @param nums
 	 * @return
 	 */
 	public int longestConsecutive(int[] nums) {
 		Set<Integer> res = new HashSet<>();
-
 		for (int num : nums) {
 			res.add(num);
 		}
-
-//		Set<Integer> set = Arrays.stream(nums)
-//			.boxed()
-//			.collect(Collectors.toSet());
-
 		int longestStreak = 0;
-
 		for (int num : res) {
 			/**
 			 * 只有当 num 是序列的起始点时才开始计算
@@ -39,8 +32,8 @@ public class Solution {
 
 				// 继续向上查找连续的数字
 				while (res.contains(currentNum + 1)) {
-					currentNum++;
-					currentStreak++;
+					currentNum ++;
+					currentStreak ++;
 				}
 
 				// 更新最长序列长度
@@ -49,4 +42,9 @@ public class Solution {
 		}
 		return longestStreak;
 	}
+
+	/**
+	 * 并查集 解法
+	 */
+
 }
