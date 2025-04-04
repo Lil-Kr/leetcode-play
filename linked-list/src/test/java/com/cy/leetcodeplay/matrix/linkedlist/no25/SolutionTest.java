@@ -1,6 +1,7 @@
 package com.cy.leetcodeplay.matrix.linkedlist.no25;
 
-import com.cy.leetcodeplay.matrix.common.entity.ListNode;
+import com.cy.leetcodeplay.linkedlist.no25.Solution;
+import com.cy.leetcodeplay.common.entity.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

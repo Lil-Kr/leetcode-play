@@ -1,7 +1,7 @@
 package com.cy.leetcodeplay.binarytree.bst.no783;
 
-import com.cy.leetcodeplay.matrix.common.interfases.impl.BST;
-import com.cy.leetcodeplay.matrix.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.interfases.impl.BST;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

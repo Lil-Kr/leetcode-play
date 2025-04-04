@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.binarytree.bt.no106;
 
-import com.cy.leetcodeplay.matrix.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,9 +10,9 @@ import java.util.Map;
  * @Date: 2024/10/19
  * @Description: no.106. Construct Binary Tree from Inorder and Postorder Traversal
  *
- * 1. 后序遍历的最后一个元素是树的根节点。
- * 2. 在中序遍历中找到根节点的位置，这将帮助我们确定左子树和右子树的范围。
- * 3. 递归构造左子树和右子树。
+ * 1. 后序遍历的最后一个元素是树的根节点.
+ * 2. 在中序遍历中找到根节点的位置，这将帮助我们确定左子树和右子树的范围.
+ * 3. 递归构造左子树和右子树.
  *
  *
  * case1:

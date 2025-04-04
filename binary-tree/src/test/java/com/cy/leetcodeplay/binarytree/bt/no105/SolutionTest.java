@@ -1,8 +1,8 @@
 package com.cy.leetcodeplay.binarytree.bt.no105;
 
 import com.alibaba.fastjson2.JSONArray;
-import com.cy.leetcodeplay.matrix.common.entity.TreeNode;
-import com.cy.leetcodeplay.matrix.common.helper.Helper;
+import com.cy.leetcodeplay.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.helper.Helper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

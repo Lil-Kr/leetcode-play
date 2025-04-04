@@ -18,7 +18,6 @@
     <modules>
         <module>common</module>
         <module>array</module>
-        <module>question-number</module>
         <module>sort</module>
         <module>find-table</module>
         <module>linked-list</module>

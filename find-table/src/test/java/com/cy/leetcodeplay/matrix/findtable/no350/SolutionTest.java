@@ -1,7 +1,8 @@
 package com.cy.leetcodeplay.matrix.findtable.no350;
 
 import com.alibaba.fastjson2.JSONArray;
-import com.cy.leetcodeplay.matrix.common.util.PrintString;
+import com.cy.leetcodeplay.findtable.no350.Solution;
+import com.cy.leetcodeplay.common.util.PrintString;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

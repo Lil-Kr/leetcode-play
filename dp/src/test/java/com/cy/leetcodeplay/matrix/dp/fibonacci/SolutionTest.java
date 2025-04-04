@@ -1,5 +1,6 @@
 package com.cy.leetcodeplay.matrix.dp.fibonacci;
 
+import com.cy.leetcodeplay.dp.fibonacci.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

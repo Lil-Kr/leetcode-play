@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.binarytree.bt.no100;
 
-import com.cy.leetcodeplay.matrix.common.interfases.impl.BST;
+import com.cy.leetcodeplay.common.interfases.impl.BST;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

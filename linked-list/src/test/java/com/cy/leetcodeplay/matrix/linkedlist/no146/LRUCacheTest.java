@@ -1,5 +1,6 @@
 package com.cy.leetcodeplay.matrix.linkedlist.no146;
 
+import com.cy.leetcodeplay.linkedlist.no146.LRUCache;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

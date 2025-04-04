@@ -28,4 +28,11 @@ class SolutionTest {
 		solution.nextPermutation(nums);
 		Assertions.assertEquals("[1,5,1]", JSONArray.toJSONString(nums));
 	}
+
+	@Test
+	public void test4() {
+		int[] nums = {1,3,2};
+		solution.nextPermutation(nums);
+		Assertions.assertEquals("[2,1,3]", JSONArray.toJSONString(nums));
+	}
 }

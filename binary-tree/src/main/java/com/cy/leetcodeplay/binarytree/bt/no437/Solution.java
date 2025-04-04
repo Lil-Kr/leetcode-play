@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.binarytree.bt.no437;
 
-import com.cy.leetcodeplay.matrix.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +9,7 @@ import java.util.Map;
  * @Author: Lil-K
  * @Date: 2024/10/6
  * @Description: no.437. Path Sum III
+ * link: https://leetcode.com/problems/path-sum-iii/
  */
 public class Solution {
 
@@ -60,16 +61,16 @@ public class Solution {
 	 * @return
 	 */
 	public int pathSum(TreeNode root, int targetSum) {
-		// 前缀和哈希表，记录到达每个节点时的前缀和的次数
+		// 前缀和哈希表, 记录到达每个节点时的前缀和的次数
 		Map<Long, Integer> prefixSumMap = new HashMap<>();
-		// 初始化，前缀和为 0 的路径有 1 条
+		// 初始化, 前缀和为 0 的路径有 1 条
 		prefixSumMap.put(0L, 1);
 		// 从根节点开始 DFS
 		return dfs(root, 0, targetSum, prefixSumMap);
 	}
 
 	/**
-	 *
+	 * 深度优先遍历
 	 * @param node
 	 * @param currSum
 	 * @param targetSum
@@ -84,17 +85,17 @@ public class Solution {
 		// 更新当前路径的前缀和
 		currSum += node.val;
 
-		// 查看是否存在从祖先节点到当前节点的路径和为 targetSum 的路径
+		// 查看从祖先节点到当前节点的路径和为 targetSum 的路径数量
 		int res = prefixSumMap.getOrDefault(currSum - targetSum, 0);
 
-		// 将当前前缀和加入哈希表
+		// 将当前前缀和加入哈希表, 此处会有重复的值加入
 		prefixSumMap.put(currSum, prefixSumMap.getOrDefault(currSum, 0) + 1);
 
 		// 递归处理左右子树
 		res += dfs(node.left, currSum, targetSum, prefixSumMap);
 		res += dfs(node.right, currSum, targetSum, prefixSumMap);
 
-		// 回溯：移除当前节点的前缀和, 确保不影响其他路径的计算
+		// 回溯: 移除当前节点的前缀和, 确保不影响其他路径的计算
 		prefixSumMap.put(currSum, prefixSumMap.get(currSum) - 1);
 
 		return res;

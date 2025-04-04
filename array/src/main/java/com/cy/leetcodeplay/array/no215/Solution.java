@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.array.no215;
 
-import com.cy.leetcodeplay.matrix.common.util.CommonUtil;
+import com.cy.leetcodeplay.common.util.CommonUtil;
 
 import java.util.Random;
 

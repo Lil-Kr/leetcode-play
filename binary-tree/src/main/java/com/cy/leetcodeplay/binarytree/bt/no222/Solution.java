@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.binarytree.bt.no222;
 
-import com.cy.leetcodeplay.matrix.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

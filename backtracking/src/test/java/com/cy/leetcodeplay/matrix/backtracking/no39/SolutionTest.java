@@ -1,6 +1,7 @@
 package com.cy.leetcodeplay.matrix.backtracking.no39;
 
 import com.alibaba.fastjson2.JSONArray;
+import com.cy.leetcodeplay.backtracking.no39.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.List;

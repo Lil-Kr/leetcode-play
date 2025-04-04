@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.binarytree.bt.no100;
 
-import com.cy.leetcodeplay.matrix.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -14,9 +14,9 @@ public class Solution {
 
 	/**
 	 * recursion
-	 * 1. if both node is null, return true。
-	 * 2. if one of node is null, return false。
-	 * 3. if node1 not equals node2, return false。
+	 * 1. if both node is null, return true.
+	 * 2. if one of node is null, return false.
+	 * 3. if node1 not equals node2, return false.
 	 * 4. compare left child node and right child is or not different
 	 * @param p
 	 * @param q

@@ -1,5 +1,6 @@
 package com.cy.leetcodeplay.matrix.findtable.no155;
 
+import com.cy.leetcodeplay.findtable.no155.MinStack;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

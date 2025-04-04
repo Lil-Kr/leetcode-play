@@ -5,9 +5,9 @@ package com.cy.leetcodeplay.array.no189;
  * @Date: 2024/10/22
  * @Description: no.189. Rotate Array
  *
- * 1. 反转整个数组。
- * 2. 反转前 k 个元素。
- * 3. 反转剩余的元素。
+ * 1. 反转整个数组.
+ * 2. 反转前 k 个元素.
+ * 3. 反转剩余的元素.
  */
 public class Solution {
 

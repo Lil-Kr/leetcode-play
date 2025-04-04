@@ -1,6 +1,7 @@
 package com.cy.leetcodeplay.matrix.dp.no940;
 
 
+import com.cy.leetcodeplay.dp.no940.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

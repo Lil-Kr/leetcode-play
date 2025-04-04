@@ -1,5 +1,6 @@
 package com.cy.leetcodeplay.matrix.findtable.no220;
 
+import com.cy.leetcodeplay.findtable.no220.Solution;
 import org.junit.jupiter.api.Test;
 
 import java.util.TreeSet;

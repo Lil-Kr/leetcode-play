@@ -1,5 +1,6 @@
 package com.cy.leetcodeplay.matrix.findtable.no219;
 
+import com.cy.leetcodeplay.findtable.no219.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

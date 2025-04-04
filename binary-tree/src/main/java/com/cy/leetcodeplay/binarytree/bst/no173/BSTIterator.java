@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.binarytree.bst.no173;
 
-import com.cy.leetcodeplay.matrix.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 
 import java.util.Stack;
 

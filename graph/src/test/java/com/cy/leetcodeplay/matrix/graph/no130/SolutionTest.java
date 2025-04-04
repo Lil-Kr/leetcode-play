@@ -1,6 +1,7 @@
 package com.cy.leetcodeplay.matrix.graph.no130;
 
 import com.alibaba.fastjson2.JSONArray;
+import com.cy.leetcodeplay.graph.no130.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

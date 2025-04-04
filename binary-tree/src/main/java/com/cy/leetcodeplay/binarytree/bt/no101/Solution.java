@@ -1,6 +1,6 @@
 package com.cy.leetcodeplay.binarytree.bt.no101;
 
-import com.cy.leetcodeplay.matrix.common.entity.TreeNode;
+import com.cy.leetcodeplay.common.entity.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -57,9 +57,9 @@ public class Solution {
 
 	/**
 	 * 递归:
-	 * 1. 如果两棵树都为空, 它们是镜像的。
-	 * 2. 如果其中一个为空, 另一个不为空, 它们不是镜像的。
-	 * 3. 如果两棵树的根节点的值相同, 递归比较它们的左子树和右子树, 继续检查。
+	 * 1. 如果两棵树都为空, 它们是镜像的.
+	 * 2. 如果其中一个为空, 另一个不为空, 它们不是镜像的.
+	 * 3. 如果两棵树的根节点的值相同, 递归比较它们的左子树和右子树, 继续检查.
 	 * @param root
 	 * @return
 	 */
