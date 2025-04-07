@@ -29,6 +29,7 @@
         <module>graph</module>
         <module>dp</module>
         <module>matrix</module>
+        <module>greedy</module>
     </modules>
 
     <properties>

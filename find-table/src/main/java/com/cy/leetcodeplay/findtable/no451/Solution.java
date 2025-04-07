@@ -45,4 +45,31 @@ public class Solution {
 		}
 		return result.toString();
 	}
+
+	/**
+	 *
+	 * @param s
+	 * @return
+	 */
+	public String frequencySort2(String s) {
+		if (s.length() == 1) return s;
+
+		Map<Character, Integer> freq = new HashMap<>();
+		for (char ch : s.toCharArray()) {
+			freq.put(ch, freq.getOrDefault(ch, 0) + 1);
+		}
+
+		PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+		maxHeap.addAll(freq.entrySet());
+		StringBuilder res = new StringBuilder();
+		while (!maxHeap.isEmpty()) {
+			Map.Entry<Character, Integer> cur = maxHeap.poll();
+			Character key = cur.getKey();
+			Integer value = cur.getValue();
+			for (int i = 0; i < value; i++) {
+				res.append(key);
+			}
+		}
+		return res.toString();
+	}
 }

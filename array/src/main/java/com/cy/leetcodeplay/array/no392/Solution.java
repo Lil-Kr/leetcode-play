@@ -4,7 +4,7 @@ package com.cy.leetcodeplay.array.no392;
  * @Author: Lil-K
  * @Date: 2024/9/25
  * @Description: no.392. Is Subsequence
- *
+ * link: https://leetcode.com/problems/is-subsequence/description/
  * 双指针
  */
 public class Solution {
