@@ -18,7 +18,7 @@ public class Solution {
 	 * @return:
 	 */
 	public int[][] insert(int[][] intervals, int[] newInterval) {
-		List<int[]> result = new ArrayList<>();
+		List<int[]> res = new ArrayList<>();
 		if (intervals == null || intervals.length == 0) {
 			return new int[][]{newInterval};
 		}
@@ -27,7 +27,7 @@ public class Solution {
 		int i = 0;
 
 		while (i < n && intervals[i][1] < newInterval[0]) {
-			result.add(intervals[i]);
+			res.add(intervals[i]);
 			i++;
 		}
 
@@ -37,14 +37,15 @@ public class Solution {
 			newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
 			i++;
 		}
-		result.add(newInterval); // 添加合并后的新区间
+		// 添加合并后的新区间
+		res.add(newInterval);
 
 		// 添加剩余的区间
 		while (i < n) {
-			result.add(intervals[i]);
+			res.add(intervals[i]);
 			i++;
 		}
 
-		return result.toArray(new int[result.size()][]);
+		return res.toArray(new int[res.size()][]);
 	}
 }
