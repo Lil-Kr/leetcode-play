@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.array.no76;
+package com.cy.leetcodeplay.string.no76;
 
 import java.util.Map;
 import java.util.TreeMap;

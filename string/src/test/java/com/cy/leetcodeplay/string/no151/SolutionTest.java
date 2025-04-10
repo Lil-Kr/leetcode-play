@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.matrix.string.no151;
+package com.cy.leetcodeplay.string.no151;
 
 
 import com.cy.leetcodeplay.string.no151.Solution;

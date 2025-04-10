@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.matrix.string.no65;
+package com.cy.leetcodeplay.string.no65;
 
 import static org.junit.jupiter.api.Assertions.*;
 
