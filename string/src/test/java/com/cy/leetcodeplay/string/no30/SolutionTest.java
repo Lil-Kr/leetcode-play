@@ -17,4 +17,20 @@ class SolutionTest {
 		List<Integer> res = solution.findSubstring(s, words);
 		Assertions.assertEquals("[0,9]", JSONArray.toJSONString(res));
 	}
+
+	@Test
+	public void test2() {
+		String s = "wordgoodgoodgoodbestword";
+		String[] words = {"word","good","best","word"};
+		List<Integer> res = solution.findSubstring(s, words);
+		Assertions.assertEquals("[]", JSONArray.toJSONString(res));
+	}
+
+	@Test
+	public void test3() {
+		String s = "barfoofoobarthefoobarman";
+		String[] words = {"bar","foo","the"};
+		List<Integer> res = solution.findSubstring(s, words);
+		Assertions.assertEquals("[6,9,12]", JSONArray.toJSONString(res));
+	}
 }

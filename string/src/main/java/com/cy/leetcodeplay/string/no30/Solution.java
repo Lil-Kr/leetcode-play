@@ -34,26 +34,43 @@ public class Solution {
 			return res;
 		}
 
+		/**
+		 * 记录 words 中, 每个 word 的频率, 不需要强调顺序
+		 */
 		Map<String, Integer> wordCount = new HashMap<>();
 		for (String word : words) {
 			wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
 		}
 
+		/**
+		 * 这里是重点
+		 * 按 wordLen 分组, 查重
+		 */
 		for (int i = 0; i < wordLen; i++) {
+			/**
+			 * 初始化数据, 滑动窗口的左右边界
+			 */
 			int left = i;
 			int right = i;
 			int count = 0;
 
 			Map<String, Integer> currentCount = new HashMap<>();
 
+			/**
+			 * 这里使用 <= 是因为 wordLen是长度, 不是索引值
+			 */
 			while (right + wordLen <= s.length()) {
 				String word = s.substring(right, right + wordLen);
 				right += wordLen;
 
 				if (wordCount.containsKey(word)) {
+					// 记录 s 中出现这个字符的映射关系
 					currentCount.put(word, currentCount.getOrDefault(word, 0) + 1);
 					count++;
 
+					/**
+					 * 当前word的数量超过了 words 中对应word的数量时, 说明左边界需要往右边收缩
+					 */
 					while (currentCount.get(word) > wordCount.get(word)) {
 						String leftWord = s.substring(left, left + wordLen);
 						currentCount.put(leftWord, currentCount.get(leftWord) - 1);
