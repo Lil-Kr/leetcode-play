@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.stackandqueue.queue.no295;
+package com.cy.leetcodeplay.heap.no295;
 
 import java.util.PriorityQueue;
 

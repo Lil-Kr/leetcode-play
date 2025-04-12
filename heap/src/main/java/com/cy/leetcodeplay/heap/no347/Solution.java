@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.stackandqueue.queue.no347;
+package com.cy.leetcodeplay.heap.no347;
 
 import java.util.*;
 

@@ -6,15 +6,15 @@ package com.cy.leetcodeplay.common.interfases;
  */
 public interface BSTService{
 
-    void add(Integer e);
+	void add(Integer e);
 
-    boolean contains(Integer e);
+	boolean contains(Integer e);
 
-    void update(Integer e);
+	void update(Integer e);
 
-    void remove(Integer e);
+	void remove(Integer e);
 
-    int getSize();
+	int getSize();
 
-    boolean isEmpty();
+	boolean isEmpty();
 }

@@ -21,6 +21,7 @@ public class Solution {
 		for (int i = 0; i < n; i++) {
 			/**
 			 * 当 nums[i] 在 [1, n] 范围内, 且 nums[i] 不在正确的位置时, 交换
+			 * 如果存在 -1
 			 */
 			while (nums[i] > 0 && nums[i] <= n && nums[i] != nums[nums[i] - 1]) {
 				// 交换 nums[i] 和 nums[correctIndex]

@@ -31,6 +31,7 @@
 		<module>matrix</module>
 		<module>greedy</module>
 		<module>trie</module>
+		<module>heap</module>
 	</modules>
 
 	<properties>
