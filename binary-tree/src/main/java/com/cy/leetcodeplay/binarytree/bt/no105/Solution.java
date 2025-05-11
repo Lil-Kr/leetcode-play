@@ -72,7 +72,6 @@ public class Solution {
 
 		/**
 		 * 递归构建左子树和右子树
-		 * 这一步很关键, 由于是后续遍历结果, 必须先构建右子树, 再构建左子树
 		 */
 		root.left = buildTree(preorder, inStart, inIndex - 1);
 		root.right = buildTree(preorder, inIndex + 1, inEnd);

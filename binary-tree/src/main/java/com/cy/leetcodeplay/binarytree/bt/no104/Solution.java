@@ -7,6 +7,7 @@ import com.cy.leetcodeplay.common.entity.TreeNode;
  * @Author: Lil-K
  * @Date: 2024/9/27
  * @Description: no.104. Maximum Depth of Binary Tree
+ * link: https://leetcode.com/problems/maximum-depth-of-binary-tree/
  */
 public class Solution {
 

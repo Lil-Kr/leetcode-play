@@ -6,6 +6,7 @@ import com.cy.leetcodeplay.common.entity.TreeNode;
  * @Author: Lil-K
  * @Date: 2024/10/14
  * @Description: no.98. Validate Binary Search Tree
+ * link: https://leetcode.com/problems/validate-binary-search-tree
  */
 public class Solution {
 
@@ -21,6 +22,7 @@ public class Solution {
 	}
 
 	private boolean inOrder(TreeNode node) {
+		// 这个判断条件很关键
 		if (node == null) return true;
 
 		// 递归遍历左子树
