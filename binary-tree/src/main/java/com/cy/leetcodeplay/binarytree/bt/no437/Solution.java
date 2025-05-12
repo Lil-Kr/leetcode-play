@@ -9,7 +9,7 @@ import java.util.Map;
  * @Author: Lil-K
  * @Date: 2024/10/6
  * @Description: no.437. Path Sum III
- * link: https://leetcode.com/problems/path-sum-iii/
+ * link: https://leetcode.com/problems/path-sum-iii/description/
  */
 public class Solution {
 

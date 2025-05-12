@@ -6,6 +6,7 @@ import com.cy.leetcodeplay.common.entity.TreeNode;
  * @Author: Lil-K
  * @Date: 2024/10/16
  * @Description: no.114. Flatten Binary Tree to Linked List
+ * link: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
  */
 public class Solution {
 
