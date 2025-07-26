@@ -3,15 +3,13 @@ package com.cy.leetcodeplay.array.no33;
 /**
  * @Author: Lil-K
  * @Date: 2024/8/23
- * @Description:
+ * @Description: no. 33. Search in Rotated Sorted Array
+ * link: https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+ * top-100
+ *
+ * Binary Search
  */
 public class Solution {
-
-	public static void main (String[] args) {
-		int[] arr = {4, 5, 6, 7, 0, 1};
-		int res = search(arr, 7);
-		System.out.println(res);
-	}
 
 	public static int search(int[] nums, int target) {
 		int n = nums.length;
@@ -23,7 +21,8 @@ public class Solution {
 				return mid;
 			}
 
-			if (nums[l] <= nums[mid]) { // 左半部分有序
+			// 左半部分有序
+			if (nums[l] <= nums[mid]) {
 				if (nums[l] <= target && target < nums[mid]) {
 					r = mid - 1;
 				} else {

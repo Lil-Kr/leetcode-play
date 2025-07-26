@@ -29,7 +29,6 @@ public class Solution {
 		}
 	}
 
-
 	public int[] merge(int[] nums1, int[] nums2, int len) {
 		int[] merge = new int[len];
 
