@@ -27,18 +27,21 @@ public class Solution {
 	public int maxPathSum(TreeNode root) {
 		if (root == null) return 0;
 
-		postOrder(root);
+		dfs(root);
 		return maxSum;
 	}
 
-	private int postOrder(TreeNode node) {
+	private int dfs(TreeNode node) {
 		if (node == null) return 0;
 
-		int l = Math.max(postOrder(node.left), 0);
-		int r = Math.max(postOrder(node.right), 0);
+		int l = Math.max(dfs(node.left), 0);
+		int r = Math.max(dfs(node.right), 0); // -->
 
+		// 更新当前最大路径和（左 + 右 + 当前）
 		int currentPathSum = node.val + l + r;
 		maxSum = Math.max(maxSum, currentPathSum);
+
+		// 返回当前子树的最大贡献值，供父节点选择
 		return node.val + Math.max(l, r);
 	}
 

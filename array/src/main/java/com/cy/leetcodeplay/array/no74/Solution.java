@@ -4,11 +4,9 @@ package com.cy.leetcodeplay.array.no74;
  * @Author: Lil-K
  * @Date: 2024/9/29
  * @Description: no.74. Search a 2D Matrix
- *
+ * link: https://leetcode.com/problems/search-a-2d-matrix/
  * 要求: O(log(m * n)) time complexity
- *
  * 一维索引与二维索引的关系
- *
  */
 public class Solution {
 
@@ -24,15 +22,22 @@ public class Solution {
 		}
 
 		int m = matrix.length; // 列数
-		int n = matrix[0].length; // fix 每行的长度
+		int n = matrix[0].length; // 每行的长度
 		int l = 0, r = m * n - 1;
 
 		/**
 		 * r <= r: 表示最后找到这一个元素
 		 */
 		while (l <= r) {
-			int mid = l + (r - l) / 2; // 防止溢出
-			int midValue = matrix[mid / n][mid % n]; // 计算中间值, 通过每行的长度
+			// 防止溢出
+			int mid = l + (r - l) / 2;
+
+			/**
+			 * 计算中间值, 通过每行的长度
+			 * 行号: mid / n
+			 * 列号: mid % n
+			 */
+			int midValue = matrix[mid / n][mid % n];
 
 			if (midValue == target) {
 				return true; // 找到目标值
@@ -44,6 +49,4 @@ public class Solution {
 		}
 		return false;
 	}
-
-
 }

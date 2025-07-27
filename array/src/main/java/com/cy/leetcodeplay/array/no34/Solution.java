@@ -5,45 +5,39 @@ package com.cy.leetcodeplay.array.no34;
  * @Date: 2024/3/6
  * @Description: no.34
  * title: Find First and Last Position of Element in Sorted Array
- *
- *
+ * link: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
  */
 public class Solution {
 
-    /**
-     * 对撞指针
-     * @param nums
-     * @param target
-     * @return
-     */
-    public int[] searchRange(int[] nums, int target) {
-        int[] t_not = {-1, -1};
+	/**
+	 * 对撞指针
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
 
-        if (nums.length == 0) return t_not;
-        if (nums.length == 1) {
-            if (nums[0] == target) {
-                return new int[]{0, 0};
-            }else {
-                return t_not;
-            }
-        }
+	public int[] searchRange(int[] nums, int target) {
+		int n = nums.length;
+		int[] error = new int[]{-1, -1};
+		if (n <= 0) return error;
 
-        int startPoint = 0;
-        int endPoint = nums.length - 1;
+		if (n == 1) {
+			if (nums[0] == target){
+				return new int[]{0, 0};
+			} else {
+				return error;
+			}
+		}
 
-        while (nums[startPoint] != nums[endPoint] && startPoint <= endPoint) {
-            if (nums[startPoint] != target) {
-                startPoint++;
-            }
+		int l = 0, r = n - 1;
+		while (l <= r && nums[l] != nums[r]) {
+			if (nums[l] != target) l ++;
+			if (nums[r] != target) r --;
+		}
 
-            if (nums[endPoint] != target) {
-                endPoint--;
-            }
-        }
+		if (l > r || nums[l] != target || nums[r] != target) return error;
 
-        if (startPoint > endPoint || nums[startPoint] != target || nums[endPoint] != target) return t_not;
-
-        return new int[]{startPoint, endPoint};
-    }
+		return new int[]{l, r};
+	}
 
 }
