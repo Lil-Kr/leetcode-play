@@ -20,9 +20,10 @@ public class Solution {
 		flatten(root.left);
 		flatten(root.right);
 
+		// swap
 		TreeNode tempR = root.right;
-
 		root.right = root.left;
+		// release node
 		root.left = null;
 
 		TreeNode cur = root;

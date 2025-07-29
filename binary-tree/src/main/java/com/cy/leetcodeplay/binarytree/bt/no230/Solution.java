@@ -2,6 +2,9 @@ package com.cy.leetcodeplay.binarytree.bt.no230;
 
 import com.cy.leetcodeplay.common.entity.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Author: Lil-K
  * @Date: 2024/10/14
@@ -34,5 +37,29 @@ public class Solution {
 		}
 
 		inOrder(node.right, k);
+	}
+
+	/**
+	 * 解法二: a more concise way to write
+	 * @param root
+	 * @param k
+	 * @return
+	 */
+	public int kthSmallest2(TreeNode root, int k) {
+		if (root == null) return 0;
+		List<Integer> res = new ArrayList<>();
+		inOrder(root, res, k);
+		return res.get(k - 1);
+	}
+
+	private void inOrder(TreeNode node, List<Integer> res, int k) {
+		if (node == null) return;
+
+		inOrder(node.left, res, k);
+		if (res.size() == k) {
+			return;
+		}
+		res.add(node.val);
+		inOrder(node.right, res, k);
 	}
 }

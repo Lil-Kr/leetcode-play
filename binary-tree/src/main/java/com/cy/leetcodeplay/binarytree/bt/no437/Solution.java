@@ -78,14 +78,12 @@ public class Solution {
 	 * @return
 	 */
 	private int dfs(TreeNode node, long currSum, int targetSum, Map<Long, Integer> prefixSumMap) {
-		if (node == null) {
-			return 0;
-		}
+		if (node == null) return 0;
 
 		// 更新当前路径的前缀和
 		currSum += node.val;
 
-		// 查看从祖先节点到当前节点的路径和为 targetSum 的路径数量
+		// 判断是否存在一条从之前某个节点到当前节点的路径，路径和为 targetSum
 		int res = prefixSumMap.getOrDefault(currSum - targetSum, 0);
 
 		// 将当前前缀和加入哈希表, 此处会有重复的值加入
@@ -95,7 +93,7 @@ public class Solution {
 		res += dfs(node.left, currSum, targetSum, prefixSumMap);
 		res += dfs(node.right, currSum, targetSum, prefixSumMap);
 
-		// 回溯: 移除当前节点的前缀和, 确保不影响其他路径的计算
+		// 回溯: 移除当前节点的前缀和, 确保不影响兄弟节点的路径计算
 		prefixSumMap.put(currSum, prefixSumMap.get(currSum) - 1);
 
 		return res;

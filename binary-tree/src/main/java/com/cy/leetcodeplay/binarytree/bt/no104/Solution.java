@@ -12,7 +12,7 @@ import com.cy.leetcodeplay.common.entity.TreeNode;
 public class Solution {
 
 	/**
-	 *
+	 * post order
 	 * @param root
 	 * @return
 	 */

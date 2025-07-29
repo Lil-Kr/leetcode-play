@@ -8,14 +8,14 @@ import com.cy.leetcodeplay.common.entity.TreeNode;
  * @Description: no.236. Lowest Common Ancestor of a Binary Tree
  * link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree
  *
- * 1. 如果在左子树找到了 p 或 q，在右子树找到了另一个节点，那么当前节点就是最近公共祖先.
- * 2. 如果在当前节点或其左右子树中找到了 p 或 q，而另一侧没有找到，则继续递归查找.
+ * 1. 如果在左子树找到了 p 或 q, 并且在右子树找到了另一个节点，那么当前节点就是最近公共祖先.
+ * 2. 如果在当前节点或其左右子树中找到了 p 或 q, 而另一侧没有找到, 则继续递归查找.
  * 3. 递归的基准条件是当前节点为 null（到达叶子节点的终点）或者当前节点是 p 或 q 本身.
  */
 public class Solution {
 
 	/**
-	 *
+	 * post order
 	 * @param root
 	 * @param p
 	 * @param q
