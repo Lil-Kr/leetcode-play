@@ -55,4 +55,32 @@ public class Solution {
 		}
 	}
 
+	/**
+	 * ================ 写法二 ================
+	 */
+	private List<String> res = new ArrayList<>();
+
+	public List<String> generateParenthesis2(int n) {
+		backtraking2(n, 0, 0, new StringBuilder());
+		return res;
+	}
+
+	private void backtraking2(int n, int open, int close, StringBuilder s) {
+		if (s.length() == n * 2) {
+			res.add(s.toString());
+			return;
+		}
+
+		if (open < n) {
+			s.append("(");
+			backtraking2(n, open + 1, close, s);
+			s.deleteCharAt(s.length() - 1);
+		}
+
+		if (close < open) {
+			s.append(")");
+			backtraking2(n, open, close + 1, s);
+			s.deleteCharAt(s.length() - 1);
+		}
+	}
 }
