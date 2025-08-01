@@ -4,6 +4,7 @@ package com.cy.leetcodeplay.array.no4;
  * @Author: Lil-K
  * @Date: 2024/9/29
  * @Description: no.4. Median of Two Sorted Arrays
+ * link: https://leetcode.com/problems/median-of-two-sorted-arrays/description/
  */
 public class Solution {
 
@@ -29,7 +30,7 @@ public class Solution {
 		}
 	}
 
-	public int[] merge(int[] nums1, int[] nums2, int len) {
+	private int[] merge(int[] nums1, int[] nums2, int len) {
 		int[] merge = new int[len];
 
 		int p1 = 0, p2 = 0;

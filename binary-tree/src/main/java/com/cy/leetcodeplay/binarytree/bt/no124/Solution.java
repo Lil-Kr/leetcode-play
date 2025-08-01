@@ -34,8 +34,11 @@ public class Solution {
 	private int dfs(TreeNode node) {
 		if (node == null) return 0;
 
+		/**
+		 * 防止影响求最大路径和, 所以忽略 0,
+		 */
 		int l = Math.max(dfs(node.left), 0);
-		int r = Math.max(dfs(node.right), 0); // -->
+		int r = Math.max(dfs(node.right), 0);
 
 		// 更新当前最大路径和（左 + 右 + 当前）
 		int currentPathSum = node.val + l + r;
