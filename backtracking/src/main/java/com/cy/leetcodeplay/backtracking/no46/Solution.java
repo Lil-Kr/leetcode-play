@@ -7,6 +7,7 @@ import java.util.List;
  * @Author: Lil-K
  * @Date: 2024/10/24
  * @Description: no.46. Permutations
+ * link: https://leetcode.com/problems/permutations/
  *
  * 这道题相当于求一个数组的全排列:
  *  1.

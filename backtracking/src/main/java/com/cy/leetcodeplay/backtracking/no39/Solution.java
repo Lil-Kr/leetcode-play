@@ -7,7 +7,7 @@ import java.util.List;
  * @Author: Lil-K
  * @Date: 2024/10/26
  * @Description: no.39. Combination Sum
- * todo: 未录入题库
+ * link: https://leetcode.com/problems/combination-sum
  * 
  * 递归和回溯:
  *    1. 使用递归来遍历所有组合, 尝试将当前数字多次加入组合中, 直到达到目标或超出目标
@@ -43,9 +43,11 @@ public class Solution {
 			}
 
 			curList.add(candidates[i]);
+
 			/**
 			 * 可重复使用同一元素, 传入i
 			 */
+
 			backtrack(candidates, target - candidates[i], i, curList);
 			/**
 			 * 回溯

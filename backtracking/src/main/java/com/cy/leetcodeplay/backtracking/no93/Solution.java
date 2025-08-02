@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @Author: Lil-K
  * @Date: 2025/7/31
- * @Description: no. 93. Restore IP Addresses
+ * @Description: no.93. Restore IP Addresses
  * link: https://leetcode.com/problems/restore-ip-addresses/description/
  */
 public class Solution {
@@ -19,6 +19,7 @@ public class Solution {
 	 * @return
 	 */
 	public List<String> restoreIpAddresses(String s) {
+		if (s.length() < 4) return res;
 		backtracking(s, 0, new ArrayList<>());
 		return res;
 	}
