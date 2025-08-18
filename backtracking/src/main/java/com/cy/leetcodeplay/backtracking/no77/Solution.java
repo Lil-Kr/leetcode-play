@@ -7,6 +7,7 @@ import java.util.List;
  * @Author: Lil-K
  * @Date: 2024/10/25
  * @Description: no.77. Combinations
+ * link: https://leetcode.com/problems/combinations/
  */
 public class Solution {
 
@@ -65,7 +66,7 @@ public class Solution {
 		}
 
 		/**
-		 * 当前还有 k - curList.size() 个元素需要填补, 所以 [i ... n] 中至少要有 k - curList.size() 个元素
+		 * 当前还有 k - curList.size() 个元素需要填补, 所以 [i ... n] 中至少要有 k - curList.size() 个元素需要扫描
 		 * i 最多为: n - (k - curList.size()) + 1
 		 */
 		for (int i = start; i <= n - (k - curList.size()) + 1; i++) {

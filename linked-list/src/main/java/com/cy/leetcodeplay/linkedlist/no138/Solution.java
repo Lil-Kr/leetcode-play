@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * @Author: Lil-K
  * @Date: 2025/4/8
- * @Description: no. 138. Copy List with Random Pointer
+ * @Description: no.138. Copy List with Random Pointer
  * link: https://leetcode.com/problems/copy-list-with-random-pointer/description/
  */
 public class Solution {

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @Author: Lil-K
  * @Date: 2025/4/7
- * @Description: no. 763. Partition Labels
+ * @Description: no.763. Partition Labels
  * link: https://leetcode.com/problems/partition-labels/description
  */
 public class Solution {

@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.matrix.no73;
 /**
  * @Author: Lil-K
  * @Date: 2025/3/1
- * @Description: no. 73. Set Matrix Zeroes
+ * @Description: no.73. Set Matrix Zeroes
  * link: https://leetcode.com/problems/set-matrix-zeroes/description/
  */
 public class Solution {

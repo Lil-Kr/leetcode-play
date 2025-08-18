@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @Author: Lil-K
  * @Date: 2025/7/29
- * @Description: no. 68. Text Justification
+ * @Description: no.68. Text Justification
  * link: https://leetcode.com/problems/text-justification/description/
  */
 public class Solution {

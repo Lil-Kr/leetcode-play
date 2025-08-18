@@ -7,7 +7,7 @@ import java.util.List;
  * @Author: Lil-K
  * @Date: 2024/10/24
  * @Description: no.131. Palindrome Partitioning
- * todo: 未录入题库
+ * link: https://leetcode.com/problems/palindrome-partitioning/description/
  *
  * 这道题的题意是必须切分, 如果字符串完整的就是回文,
  *

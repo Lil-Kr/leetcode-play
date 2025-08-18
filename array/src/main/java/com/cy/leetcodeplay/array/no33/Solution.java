@@ -3,7 +3,7 @@ package com.cy.leetcodeplay.array.no33;
 /**
  * @Author: Lil-K
  * @Date: 2024/8/23
- * @Description: no. 33. Search in Rotated Sorted Array
+ * @Description: no.33. Search in Rotated Sorted Array
  * link: https://leetcode.com/problems/search-in-rotated-sorted-array/description/
  * top-100
  *
