@@ -1,7 +1,6 @@
 package com.cy.leetcodeplay.backtracking.no216;
 
 import com.alibaba.fastjson2.JSONArray;
-import com.cy.leetcodeplay.backtracking.no216.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -30,5 +29,12 @@ class SolutionTest {
 		int k = 4, n = 1;
 		List<List<Integer>> res1 = solution.combinationSum3(k, n);
 		Assertions.assertEquals("[]", JSONArray.toJSONString(res1));
+	}
+
+	@Test
+	public void test4() {
+		int k = 2, n = 18;
+		List<List<Integer>> res1 = solution.combinationSum3(k, n);
+		Assertions.assertEquals("[[1,17],[2,16],[3,15],[4,14],[5,13],[6,12],[7,11],[8,10]]", JSONArray.toJSONString(res1));
 	}
 }
