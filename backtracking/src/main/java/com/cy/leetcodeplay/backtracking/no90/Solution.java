@@ -8,11 +8,12 @@ import java.util.List;
  * @Author: Lil-K
  * @Date: 2024/10/26
  * @Description: no.90. Subsets II
+ * link: https://leetcode.com/problems/subsets-ii/
  * todo: 未录入题库
  */
 public class Solution {
 
-	private  List<List<Integer>> res = new ArrayList<>();
+	private List<List<Integer>> res = new ArrayList<>();
 
 	public List<List<Integer>> subsetsWithDup(int[] nums) {
 		Arrays.sort(nums); // 排序, 便于去重
