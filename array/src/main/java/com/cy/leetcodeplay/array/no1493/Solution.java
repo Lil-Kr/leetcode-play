@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.array.no1493;
  * @Description: no.1493. Longest Subarray of 1's After Deleting One Element
  * link: https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  * Sliding Window
  */
 public class Solution {

@@ -8,23 +8,23 @@ import java.util.Arrays;
  * @Description: no.639. Decode Ways II
  * link: https://leetcode.com/problems/decode-ways-ii/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 
 	private long MOD = (int) Math.pow(10, 9) + 7;
 
 	/**
-	 * 解法一: 暴力递归
+	 * 解法一: recursive
 	 * 这个版本不是完整的代码, 没有做取余的操作
 	 * @param s
 	 * @return
 	 */
 	public int numDecodings(String s) {
-		return f1(s.toCharArray(), 0);
+		return (int)f1(s.toCharArray(), 0);
 	}
 
-	private int f1(char[] s, int i) {
+	private long f1(char[] s, int i) {
 		if (i == s.length) return 1;
 
 		/**
@@ -35,21 +35,21 @@ public class Solution {
 		}
 
 		/**
-		 * 2. f(i) + f(i + 1), [number], [*], [0]
+		 * 2. f(i) + f(i + 1), [number], [*]
 		 */
-		int res = (s[i] == '*' ? 9 : 1) * f1(s, i + 1);
+		long res = (s[i] == '*' ? 9 : 1) * f1(s, i + 1);
 
 		/**
 		 * 3. f(i + i+1), + f(i + 2),  [number, number], [number, *], [*, number],
 		 * i, i + 1 一起转的case
 		 */
 		if (i + 1 >= s.length) {
-			return  res;
+			return  res % MOD;
 		}
 
 		if (s[i] != '*') { // i 是数字
 			if (s[i + 1] != '*') { // [number, number]
-				if (i + 1 < s.length && ((s[i] - '0') * 10 + (s[i + 1] - '0')) <= 26) {
+				if (((s[i] - '0') * 10 + (s[i + 1] - '0')) <= 26) {
 					res += f1(s, i + 2);
 				}
 			} else { // i + 1 == *
@@ -74,11 +74,11 @@ public class Solution {
 				res += 15 * f1(s, i + 2);
 			}
 		}
-		return res;
+		return res % MOD;
 	}
 
 	/**
-	 * 解法二: 递归 + 记忆化搜索
+	 * solution2: recursive + memory search
 	 * @param s
 	 * @return
 	 */
@@ -119,7 +119,7 @@ public class Solution {
 
 		if (s[i] != '*') { // i 是数字
 			if (s[i + 1] != '*') { // [number, number]
-				if (i + 1 < s.length && ((s[i] - '0') * 10 + (s[i + 1] - '0')) <= 26) {
+				if (((s[i] - '0') * 10 + (s[i + 1] - '0')) <= 26) {
 					res += f2(s, i + 2, dp);
 				}
 			} else { // i + 1 == *
@@ -144,13 +144,13 @@ public class Solution {
 				res += 15 * f2(s, i + 2, dp);
 			}
 		}
-
 		dp[i] = res % MOD;
 		return dp[i];
 	}
 
 	/**
-	 * 解法三: 动态规划 + db表
+	 * solution3: 动态规划 + db表
+	 * down to top
 	 * @param s
 	 * @return
 	 */
@@ -161,37 +161,38 @@ public class Solution {
 		dp[n] = 1;
 
 		for (int i = n - 1; i >= 0; i--) {
-			if (chars[i] != '0') {
-				dp[i] = (chars[i] == '*' ? 9 : 1) * dp[i + 1];
-				if (i + 1 < n) {
-					if (chars[i] != '*') { // i 是数字
-						if (chars[i + 1] != '*') { // [number, number]
-							if (((chars[i] - '0') * 10 + (chars[i + 1] - '0')) <= 26) {
-								dp[i] += dp[i + 2];
-							}
-						} else { // i + 1 == *
-							if (chars[i] == '1') {
-								dp[i] += 9 * dp[i + 2];
-							}
+			if (chars[i] == '0') continue;
 
-							if (chars[i] == '2') {
-								dp[i] += 6 * dp[i + 2];
-							}
-						}
-					} else { // i == *
-						if (chars[i + 1] != '*') { // [*, number]
-							if (chars[i + 1] <= '6') {
-								dp[i] += 2 * dp[i + 2];
-							} else if (chars[i + 1] > '6') {
-								dp[i] += dp[i + 2];
-							}
-						} else { // [*, *]
-							dp[i] += 15 * dp[i + 2];
-						}
+			dp[i] = (chars[i] == '*' ? 9 : 1) * dp[i + 1];
+
+			if (i + 1 >= n) continue;
+
+			if (chars[i] != '*') { // i 是数字
+				if (chars[i + 1] != '*') { // [number, number]
+					if (((chars[i] - '0') * 10 + (chars[i + 1] - '0')) <= 26) {
+						dp[i] += dp[i + 2];
+					}
+				} else { // i + 1 == *
+					if (chars[i] == '1') {
+						dp[i] += 9 * dp[i + 2];
+					}
+
+					if (chars[i] == '2') {
+						dp[i] += 6 * dp[i + 2];
 					}
 				}
-				dp[i] = dp[i] % MOD;
+			} else { // i == *
+				if (chars[i + 1] != '*') { // [*, number]
+					if (chars[i + 1] <= '6') {
+						dp[i] += 2 * dp[i + 2];
+					} else if (chars[i + 1] > '6') {
+						dp[i] += dp[i + 2];
+					}
+				} else { // [*, *]
+					dp[i] += 15 * dp[i + 2];
+				}
 			}
+			dp[i] = dp[i] % MOD;
 		}
 		return (int)dp[0];
 	}

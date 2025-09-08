@@ -4,7 +4,7 @@ package com.cy.leetcodeplay.graph.no130;
  * @Author: Lil-K
  * @Date: 2024/11/1
  * @Description: no.130. Surrounded Regions
- * todo: 未录入题库
+ * todo: 未录入Anki
  * 
  * 题目: 
  *  给定一个二维的 board, 包含字符 'X' 和 'O', 找出所有被 'X' 包围的 'O' 区域, 并将它们翻转成 'X'.

@@ -5,15 +5,15 @@ import java.util.Arrays;
 /**
  * @Author: Lil-K
  * @Date: 2024/11/5
- * @Description: 91. Decode Ways
+ * @Description: no.91. Decode Ways
  * link: https://leetcode.com/problems/decode-ways/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 
 	/**
-	 * 解法一: 暴力递归
+	 * solution1: 暴力递归
 	 * s[i ... s.length() - 1] 有多少种有效的方案
 	 * @param s
 	 * @return
@@ -41,7 +41,7 @@ public class Solution {
 	}
 
 	/**
-	 * 解法二: 递归 + 记忆化查询
+	 * solution2: 递归 + 记忆化查询
 	 * @param s
 	 * @return
 	 */
@@ -74,7 +74,8 @@ public class Solution {
 	}
 
 	/**
-	 * 解法三: 带dp表的动态规划
+	 * solution3: 带dp表的动态规划
+	 * 严格位置依赖
 	 * @param s
 	 * @return
 	 */
@@ -98,7 +99,7 @@ public class Solution {
 	}
 
 	/**
-	 * 解法四: 优化带有dp表的动态规划, 省去 dp 表
+	 * solution4: 严格位置依赖的动态规划 + 空间压缩
 	 * int next = i+1 的值,  int nextNext = i + 2 的值, int cur = next + nextNext
 	 * @param s
 	 * @return

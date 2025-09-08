@@ -11,7 +11,7 @@ import java.util.List;
  * @Description: no.872. Leaf-Similar Trees
  * link: https://leetcode.com/problems/leaf-similar-trees/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

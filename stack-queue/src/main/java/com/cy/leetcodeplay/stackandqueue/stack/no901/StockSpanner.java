@@ -8,7 +8,7 @@ import java.util.Deque;
  * @Date: 2025/9/3
  * @Description: no.901. Online Stock Span
  * link: https://leetcode.com/problems/online-stock-span/description/
- * todo: 未录入题库
+ * todo: 未录入Anki
  * Monotonic Stack
  */
 public class StockSpanner {

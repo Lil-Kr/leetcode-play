@@ -8,7 +8,7 @@ import java.util.Queue;
  * @Date: 2025/8/27
  * @Description: no.933. Number of Recent Calls
  * link: https://leetcode.com/problems/number-of-recent-calls/description/
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class RecentCounter {
 	private Queue<Integer> queue;

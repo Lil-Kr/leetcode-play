@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.array.no643;
  * @Description: no.643. Maximum Average Subarray I
  * link: https://leetcode.com/problems/maximum-average-subarray-i/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  * Sliding Window
  */
 public class Solution {

@@ -19,8 +19,13 @@ class SolutionTest {
 	public void test2() {
 		int n = 40;
 		int res1 = solution.fib(n);
-//		Assertions.assertEquals(6765, res1);
+		Assertions.assertEquals(102334155, res1);
+	}
 
-		System.out.println(solution.getNum());
+	@Test
+	public void test3() {
+		int n = 40;
+		int res1 = solution.fib3(n);
+		Assertions.assertEquals(102334155, res1);
 	}
 }

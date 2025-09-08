@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.array.no1004;
  * @Description: no.1004. Max Consecutive Ones III
  * link: https://leetcode.com/problems/max-consecutive-ones-iii/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  * Sliding Window
  */
 public class Solution {

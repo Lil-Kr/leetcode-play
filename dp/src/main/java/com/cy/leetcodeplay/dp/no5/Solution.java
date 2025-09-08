@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.dp.no5;
  * @Description: no.5. Longest Palindromic Substring
  * link: https://leetcode.com/problems/longest-palindromic-substring/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @Description: 1679. Max Number of K-Sum Pairs
  * https://leetcode.com/problems/max-number-of-k-sum-pairs/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

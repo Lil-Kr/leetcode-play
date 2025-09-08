@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.dp.no32;
  * @Description: no.32. Longest Valid Parentheses
  * link: https://leetcode.com/problems/longest-valid-parentheses/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  *
  * 以左括号 ( 结尾的情况下, 都是不正确的, 所以从右往左推
  */

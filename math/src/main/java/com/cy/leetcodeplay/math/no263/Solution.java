@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.math.no263;
  * @Description: no.263. Ugly Number
  * link: https://leetcode.com/problems/ugly-number/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

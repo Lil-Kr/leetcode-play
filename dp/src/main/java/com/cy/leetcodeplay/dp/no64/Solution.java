@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.dp.no64;
  * @Description: no.64. Minimum Path Sum
  * link: https://leetcode.com/problems/minimum-path-sum/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  *
  * 每一步都只能向右或者向下走
  */

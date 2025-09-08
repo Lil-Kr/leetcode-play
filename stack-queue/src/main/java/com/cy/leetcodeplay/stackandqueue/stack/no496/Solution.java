@@ -11,11 +11,17 @@ import java.util.Map;
  * @Description: no.496. Next Greater Element I
  * link: https://leetcode.com/problems/next-greater-element-i/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  * Monotonic Stack
  */
 public class Solution {
 
+	/**
+	 *
+	 * @param nums1
+	 * @param nums2
+	 * @return
+	 */
 	public int[] nextGreaterElement(int[] nums1, int[] nums2) {
 		Map<Integer, Integer> map = new HashMap<>();
 		Deque<Integer> stack = new ArrayDeque<>();

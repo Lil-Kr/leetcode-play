@@ -8,12 +8,12 @@ import java.util.Arrays;
  * @Description: no.70. Climbing Stairs
  * 题意: 爬楼梯, 给定n阶台阶, 可以每次上1阶台阶, 或者每次上2阶台阶, 爬完这n阶台阶, 有多少种方法
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 
 	/**
-	 * 记忆化搜索
+	 * memory search
 	 * @param n
 	 * @return
 	 */
@@ -23,6 +23,12 @@ public class Solution {
 		return climbing(n, memo);
 	}
 
+	/**
+	 * solution1:
+	 * @param n
+	 * @param memo
+	 * @return
+	 */
 	private int climbing(int n, int[] memo) {
 		// if (n == 0 || n == 1) return 1;
 		if (n == 1) return 1;
@@ -35,7 +41,7 @@ public class Solution {
 	}
 
 	/**
-	 * 解法二: 自底向上
+	 * solution2: 自底向上
 	 * 到达每一阶的方法数只依赖于前两阶的和
 	 * @param n
 	 * @return
@@ -54,7 +60,7 @@ public class Solution {
 	}
 
 	/**
-	 * 解法三: 动态规划
+	 * solution3: dp
 	 * @param n
 	 * @return
 	 */

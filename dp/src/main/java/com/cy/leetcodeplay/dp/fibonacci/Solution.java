@@ -1,23 +1,12 @@
 package com.cy.leetcodeplay.dp.fibonacci;
 
-import java.util.Arrays;
-
 /**
  * @Author: Lil-K
  * @Date: 2024/11/2
  * @Description: 斐波那契额数列
+ * link: https://leetcode.com/problems/fibonacci-number/description/
  */
 public class Solution {
-
-	private int num = 0;
-
-	public int getNum() {
-		return num;
-	}
-
-	public void setNum(int num) {
-		this.num = num;
-	}
 
 	/**
 	 *
@@ -25,7 +14,6 @@ public class Solution {
 	 * @return
 	 */
 	public int fib(int n) {
-		setNum(num+1);
 		if (n == 0) return 0;
 
 		if (n == 1) return 1;
@@ -34,13 +22,11 @@ public class Solution {
 	}
 
 	/**
-	 * 优化
+	 * optimization: top -> down
 	 * @param n
 	 * @return
 	 */
 	public int fib2(int n, int[] memo) {
-		setNum(num+1);
-
 		if (n == 0) return 0;
 
 		if (n == 1) return 1;
@@ -52,15 +38,20 @@ public class Solution {
 		return memo[n];
 	}
 
-	public static void main(String[] args) {
-		int n = 1000;
+	/**
+	 * optimization: down -> top
+	 * @param n
+	 * @return
+	 */
+	public int fib3(int n) {
+
 		int[] memo = new int[n + 1];
-		Arrays.fill(memo, -1);
+		memo[0] = 0;
+		memo[1] = 1;
+		for (int i = 2; i <= n; i ++) {
+			memo[i] = memo[i - 1] + memo[i - 2];
+		}
 
-		Solution s = new Solution();
-		int res = s.fib2(n, memo);
-		System.out.println(res);
-
-		System.out.println(s.getNum());
+		return memo[n];
 	}
 }

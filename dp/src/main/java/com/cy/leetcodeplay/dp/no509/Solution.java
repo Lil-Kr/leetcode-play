@@ -6,11 +6,14 @@ import java.util.Arrays;
  * @Author: Lil-K
  * @Date: 2024/11/2
  * @Description: no.509. Fibonacci Number
+ * link: https://leetcode.com/problems/fibonacci-number/description/
+ *
+ * todo: 未录入Anki
  */
 public class Solution {
 
 	/**
-	 * 自顶向下
+	 * solution1: top to down (自顶向下)
 	 * @param n
 	 * @return
 	 */
@@ -31,9 +34,8 @@ public class Solution {
 		return memo[n];
 	}
 
-
 	/**
-	 * 解法二: 自底向上
+	 * solution2: down to top (自底向上)
 	 * @param n
 	 * @return
 	 */
@@ -51,22 +53,35 @@ public class Solution {
 	}
 
 	/**
-	 * 再优化: 动态规划
+	 * solution3: dynamic programming
 	 * @param n
 	 * @return
 	 */
 	public int fib3 (int n) {
 		if (n == 0) return 0;
-		if (n == 1) return 1;
-
-		int ll = 0, l = 1;
-		int cur = 0;
-
-		for (int i = 2; i <= n; i++) {
-			cur = ll + l;
-			ll = l;
-			l = cur;
+		int[] dp = new int[n + 1];
+		dp[0] = 0;
+		dp[1] = 1;
+		for (int i = 2; i <= n; i ++) {
+			dp[i] = dp[i - 1] + dp[i - 2];
 		}
-		return l;
+		return dp[n];
+	}
+
+	/**
+	 * solution4: don`t need dp table
+	 * O(log n)
+	 * @param n
+	 * @return
+	 */
+	public int fib4 (int n) {
+		if (n == 0 || n == 1) return n;
+		int lastLast = 0, last = 1;
+		for (int i = 2, cur; i <= n; i ++) {
+			cur = lastLast + last;
+			lastLast = last;
+			last = cur;
+		}
+		return last;
 	}
 }

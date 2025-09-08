@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.string.no1768;
  * @Description: no.1768. Merge Strings Alternately
  * link: https://leetcode.com/problems/merge-strings-alternately/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

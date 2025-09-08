@@ -6,14 +6,13 @@ import java.util.List;
  * @Author: Lil-K
  * @Date: 2024/11/3
  * @Description: no.120. Triangle
- *
- * todo: 待完成
- * todo: 未录入题库
+ * link: https://leetcode.com/problems/triangle/description/
+ * todo: 未录入Anki
  */
 public class Solution {
 
 	/**
-	 * 解法一: 纯递归
+	 * solution: recursive
 	 * @param triangle
 	 * @return
 	 */
@@ -27,8 +26,8 @@ public class Solution {
 		if (row == triangle.size() - 1) return triangle.get(row).get(col);
 
 		/**
-		 * 1. 向下移动 1 (row + 1, col)
-		 * 2. 向下移动 1 + 向右移动 1 (row + 1, col + 1)
+		 * 1. move to down 1 (row + 1, col)
+		 * 2. move to down 1 + move to right 1 (row + 1, col + 1)
 		 */
 		int l = minimumTotal(triangle, row + 1, col);
 		int r = minimumTotal(triangle, row + 1, col + 1);
@@ -37,7 +36,7 @@ public class Solution {
 	}
 
 	/**
-	 * 解法二: 递归 + 记忆化搜索
+	 * solution: recursive + memory search
 	 * @param triangle
 	 * @return
 	 */
@@ -64,8 +63,8 @@ public class Solution {
 		if (memo[row][col] != Integer.MAX_VALUE) return memo[row][col];
 
 		/**
-		 * 1. 向下移动 1 (row + 1, col)
-		 * 2. 向下移动 1 + 向右移动 1 (row + 1, col + 1)
+		 * 1. move to down 1 (row + 1, col)
+		 * 2. move to down 1 + move to right 1 (row + 1, col + 1)
 		 */
 		int l = minimumTotal2(triangle, row + 1, col, memo);
 		int r = minimumTotal2(triangle, row + 1, col + 1, memo);
@@ -77,7 +76,7 @@ public class Solution {
 
 
 	/**
-	 * 解法三: 动态规划
+	 * solution: Dynamic Programming
 	 * @param triangle
 	 * @return
 	 */

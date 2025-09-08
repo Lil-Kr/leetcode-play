@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @Date: 2025/8/18
  * @Description: no.135. Candy
  * link: https://leetcode.com/problems/candy/description/
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

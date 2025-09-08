@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.dp.no467;
  * @Description: no.467. Unique Substrings in Wraparound String
  *  link: https://leetcode.com/problems/unique-substrings-in-wraparound-string/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  *
  * 长度长的子串一定包含 长度短的 子串, 所以短的子串不需要考虑了
  * 检查每个字符, 往左边能延申多长

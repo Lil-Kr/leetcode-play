@@ -5,7 +5,7 @@ package com.cy.leetcodeplay.string.no6;
  * @Date: 2025/4/10
  * @Description: no.6. Zigzag Conversion
  * link: https://leetcode.com/problems/zigzag-conversion/description
- * todo: 未录入题库
+ * todo: 未录入Anki
  *
  * Z 字形排列规律:
  *  字符先向下填充到第 numRows 行, 然后斜向上填充到第 1 行, 如此反复.

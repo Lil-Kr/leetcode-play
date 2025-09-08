@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @Date: 2025/8/26
  * @Description: no.1657. Determine if Two Strings Are Close
  * link: https://leetcode.com/problems/determine-if-two-strings-are-close/description
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

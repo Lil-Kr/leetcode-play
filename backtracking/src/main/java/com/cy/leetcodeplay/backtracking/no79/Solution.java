@@ -4,7 +4,7 @@ package com.cy.leetcodeplay.backtracking.no79;
  * @Author: Lil-K
  * @Date: 2024/10/28
  * @Description: no.79. Word Search
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

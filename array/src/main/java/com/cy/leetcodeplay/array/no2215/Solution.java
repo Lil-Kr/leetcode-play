@@ -7,7 +7,7 @@ import java.util.*;
  * @Date: 2025/8/25
  * @Description: no.2215. Find the Difference of Two Arrays
  * link: https://leetcode.com/problems/find-the-difference-of-two-arrays/description/
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

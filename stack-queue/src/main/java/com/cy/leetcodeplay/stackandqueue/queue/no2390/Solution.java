@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * @Date: 2025/8/27
  * @Description: no.2390. Removing Stars From a String
  * link: https://leetcode.com/problems/removing-stars-from-a-string/description/
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

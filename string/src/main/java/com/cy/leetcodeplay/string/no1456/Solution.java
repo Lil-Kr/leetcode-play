@@ -9,7 +9,7 @@ import java.util.Set;
  * @Description: no.1456. Maximum Number of Vowels in a Substring of Given Length
  * link: https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  * Sliding Window
  */
 public class Solution {

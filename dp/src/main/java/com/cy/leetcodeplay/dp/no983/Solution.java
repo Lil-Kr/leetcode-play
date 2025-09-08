@@ -7,22 +7,22 @@ import java.util.Arrays;
  * @Date: 2024/11/2
  * @Description: no.983. Minimum Cost For Tickets
  * link: https://leetcode.com/problems/minimum-cost-for-tickets/description/
- * todo: 未录入题库
  *
+ * todo: 未录入Anki
  * 一维动态规划
  */
 public class Solution {
 
+	// ticket type
 	private int[] tickets = {1, 7, 30};
 
 	/**
-	 * 解法一: 暴力递归
+	 * solution1: 暴力递归
 	 * @param days
 	 * @param costs
 	 * @return
 	 */
 	public int mincostTickets(int[] days, int[] costs) {
-
 		return f1(days, costs, 0);
 	}
 
@@ -30,7 +30,7 @@ public class Solution {
 	 *
 	 * @param days
 	 * @param costs
-	 * @param index 可变参数
+	 * @param index next start index position for days[index]
 	 * @return
 	 */
 	private int f1(int[] days, int[] costs, int index) {
@@ -52,7 +52,7 @@ public class Solution {
 
 
 	/**
-	 * 解法二: 递归 + 记忆化搜索
+	 * solution2: 递归 + 记忆化搜索
 	 * @param days
 	 * @param costs
 	 * @return
@@ -85,7 +85,8 @@ public class Solution {
 
 
 	/**
-	 * 解法三: 动态规划
+	 * solution3: dp
+	 * down -> top
 	 * @param days
 	 * @param costs
 	 * @return
@@ -93,7 +94,7 @@ public class Solution {
 	public int mincostTickets3(int[] days, int[] costs) {
 		int[] dp = new int[366];
 		int n = days.length;
-		Arrays.fill(dp, 0, days.length + 1, Integer.MAX_VALUE);
+		Arrays.fill(dp, 0, n + 1, Integer.MAX_VALUE);
 		dp[n] = 0;
 
 		for (int i = n - 1; i >= 0; i--) {

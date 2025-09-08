@@ -7,7 +7,7 @@ import com.cy.leetcodeplay.common.entity.ListNode;
  * @Date: 2025/8/27
  * @Description: no.2095. Delete the Middle Node of a Linked List
  * link: https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

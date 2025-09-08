@@ -10,7 +10,7 @@ package com.cy.leetcodeplay.dp.no940;
  *  1. 每个字符向左, 计算得到有多少个字符组合
  *  2.
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.dp.no1143;
  * @Description: no.1143. Longest Common Subsequence
  * link: https://leetcode.com/problems/longest-common-subsequence/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  *
  * 解题思路:
  *  1. 定好范围之后, 过结尾作为开始来讨论

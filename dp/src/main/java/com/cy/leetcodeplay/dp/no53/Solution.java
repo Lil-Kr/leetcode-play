@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @Date: 2024/11/1
  * @Description: no.53. Maximum Subarray
  * link: https://leetcode.com/problems/maximum-subarray/description/
- * todo: 未录入题库
+ * todo: 未录入Anki
  *
  * 动态规划:
  *

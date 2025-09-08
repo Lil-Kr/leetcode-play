@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.string.no1071;
  * @Description: no.1071. Greatest Common Divisor of Strings
  * link: https://leetcode.com/problems/greatest-common-divisor-of-strings/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

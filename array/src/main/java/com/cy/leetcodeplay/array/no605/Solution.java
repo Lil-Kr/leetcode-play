@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.array.no605;
  * @Description: no.605. Can Place Flowers
  * https://leetcode.com/problems/can-place-flowers/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

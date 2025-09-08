@@ -7,7 +7,7 @@ import com.cy.leetcodeplay.common.entity.ListNode;
  * @Date: 2025/8/30
  * @Description: no.2130. Maximum Twin Sum of a Linked List
  * link: https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description
- * todo: 未录入题库
+ * todo: 未录入Anki
  */
 public class Solution {
 

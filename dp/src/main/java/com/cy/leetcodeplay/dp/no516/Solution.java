@@ -6,7 +6,7 @@ package com.cy.leetcodeplay.dp.no516;
  * @Description: no.516. Longest Palindromic Subsequence
  * link: https://leetcode.com/problems/longest-palindromic-subsequence/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  *
  * 最长回文子序列问题:
  *  1. 可以转化为最长公共子序列问题

@@ -9,7 +9,7 @@ import java.util.Deque;
  * @Description: no.735. Asteroid Collision
  * link: https://leetcode.com/problems/asteroid-collision/description/
  *
- * todo: 未录入题库
+ * todo: 未录入Anki
  * Monotonic Stack
  */
 public class Solution {
