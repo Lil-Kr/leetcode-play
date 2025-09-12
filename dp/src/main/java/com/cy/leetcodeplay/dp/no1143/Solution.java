@@ -1,5 +1,7 @@
 package com.cy.leetcodeplay.dp.no1143;
 
+import java.util.Arrays;
+
 /**
  * @Author: Lil-K
  * @Date: 2024/12/6
@@ -104,9 +106,7 @@ public class Solution {
 		 */
 		int[][] dp = new int[n + 1][m + 1];
 		for (int i = 0; i <= n; i++) {
-			for (int j = 0; j <= m; j++) {
-				dp[i][j] = -1;
-			}
+			Arrays.fill(dp[i], -1);
 		}
 
 		return f3(s1, s2, n, m, dp);
@@ -197,7 +197,6 @@ public class Solution {
 				leftUp = backUp;
 			}
 		}
-
 		return dp[m];
 	}
 }

@@ -1,5 +1,7 @@
 package com.cy.leetcodeplay.dp.no64;
 
+import java.util.Arrays;
+
 /**
  * @Author: Lil-K
  * @Date: 2024/12/6
@@ -13,7 +15,7 @@ package com.cy.leetcodeplay.dp.no64;
 public class Solution {
 
 	/**
-	 * 解法一: 纯递归
+	 * solution1: recursive
 	 * @param grid
 	 * @return
 	 */
@@ -37,6 +39,36 @@ public class Solution {
 	}
 
 	/**
+	 * Reverse direction
+	 * @param grid
+	 * @return
+	 */
+	public int minPathSum1_1(int[][] grid) {
+		return f1_2(grid, 0, 0);
+	}
+
+	private int f1_2(int[][] grid, int i, int j) {
+		int row = grid.length, col = grid[0].length;
+
+		if (i == row - 1 && j == col - 1) {
+			return grid[i][j];
+		}
+
+		int right = Integer.MAX_VALUE, down = Integer.MAX_VALUE;
+		if (i + 1 < row) {
+			right = f1_2(grid, i + 1, j);
+		}
+
+		if (j + 1 < col) {
+			down = f1_2(grid, i, j + 1);
+		}
+
+		return grid[i][j] + Math.min(right, down);
+	}
+
+	/** ===================== solution2 ====================== **/
+
+	/**
 	 * 解法二: 记忆化搜索 + 递归
 	 * 从顶到底
 	 * @param grid
@@ -49,10 +81,8 @@ public class Solution {
 		int n = grid.length, m = grid[0].length;
 		int[][] dp = new int[n][m];
 
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < m; j++) {
-				dp[i][j] = -1;
-			}
+		for (int i = 0; i < m; i ++) {
+			Arrays.fill(dp[i], -1);
 		}
 
 		return f2(grid, grid.length - 1, grid[0].length - 1, dp);
@@ -60,24 +90,22 @@ public class Solution {
 
 	private int f2(int[][] grid, int i, int j, int[][] dp) {
 		if(dp[i][j] != -1) return dp[i][j];
-
-		int ans;
 		if (i == 0 && j == 0) {
-			ans = grid[i][j];
-		} else {
-			int up = Integer.MAX_VALUE;
-			int left = Integer.MAX_VALUE;
-			if (i > 0) {
-				up = f2(grid, i - 1, j, dp);
-			}
-			if (j > 0) {
-				left = f2(grid, i, j - 1, dp);
-			}
-			ans = grid[i][j] + Math.min(up, left);
+			return grid[i][j];
 		}
-		dp[i][j] = ans;
-		return ans;
+		int up = Integer.MAX_VALUE;
+		int left = Integer.MAX_VALUE;
+		if (i - 1 >= 0) {
+			up = f2(grid, i - 1, j, dp);
+		}
+		if (j - 1 >= 0) {
+			left = f2(grid, i, j - 1, dp);
+		}
+		dp[i][j] = grid[i][j] + Math.min(up, left);
+		return dp[i][j];
 	}
+
+	/** ===================== solution3 ====================== **/
 
 	/**
 	 * 解法三: 严格位置依赖的动态规划
