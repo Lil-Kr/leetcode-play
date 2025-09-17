@@ -17,7 +17,7 @@ import java.util.Arrays;
  *
  * 初始化 maxSum 为第一个元素, currentSum 也初始化为第一个元素. 
  * 从第二个元素开始遍历数组, 每次更新 currentSum：若 currentSum + nums[i] 更大, 则加上当前元素, 否则更新为 nums[i], 表示重新开始子数组. 
- * 将 currentSum 与 maxSum 比较并更新 maxSum. 
+ * 将 currentSum 与 maxSum 比较并更新 maxSum.
  * 遍历结束后, maxSum 即为所求的最大子数组和.
  */
 public class Solution {
@@ -40,7 +40,6 @@ public class Solution {
 
 		for (int i = index; i < nums.length; i++) {
 			curSum += nums[i];
-
 			maxSum = Math.max(curSum, maxSum);
 		}
 
@@ -74,23 +73,21 @@ public class Solution {
 	}
 
 	/**
-	 * 解法三: dp表 + 动态规划
+	 * 解法三: dp
 	 * @param nums
 	 * @return
 	 */
 	public int maxSubArray3(int[] nums) {
 		int n = nums.length;
 		int[] dp = new int[n];
-		Arrays.fill(dp, Integer.MIN_VALUE);
-
 		dp[0] = nums[0];
-		int maxSum = dp[0];
 
+		int ans = nums[0];
 		for (int i = 1; i < n; i++) {
 			dp[i] = Math.max(nums[i], dp[i - 1] + nums[i]);
-			maxSum = Math.max(maxSum, dp[i]);
+			ans = Math.max(ans, dp[i]);
 		}
-		return maxSum;
+		return ans;
 	}
 
 	/**
@@ -99,16 +96,60 @@ public class Solution {
 	 * @return
 	 */
 	public int maxSubArray4(int[] nums) {
-		if (nums.length == 1) return nums[0];
-
-		int maxSum = nums[0];
-		int currentSum = nums[0];
-
-		for (int i = 1; i < nums.length; i++) {
-			currentSum = Math.max(nums[i], currentSum + nums[i]);
-			maxSum = Math.max(maxSum, currentSum);
+		int n = nums.length;
+		int[] dp = new int[n];
+		dp[0] = nums[0];
+		int ans = nums[0];
+		for (int i = 1; i < n; i ++) {
+			dp[i] = Math.max(nums[i], dp[i - 1] + nums[i]);
+			ans = Math.max(ans, dp[i]);
 		}
-
-		return maxSum;
+		return ans;
 	}
+
+	/**
+	 * solution5: dp + space compression
+	 * @param nums
+	 * @return
+	 */
+	public int maxSubArray5(int[] nums) {
+		int n = nums.length;
+		int ans = nums[0];
+		for (int i = 1, prevMax = nums[0]; i < n; i ++) {
+			prevMax = Math.max(nums[i], prevMax + nums[i]);
+			ans = Math.max(ans, prevMax);
+		}
+		return ans;
+	}
+
+	private static int left;
+	private static int right;
+	private static int sum;
+
+	/**
+	 * additional task: Find the subarray with the maximum sum and return the following three pieces of information
+	 * 1. return the maximum subarray start index: left
+	 * 2. return the maximum subarray end index: right
+	 * 3. return the maximum subarray sum: sum
+	 * @param nums
+	 * @return
+	 */
+	public void extra(int[] nums) {
+		int n = nums.length;
+		sum = Integer.MIN_VALUE;
+		for (int l = 0, r = 0, pre = Integer.MIN_VALUE; r < n; r ++) {
+			if (pre >= 0) {
+				pre += nums[r];
+			} else {
+				pre = nums[r];
+				l = r;
+			}
+			if (pre > sum) {
+				sum = pre;
+				left = l;
+				right = r;
+			}
+		}
+	}
+
 }

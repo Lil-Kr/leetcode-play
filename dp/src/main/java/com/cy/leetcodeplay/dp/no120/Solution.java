@@ -76,7 +76,7 @@ public class Solution {
 
 
 	/**
-	 * solution: Dynamic Programming
+	 * solution: dp
 	 * @param triangle
 	 * @return
 	 */

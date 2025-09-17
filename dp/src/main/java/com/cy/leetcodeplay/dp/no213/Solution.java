@@ -4,6 +4,7 @@ package com.cy.leetcodeplay.dp.no213;
  * @Author: Lil-K
  * @Date: 2024/11/3
  * @Description: no.213. House Robber II
+ * link: https://leetcode.com/problems/house-robber-ii/description/
  * todo: 未录入Anki
  */
 public class Solution {
@@ -15,26 +16,37 @@ public class Solution {
 	 */
 	public int rob(int[] nums) {
 		if (nums.length == 1) return nums[0];
-
 		int n = nums.length;
-
-		return Math.max(robRange(nums, 0, n - 2), robRange(nums, 1, n - 1));
+		return Math.max(best(nums, 1, n - 1), nums[0] + best(nums, 2, n - 2));
 	}
 
 	/**
-	 * 线性抢劫子问题的解法：从 start 到 end 的最大抢劫金额
+	 *
 	 * @param nums
-	 * @param start
-	 * @param end
+	 * @param l
+	 * @param r
 	 * @return
 	 */
-	private int robRange(int[] nums, int start, int end) {
-		int prevTwo = 0, prevOne = 0;
-		for (int i = start; i <= end; i++) {
-			int cur = Math.max(prevOne, prevTwo + nums[i]);
-			prevTwo = prevOne;
-			prevOne = cur;
+	private int best(int[] nums, int l, int r) {
+		if (l > r) {
+			return 0;
 		}
-		return prevOne;
+		if (l == r) {
+			return nums[l];
+		}
+
+		if (l + 1 == r) {
+			return Math.max(nums[l], nums[r]);
+		}
+
+		int prepre = nums[l];
+		int pre = Math.max(nums[l], nums[l + 1]);
+		for (int i = l + 2, cur; i <= r; i++) {
+			cur = Math.max(pre, nums[i] + Math.max(0, prepre));
+			prepre = pre;
+			pre = cur;
+		}
+		return pre;
 	}
+
 }
