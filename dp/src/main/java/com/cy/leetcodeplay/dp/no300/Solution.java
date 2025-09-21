@@ -44,10 +44,6 @@ public class Solution {
 	 * @return
 	 */
 	public int lengthOfLIS2(int[] nums) {
-		return f2(nums);
-	}
-
-	private int f2(int[] nums) {
 		int n = nums.length;
 		int[] dp = new int[n];
 		dp[0] = 1;
@@ -76,7 +72,55 @@ public class Solution {
 	 * @return
 	 */
 	public int lengthOfLIS3(int[] nums) {
+		int n = nums.length;
+		int[] dp = new int[n];
+		int ans = 0;
+		for (int i = 0; i < n; i ++) {
+			dp[i] = 1;
+			for (int j = 0; j < i; j ++) {
+				if (nums[j] < nums[i]) {
+					dp[i] = Math.max(dp[i], dp[j] + 1);
+				}
+			}
+			ans = Math.max(ans, dp[i]);
+		}
+		return ans;
+	}
 
-		return 0;
+	/**
+	 * solution:4: dp + binary search
+	 * O(n * logn)
+	 * search from ends array is binary search way
+	 * @param nums
+	 * @return
+	 */
+	public int lengthOfLIS4(int[] nums) {
+		int n = nums.length;
+		int[] ends = new int[n];
+		int len = 0;
+		for (int i = 0, find; i < n; i ++) {
+			find = bs1(ends, len, nums[i]);
+			if (find == -1) {
+				ends[len] = nums[i];
+				len ++;
+			} else {
+				ends[find] = nums[i];
+			}
+		}
+		return len;
+	}
+
+	private int bs1(int[] ends, int len, int num) {
+		int l = 0, r = len - 1, mid = -1, index = -1;
+		while (l <= r) {
+			mid = l + (r - l) / 2;
+			if (num <= ends[mid]) {
+				index = mid;
+				r = mid - 1;
+			} else {
+				l = mid + 1;
+			}
+		}
+		return index;
 	}
 }

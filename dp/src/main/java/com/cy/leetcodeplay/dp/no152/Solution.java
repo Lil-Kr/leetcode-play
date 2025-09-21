@@ -40,11 +40,31 @@ public class Solution {
 
 		int[] prev = f1(nums, i - 1, dp);
 		int cur = nums[i];
-		int maxVal = Math.max(cur, Math.max(cur * prev[0], cur * prev[1]));
-		int minVal = Math.min(cur, Math.min(cur * prev[0], cur * prev[1]));
+		int curMax = Math.max(cur, Math.max(cur * prev[0], cur * prev[1]));
+		int curMin = Math.min(cur, Math.min(cur * prev[0], cur * prev[1]));
 
-		dp[i][0] = maxVal;
-		dp[i][1] = minVal;
+		dp[i][0] = curMax;
+		dp[i][1] = curMin;
 		return dp[i];
 	}
+
+	/**
+	 * solution2: dp
+	 * this solution support both of double and int
+	 * @param nums
+	 * @return
+	 */
+	public int maxProduct2(int[] nums) {
+		int n = nums.length;
+		int ans = nums[0];
+		for (int i = 1, min = nums[0], max = nums[0], curMin, curMax; i < n; i ++) {
+			curMin = Math.min(nums[i], Math.min(min * nums[i], max * nums[i]));
+			curMax = Math.max(nums[i], Math.max(min * nums[i], max * nums[i]));
+			min = curMin;
+			max = curMax;
+			ans = Math.max(ans, max);
+		}
+		return ans;
+	}
+
 }
