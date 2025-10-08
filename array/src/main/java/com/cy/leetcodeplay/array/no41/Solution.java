@@ -12,6 +12,7 @@ package com.cy.leetcodeplay.array.no41;
 public class Solution {
 
 	/**
+	 * solution1:
 	 * @param nums
 	 * @return
 	 */
@@ -43,6 +44,29 @@ public class Solution {
 		 * 如果都符合 nums[i] == i + 1, 则返回 n + 1
 		 */
 		return n + 1;
+	}
+
+	/**
+	 * solution2:
+	 * @param nums
+	 * @return
+	 */
+	public int firstMissingPositive2(int[] nums) {
+		/**
+		 * l: l的左边都放 l + 1 的数, 一直观察 nums[l] 位置的值
+		 */
+		int l = 0, r = nums.length;
+		while (l < r) {
+			if (nums[l] == l + 1) {
+				l ++;
+			} else if (nums[l] <= l || nums[l] > r || nums[nums[l] - 1] == nums[l]) {
+				r --;
+				swap(nums, l, r);
+			} else {
+				swap(nums, l, nums[l] - 1);
+			}
+		}
+		return  l + 1;
 	}
 
 	private void swap(int[] nums, int i, int j) {

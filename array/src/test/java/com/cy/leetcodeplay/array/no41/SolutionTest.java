@@ -27,4 +27,27 @@ class SolutionTest {
 		int res = solution.firstMissingPositive(nums);
 		Assertions.assertEquals(res, 1);
 	}
+
+	// =================== solution2 =====================
+
+	@Test
+	public void test21() {
+		int[] nums = {1, 2, 0};
+		int res = solution.firstMissingPositive2(nums);
+		Assertions.assertEquals(res, 3);
+	}
+
+	@Test
+	public void test22() {
+		int[] nums = {3, 4, -1, 1};
+		int res = solution.firstMissingPositive2(nums);
+		Assertions.assertEquals(res, 2);
+	}
+
+	@Test
+	public void test23() {
+		int[] nums = {7, 8, 9, 11, 12};
+		int res = solution.firstMissingPositive2(nums);
+		Assertions.assertEquals(res, 1);
+	}
 }

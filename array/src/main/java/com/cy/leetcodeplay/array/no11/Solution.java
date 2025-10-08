@@ -41,26 +41,24 @@ public class Solution {
 	 */
 	public int maxArea2(int[] height) {
 		int n = height.length;
-		if (n == 2) {
-			return 1 * Math.min(height[0], height[1]);
-		}
+		if (n == 2) return Math.min(height[0], height[1]);
 
 		int l = 0, r = n - 1, max = -1;
 
 		while (l < r) {
-			int gap = r - l;
 			int minHeight = Math.min(height[l], height[r]);
-			int currentArea = gap * minHeight;
+			int currentArea = (r - l) * minHeight;
 			max = Math.max(max, currentArea);
 
 			/**
 			 * skip
 			 */
 			while (l < r && height[l] <= minHeight) {
-				l++;
+				l ++;
 			}
+
 			while (l < r && height[r] <= minHeight) {
-				r--;
+				r --;
 			}
 		}
 		return max;

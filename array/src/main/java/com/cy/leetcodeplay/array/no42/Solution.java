@@ -17,26 +17,47 @@ package com.cy.leetcodeplay.array.no42;
 public class Solution {
 
 	/**
-	 * 解法一: 双指针
+	 * solution1:
 	 * @param height
 	 * @return
 	 */
 	public int trap(int[] height) {
+		int n = height.length;
+		int[] lmax = new int[n];
+		int[] rmax = new int[n];
+		lmax[0] = height[0];
+		for (int i = 1; i < n; i ++) {
+			lmax[i] = Math.max(lmax[i - 1], height[i]);
+		}
+
+		rmax[n - 1] = height[n - 1];
+		for (int i = n - 2; i >= 0; i --) {
+			rmax[i] = Math.max(rmax[i + 1], height[i]);
+		}
+
+		int ans = 0;
+		for (int i = 1; i < n - 1; i ++) {
+			ans += Math.max(0, Math.min(lmax[i - 1], rmax[i + 1]) - height[i]);
+		}
+		return ans;
+	}
+
+	/**
+	 * solution2: 双指针
+	 * @param height
+	 * @return
+	 */
+	public int trap2(int[] height) {
 		if (height == null || height.length == 0) return 0;
-
-		int left = 0, right = height.length - 1;
-		int leftMax = height[left], rightMax = height[right];
+		int l = 1, r = height.length - 2, lmax = height[0], rmax = height[height.length - 1];
 		int water = 0;
-
-		while (left < right) {
-			if (height[left] < height[right]) {
-				left++; // 向右移动左指针
-				leftMax = Math.max(leftMax, height[left]); // 更新左边最大高度
-				water += leftMax - height[left]; // 计算当前柱子能接住的雨水量
+		while (l <= r) {
+			if (lmax >= rmax) {
+				water += Math.max(0, rmax - height[r]);
+				rmax = Math.max(rmax, height[r --]);
 			} else {
-				right--; // 向左移动右指针
-				rightMax = Math.max(rightMax, height[right]); // 更新右边最大高度
-				water += rightMax - height[right]; // 计算当前柱子能接住的雨水量
+				water += Math.max(0, lmax - height[l]);
+				lmax = Math.max(lmax, height[l ++]);
 			}
 		}
 		return water;

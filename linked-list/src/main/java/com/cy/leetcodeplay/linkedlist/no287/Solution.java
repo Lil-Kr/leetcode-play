@@ -28,23 +28,23 @@ public class Solution {
 	}
 
 	/**
-	 * 解法二: 利用链表环的概念
+	 * solution2: 利用链表环的概念
 	 * @param nums
 	 * @return:
 	 */
 	public int findDuplicate2(int[] nums) {
 		int slow = nums[0];
-		int fast = nums[0];
+		int fast = nums[nums[0]];
 
-		do {
+		while (slow != fast) {
 			slow = nums[slow];
 			fast = nums[nums[fast]];
-		} while (slow != fast);
+		}
 
 		/**
 		 * 找到环的入口
 		 */
-		slow = nums[0];
+		fast = 0;
 		while (slow != fast) {
 			slow = nums[slow];
 			fast = nums[fast];
