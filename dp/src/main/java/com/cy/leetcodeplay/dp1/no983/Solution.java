@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @Author: Lil-K
  * @Date: 2024/11/2
  * @Description: no.983. Minimum Cost For Tickets
- * link: https://leetcode.com/problems/minimum-cost-for-tickets/description/
+ * link: https://leetcode.com/problems/minimum-cost-for-tickets/description
  *
  * todo: 未录入Anki
  * 一维动态规划
@@ -27,7 +27,6 @@ public class Solution {
 	}
 
 	/**
-	 *
 	 * @param days
 	 * @param costs
 	 * @param index next start index position for days[index]
@@ -41,15 +40,14 @@ public class Solution {
 		/**
 		 * k 是方案编号: 0 1 2
 		 */
-		for (int k = 0, j = index; k < tickets.length; k++) {
-			while (j < days.length && days[index] + tickets[k] > days[j]) {
-				j++;
+		for (int k = 0, i = index; k < tickets.length; k ++) {
+			while (i < days.length && days[index] + tickets[k] > days[i]) {
+				i ++;
 			}
-			ans = Math.min(ans, costs[k] + f1(days, costs, j));
+			ans = Math.min(ans, costs[k] + f1(days, costs, i));
 		}
 		return ans;
 	}
-
 
 	/**
 	 * solution2: 递归 + 记忆化搜索
@@ -73,11 +71,11 @@ public class Solution {
 		/**
 		 * k 是方案编号: 0 1 2
 		 */
-		for (int k = 0, j = index; k < tickets.length; k++) {
-			while (j < days.length && days[index] + tickets[k] > days[j]) {
-				j++;
+		for (int k = 0, i = index; k < tickets.length; k++) {
+			while (i < days.length && days[index] + tickets[k] > days[i]) {
+				i++;
 			}
-			ans = Math.min(ans, costs[k] + f2(days, costs, j, dp));
+			ans = Math.min(ans, costs[k] + f2(days, costs, i, dp));
 		}
 		dp[index] = ans;
 		return ans;
@@ -87,6 +85,7 @@ public class Solution {
 	/**
 	 * solution3: dp
 	 * down -> top
+	 * the performance is slowly than solution2.
 	 * @param days
 	 * @param costs
 	 * @return

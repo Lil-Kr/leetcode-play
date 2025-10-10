@@ -198,7 +198,7 @@ public class Solution {
 	}
 
 	/**
-	 * 动态规划 + 去除 dp表
+	 * solution3: dp + space compression
 	 * @param s
 	 * @return
 	 */

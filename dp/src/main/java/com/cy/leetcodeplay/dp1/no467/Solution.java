@@ -15,17 +15,17 @@ public class Solution {
 
 	/**
 	 *
-	 * @param s
+	 * @param str
 	 * @return
 	 */
-	public int findSubstringInWraproundString(String s) {
-		int n = s.length();
+	public int findSubstringInWraproundString(String str) {
+		int n = str.length();
 		/**
 		 * 将待考察的字符串转换为数字
 		 */
-		int[] freqS = new int[n];
+		int[] s = new int[n];
 		for (int i = 0; i < n; i++) {
-			freqS[i] = s.charAt(i) - 'a';
+			s[i] = str.charAt(i) - 'a';
 		}
 
 		/**
@@ -33,11 +33,11 @@ public class Solution {
 		 * dp[freqS[0]] = 1; 表示: 左边第一个字符能向左延申 0 个长度, 它自身长度为 1
 		 */
 		int[] dp = new int[26];
-		dp[freqS[0]] = 1;
+		dp[s[0]] = 1;
 
 		for (int i = 1, cur, prev, len = 1; i < n; i++) {
-			cur = freqS[i];
-			prev = freqS[i - 1];
+			cur = s[i];
+			prev = s[i - 1];
 			/**
 			 * case1: 前一个字符: z, 当前字母: a,
 			 * case2: 前一个字符 + 1 == 当前的字符, len ++

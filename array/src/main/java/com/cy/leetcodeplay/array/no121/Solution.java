@@ -10,6 +10,11 @@ package com.cy.leetcodeplay.array.no121;
  */
 public class Solution {
 
+	/**
+	 *
+	 * @param prices
+	 * @return
+	 */
 	public int maxProfit(int[] prices) {
 		int minPrice = Integer.MAX_VALUE; // 初始化最低价格
 		int maxProfit = 0; // 初始化最大利润

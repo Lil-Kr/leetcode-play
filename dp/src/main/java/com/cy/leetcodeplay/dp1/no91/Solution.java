@@ -24,14 +24,14 @@ public class Solution {
 
 	private int f1(char[] s, int i) {
 		/**
-		 * i == s.length 表示: 越界的时候 返回空字符串, 也是一种情况
+		 * i == s.length 表示: 整个 s 连起来作为 1 种可能
 		 */
 		if (i == s.length) return 1;
 
 		int ans;
 		if (s[i] == '0') {
 			ans = 0;
-		} else { // s[i] == '0'
+		} else { // s[i] != '0'
 			ans = f1(s, i + 1);
 			if (i + 1 < s.length && ((s[i] - '0') * 10 + (s[i + 1] - '0')) <= 26) {
 				ans += f1(s, i + 2);

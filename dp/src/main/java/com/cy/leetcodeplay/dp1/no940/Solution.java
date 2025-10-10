@@ -16,16 +16,17 @@ public class Solution {
 
 	/**
 	 * 动态规划
-	 * @param s
+	 * @param str
 	 * @return
 	 */
-	public int distinctSubseqII(String s) {
+	public int distinctSubseqII(String str) {
 		int mod = (int) (Math.pow(10.0, 9.0) + 7); // 取余
-		char[] chs = s.toCharArray();
+		char[] s = str.toCharArray();
 		int[] cnt = new int[26];
 		int res = 1, newAdd = 0;
-		for (char ch : chs) {
+		for (char ch : s) {
 			newAdd = (res - cnt[ch - 'a'] + mod) % mod;
+			// 更新 当前位置字符 的新增数量
 			cnt[ch - 'a'] = (cnt[ch - 'a'] + newAdd) % mod;
 			res = (res + newAdd) % mod;
 		}

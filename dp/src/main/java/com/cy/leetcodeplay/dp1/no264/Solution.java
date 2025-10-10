@@ -47,7 +47,8 @@ public class Solution {
 	}
 
 	/**
-	 * 过期问题
+	 * solution2: dp
+	 * 单调性
 	 * @param n
 	 * @return
 	 */
