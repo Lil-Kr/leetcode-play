@@ -9,11 +9,16 @@ class SolutionTest {
 	private Solution solution = new Solution();
 
 	@Test
-	public void test_1() {
+	public void test1() {
 		int[] prices = new int[]{7,1,5,3,6,4};
 		int res = solution.maxProfit(prices);
-		System.out.println(res);
-		Assertions.assertEquals(res, 5);
+		Assertions.assertEquals(5, res);
 	}
 
+	@Test
+	public void test2() {
+		int[] prices = new int[]{7,1,5,3,6,4};
+		int res = solution.maxProfit2(prices);
+		Assertions.assertEquals(5, res);
+	}
 }

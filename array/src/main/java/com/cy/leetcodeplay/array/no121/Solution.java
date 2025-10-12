@@ -30,4 +30,21 @@ public class Solution {
 		}
 		return maxProfit; // 返回最大利润
 	}
+
+	/**
+	 *
+	 * @param prices
+	 * @return
+	 */
+	public int maxProfit2(int[] prices) {
+		int n = prices.length;
+
+		int minPrices = Integer.MAX_VALUE;
+		int ans = 0;
+		for (int i = 0; i < n; i++) {
+			minPrices = Math.min(minPrices, prices[i]);
+			ans = Math.max(ans, prices[i] - minPrices);
+		}
+		return ans;
+	}
 }
