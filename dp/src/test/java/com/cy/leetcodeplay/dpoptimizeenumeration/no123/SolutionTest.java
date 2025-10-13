@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.dpstatemachine.no123;
+package com.cy.leetcodeplay.dpoptimizeenumeration.no123;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -1,9 +1,7 @@
-package com.cy.leetcodeplay.dpstatemachine.no309;
+package com.cy.leetcodeplay.dpoptimizeenumeration.no309;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
 	private Solution solution = new Solution();

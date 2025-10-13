@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.dpstatemachine.no903;
+package com.cy.leetcodeplay.dpoptimizeenumeration.no903;
 
 /**
  * @Author: Lil-K
