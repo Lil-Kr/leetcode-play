@@ -9,7 +9,7 @@ class SolutionTest {
 	@Test
 	public void test1() {
 		int[] prices = {3, 3, 5, 0, 0, 3, 1, 4};
-		int res = solution.maxProfit3(prices);
+		int res = solution.maxProfit2(prices);
 		Assertions.assertEquals(6, res);
 	}
 
