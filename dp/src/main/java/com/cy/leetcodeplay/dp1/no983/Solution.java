@@ -81,7 +81,6 @@ public class Solution {
 		return ans;
 	}
 
-
 	/**
 	 * solution3: dp
 	 * down -> top
@@ -91,9 +90,9 @@ public class Solution {
 	 * @return
 	 */
 	public int mincostTickets3(int[] days, int[] costs) {
-		int[] dp = new int[366];
 		int n = days.length;
-		Arrays.fill(dp, 0, n + 1, Integer.MAX_VALUE);
+		int[] dp = new int[n + 1];
+		Arrays.fill(dp, Integer.MAX_VALUE);
 		dp[n] = 0;
 
 		for (int i = n - 1; i >= 0; i--) {

@@ -12,7 +12,7 @@ import java.util.Arrays;
  */
 public class Solution {
 
-	private long MOD = (int) Math.pow(10, 9) + 7;
+	private static long mod = (int) Math.pow(10, 9) + 7;
 
 	/**
 	 * 解法一: recursive
@@ -44,7 +44,7 @@ public class Solution {
 		 * i, i + 1 一起转的case
 		 */
 		if (i + 1 >= s.length) {
-			return  res % MOD;
+			return  res % mod;
 		}
 
 		if (s[i] != '*') { // i 是数字
@@ -74,7 +74,7 @@ public class Solution {
 				res += 15 * f1(s, i + 2);
 			}
 		}
-		return res % MOD;
+		return res % mod;
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class Solution {
 		 * i, i + 1 一起转的case
 		 */
 		if (i + 1 >= s.length) {
-			return  res;
+			return res % mod;
 		}
 
 		if (s[i] != '*') { // i 是数字
@@ -144,7 +144,7 @@ public class Solution {
 				res += 15 * f2(s, i + 2, dp);
 			}
 		}
-		dp[i] = res % MOD;
+		dp[i] = res % mod;
 		return dp[i];
 	}
 
@@ -192,7 +192,7 @@ public class Solution {
 					dp[i] += 15 * dp[i + 2];
 				}
 			}
-			dp[i] = dp[i] % MOD;
+			dp[i] = dp[i] % mod;
 		}
 		return (int)dp[0];
 	}
@@ -239,7 +239,7 @@ public class Solution {
 						}
 					}
 				}
-				cur %= MOD;
+				cur %= mod;
 			}
 			nextNext = next;
 			next = cur;

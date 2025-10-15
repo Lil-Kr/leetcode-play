@@ -18,19 +18,21 @@ public class Solution {
 	 *
 	 * dp[0 ... n-1]
 	 * dp[i]: 子串必须以i位置的字符结尾的情况, 往左最多推多远能整体有效
-	 * @param s
+	 * @param str
 	 * @return
 	 */
-	public int longestValidParentheses(String s) {
-		if (s.length() <= 1) return 0;
-		char[] chs = s.toCharArray();
-		int[] dp = new int[chs.length];
+	public int longestValidParentheses(String str) {
+		int n = str.length();
+		if (n <= 1) return 0;
+
+		char[] s = str.toCharArray();
+		int[] dp = new int[n];
 		int ans = 0;
 
-		for (int i = 1, p; i < s.length(); i++) {
-			if (chs[i] == ')') {
+		for (int i = 1, p; i < n; i ++) {
+			if (s[i] == ')') {
 				p = i - dp[i - 1] - 1;
-				if (p >= 0 && chs[p] == '(') {
+				if (p >= 0 && s[p] == '(') {
 					dp[i] = dp[i - 1] + 2 + (p > 0 ? dp[p - 1] : 0);
 				}
 			}
