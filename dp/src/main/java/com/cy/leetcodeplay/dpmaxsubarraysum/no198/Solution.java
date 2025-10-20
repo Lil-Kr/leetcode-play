@@ -1,4 +1,6 @@
-package com.cy.leetcodeplay.dp1.no198;
+package com.cy.leetcodeplay.dpmaxsubarraysum.no198;
+
+import java.util.Arrays;
 
 /**
  * @Author: Lil-K
@@ -19,15 +21,16 @@ public class Solution {
 	public int rob(int[] nums) {
 		int n = nums.length;
 		int[] dp = new int[n];
-		return tryRob(nums, 0, dp);
+		Arrays.fill(dp, -1);
+		return f1(nums, 0, dp);
 	}
 
-	private int tryRob(int[] nums, int i, int[] dp) {
+	private int f1(int[] nums, int i, int[] dp) {
 		if (i >= nums.length) return 0;
 		if (dp[i] != -1) return dp[i];
 
-		int ans = nums[i] + tryRob(nums, i + 2, dp);
-		int skip = tryRob(nums, i + 1, dp);
+		int ans = nums[i] + f1(nums, i + 2, dp);
+		int skip = f1(nums, i + 1, dp);
 		dp[i] = Math.max(ans, skip);
 		return dp[i];
 	}
@@ -58,7 +61,10 @@ public class Solution {
 		for (int i = 2; i < n; i ++) {
 			/**
 			 * 从 i 开始的最大收益
-			 * 选择抢劫 i 房间和 i+2 房间后的最大值 或者 跳过 i，直接从 i+1 开始的最大值
+			 * 选择抢劫 i 房间和 i+2 房间后的最大值 或者 跳过 i, 直接从 i+1 开始的最大值
+			 *
+			 * 如果房子中的值为负数: Math.max(nums[i], nums[i] + dp[i - 2])
+			 * dp[i] = Math.max(dp[i - 1], nums[i] + dp[i - 2]); 也是对的
 			 */
 			dp[i] = Math.max(dp[i - 1], Math.max(nums[i], nums[i] + dp[i - 2]));
 		}

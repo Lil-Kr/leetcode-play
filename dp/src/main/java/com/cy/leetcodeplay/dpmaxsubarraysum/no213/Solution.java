@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.dp1.no213;
+package com.cy.leetcodeplay.dpmaxsubarraysum.no213;
 
 /**
  * @Author: Lil-K
@@ -10,22 +10,23 @@ package com.cy.leetcodeplay.dp1.no213;
 public class Solution {
 
 	/**
-	 *
+	 * solution1: recursive
 	 * @param nums
 	 * @return
 	 */
 	public int rob(int[] nums) {
 		if (nums.length == 1) return nums[0];
 		int n = nums.length;
+
 		return Math.max(best(nums, 1, n - 1), nums[0] + best(nums, 2, n - 2));
 	}
 
 	/**
-	 *
+	 * nums[l ... r] 范围上, 没有环形的概念
 	 * @param nums
 	 * @param l
 	 * @param r
-	 * @return
+	 * @return 可以随意选择, 但不能选择响铃数字的情况下, 最大累加和
 	 */
 	private int best(int[] nums, int l, int r) {
 		if (l > r) {

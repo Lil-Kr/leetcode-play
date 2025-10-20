@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.dp1.no152;
+package com.cy.leetcodeplay.dpmaxsubarraysum.no152;
 
 /**
  * @Author: Lil-K

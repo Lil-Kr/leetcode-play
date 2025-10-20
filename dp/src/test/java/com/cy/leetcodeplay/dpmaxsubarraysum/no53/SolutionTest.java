@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.dp1.no53;
+package com.cy.leetcodeplay.dpmaxsubarraysum.no53;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -52,21 +52,14 @@ class SolutionTest {
 	@Test
 	public void test7() {
 		int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-		int res1 = solution.maxSubArray5(nums);
+		int res1 = solution.maxSubArray4(nums);
 		Assertions.assertEquals(6, res1);
 	}
 
 	@Test
 	public void test8() {
 		int[] nums = {5, 4, -1, 7, 8};
-		int res1 = solution.maxSubArray5(nums);
+		int res1 = solution.maxSubArray4(nums);
 		Assertions.assertEquals(23, res1);
 	}
-
-//	@Test
-//	public void test9() {
-//		int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-//		int[] res1 = solution.maxSubArray6(nums);
-//		Assertions.assertEquals("[3,6,6]", JSONArray.toJSONString(res1));
-//	}
 }

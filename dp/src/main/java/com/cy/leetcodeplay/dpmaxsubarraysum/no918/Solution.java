@@ -1,4 +1,6 @@
-package com.cy.leetcodeplay.dp1.no918;
+package com.cy.leetcodeplay.dpmaxsubarraysum.no918;
+
+import java.util.Arrays;
 
 /**
  * @Author: Lil-K
@@ -19,19 +21,14 @@ public class Solution {
 	 */
 	public int maxSubarraySumCircular(int[] nums) {
 		int n = nums.length;
-		int all = nums[0], max = nums[0], min = nums[0];
-
+		int sum = Arrays.stream(nums).sum();
+		int max = nums[0], min = nums[0];
 		for (int i = 1, maxpre = nums[0], minpre = nums[0]; i < n; i ++) {
-			all += nums[i];
 			maxpre = Math.max(nums[i], nums[i] + maxpre);
 			max = Math.max(max, maxpre);
-
 			minpre = Math.min(nums[i], nums[i] + minpre);
 			min = Math.min(min, minpre);
 		}
-
-		return all == min ? max : Math.max(max, all - min);
+		return sum == min ? max : Math.max(max, sum - min);
 	}
-
-
 }

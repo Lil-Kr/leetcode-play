@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.dp1.no53;
+package com.cy.leetcodeplay.dpmaxsubarraysum.no53;
 
 import java.util.Arrays;
 
@@ -23,8 +23,7 @@ import java.util.Arrays;
 public class Solution {
 
 	/**
-	 * 解法一: 暴力
-	 * 都枚举一遍所有的情况
+	 * solution1: recursive
 	 * @param nums
 	 * @return
 	 */
@@ -47,7 +46,7 @@ public class Solution {
 	}
 
 	/**
-	 * 解法二: 暴力解 + 记忆化
+	 * solution2: 暴力解 + 记忆化
 	 * 找到最小问题, 变量是 index
 	 * @param nums
 	 * @return
@@ -73,7 +72,7 @@ public class Solution {
 	}
 
 	/**
-	 * 解法三: dp
+	 * solution3: dp
 	 * @param nums
 	 * @return
 	 */
@@ -91,28 +90,11 @@ public class Solution {
 	}
 
 	/**
-	 * 写法四: 去除dp表的优化, 动态规划
-	 * @param nums
-	 * @return
-	 */
-	public int maxSubArray4(int[] nums) {
-		int n = nums.length;
-		int[] dp = new int[n];
-		dp[0] = nums[0];
-		int ans = nums[0];
-		for (int i = 1; i < n; i ++) {
-			dp[i] = Math.max(nums[i], dp[i - 1] + nums[i]);
-			ans = Math.max(ans, dp[i]);
-		}
-		return ans;
-	}
-
-	/**
 	 * solution5: dp + space compression
 	 * @param nums
 	 * @return
 	 */
-	public int maxSubArray5(int[] nums) {
+	public int maxSubArray4(int[] nums) {
 		int n = nums.length;
 		int ans = nums[0];
 		for (int i = 1, prevMax = nums[0]; i < n; i ++) {

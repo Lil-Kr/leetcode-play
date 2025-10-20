@@ -32,6 +32,10 @@ public class Solution {
 
 	private int f1(char[] s1, char[] t1, int i, int j, int[][] dp) {
 		if (dp[i][j] != -1) return dp[i][j];
+		/**
+		 * base case 的顺序不能调换, 必须先判断 j == 0
+		 * 因为 j == 0 的含义更有具体, 更有意义, 表示: t 为字符串时: "", 无论 s 中还剩多少个字符, 都为 1 个
+		 */
 		if (j == 0) return 1;
 		if (i == 0) return 0;
 

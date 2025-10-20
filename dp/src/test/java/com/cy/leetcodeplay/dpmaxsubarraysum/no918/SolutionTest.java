@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.dp1.no918;
+package com.cy.leetcodeplay.dpmaxsubarraysum.no918;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
