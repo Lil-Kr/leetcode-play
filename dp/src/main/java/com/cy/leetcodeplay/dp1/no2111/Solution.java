@@ -23,6 +23,9 @@ public class Solution {
 	public int kIncreasing(int[] arr, int k) {
 		int n = arr.length;
 		int ans = 0;
+		/**
+		 * i < k: k 为次数
+		 */
 		for (int i = 0, size; i < k; i ++) {
 			size = 0;
 			for (int j = i; j < n; j += k) {

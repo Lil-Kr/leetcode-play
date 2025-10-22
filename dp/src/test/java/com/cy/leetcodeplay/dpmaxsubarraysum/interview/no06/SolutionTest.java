@@ -3,8 +3,6 @@ package com.cy.leetcodeplay.dpmaxsubarraysum.interview.no06;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class SolutionTest {
 
 	private Solution solution = new Solution();
