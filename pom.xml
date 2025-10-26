@@ -32,6 +32,7 @@
 		<module>greedy</module>
 		<module>trie</module>
 		<module>heap</module>
+		<module>prefix-sum</module>
 	</modules>
 
 	<properties>

@@ -1,4 +1,4 @@
-package com.cy.leetcodeplay.dpgroupallpackage.no474;
+package com.cy.leetcodeplay.dp01package.no474;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
