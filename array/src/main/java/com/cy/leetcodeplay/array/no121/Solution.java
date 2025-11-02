@@ -4,6 +4,7 @@ package com.cy.leetcodeplay.array.no121;
  * @Author: Lil-K
  * @Date: 2024/8/30
  * @Description: no.121. Best Time to Buy and Sell Stock
+ * link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
  *
  * 1. 记录并更新每遍历的元素, 获取到最小值, 也就是最小买入点
  * 2. 将每次check的元素 减 最小值(最小买入点), 就可以得到最大利润

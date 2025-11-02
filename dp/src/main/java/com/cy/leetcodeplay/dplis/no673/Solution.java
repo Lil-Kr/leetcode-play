@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Author: Lil-K
  * @Date: 2025/10/21
- * @Description: 673. Number of Longest Increasing Subsequence
+ * @Description: no.673. Number of Longest Increasing Subsequence
  * link: https://leetcode.com/problems/number-of-longest-increasing-subsequence/
  *
  * todo: 未录入Anki
