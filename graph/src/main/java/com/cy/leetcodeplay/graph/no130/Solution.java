@@ -4,6 +4,7 @@ package com.cy.leetcodeplay.graph.no130;
  * @Author: Lil-K
  * @Date: 2024/11/1
  * @Description: no.130. Surrounded Regions
+ * link: https://leetcode.com/problems/surrounded-regions/description/
  * todo: 未录入Anki
  * 
  * 题目: 
@@ -58,12 +59,6 @@ public class Solution {
 		}
 	}
 
-	/**
-	 *
-	 * @param board
-	 * @param x
-	 * @param y
-	 */
 	private void dfs(char[][] board, int x, int y) {
 		board[x][y] = '#';
 
@@ -79,5 +74,50 @@ public class Solution {
 
 	private boolean inArea(int x, int y) {
 		return x >= 0 && x < rows && y >= 0 && y < cols;
+	}
+
+	/**
+	 * solution2: flood fill
+	 * @param board
+	 */
+	public void solve2(char[][] board) {
+		int n = board.length, m = board[0].length;
+		if (n <= 1 || m <= 1) return;
+		/**
+		 * 1. 先从边界入手, 将与边界的"O" 联通内部的 "O", 做标记
+		 * 2. 遍历内部的 "O", 并改为 "X"
+		 * 3. 将 step1 中标记 "O"的位置, 还原为 "O"
+		 */
+		for (int i = 0; i < n; i ++) {
+			if (board[i][0] == 'O') dfs2(board, n, m, i, 0);
+			if (board[i][m - 1] == 'O') dfs2(board, n, m, i, m - 1);
+		}
+		for (int j = 1; j < m - 1; j ++) {
+			if (board[0][j] == 'O') dfs2(board, n, m, 0, j);
+			if (board[n - 1][j] == 'O') dfs2(board, n, m, n - 1, j);
+		}
+
+		for (int i = 0; i < n; i ++) {
+			for (int j = 0; j < m; j ++) {
+				if (board[i][j] == 'O') {
+					board[i][j] = 'X';
+				}
+				if (board[i][j] == 'F') {
+					board[i][j] = 'O';
+				}
+			}
+		}
+	}
+
+	private void dfs2(char[][] board, int n, int m, int i, int j) {
+		if (i < 0 || i >= n || j < 0 || j >= m || board[i][j] != 'O') {
+			return;
+		}
+		board[i][j] = 'F';
+
+		dfs2(board, n, m, i + 1, j);
+		dfs2(board, n, m, i - 1, j);
+		dfs2(board, n, m, i, j + 1);
+		dfs2(board, n, m, i, j - 1);
 	}
 }

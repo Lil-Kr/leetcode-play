@@ -17,7 +17,7 @@ public class Solution {
 	private boolean[] visited;
 
 	/**
-	 *
+	 * solution1:
 	 * @param graph
 	 * @return
 	 */

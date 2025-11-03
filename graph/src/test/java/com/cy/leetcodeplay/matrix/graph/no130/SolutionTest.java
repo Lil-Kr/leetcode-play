@@ -14,7 +14,29 @@ class SolutionTest {
 		char[][] board = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
 
 		solution.solve(board);
-//		System.out.println(JSONArray.toJSONString(board));
 		Assertions.assertEquals("[\"XXXX\",\"XXXX\",\"XXXX\",\"XOXX\"]", JSONArray.toJSONString(board));
+	}
+
+	@Test
+	public void test21() {
+		char[][] board = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
+
+		solution.solve2(board);
+		Assertions.assertEquals("[\"XXXX\",\"XXXX\",\"XXXX\",\"XOXX\"]", JSONArray.toJSONString(board));
+	}
+
+	@Test
+	public void test22() {
+		char[][] board = {{'X'}};
+
+		solution.solve2(board);
+		Assertions.assertEquals("[\"X\"]", JSONArray.toJSONString(board));
+	}
+
+	@Test
+	public void test23() {
+		char[][] board = {{'O', 'O'}};
+		solution.solve2(board);
+		Assertions.assertEquals("[\"OO\"]", JSONArray.toJSONString(board));
 	}
 }
