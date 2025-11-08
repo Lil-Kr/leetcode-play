@@ -64,4 +64,11 @@ class SolutionTest {
 		int res1 = solution.trap2(height);
 		Assertions.assertEquals(2, res1);
 	}
+
+	@Test
+	public void test25() {
+		int[] height = {2, 0, 2};
+		int res1 = solution.trap2(height);
+		Assertions.assertEquals(2, res1);
+	}
 }

@@ -53,13 +53,13 @@ public class Solution {
 	/**
 	 * 判断子串是否是回文
 	 * @param s
-	 * @param low
-	 * @param high
+	 * @param l
+	 * @param r
 	 * @return
 	 */
-	private boolean isPalindrome(String s, int low, int high) {
-		while (low < high) {
-			if (s.charAt(low++) != s.charAt(high--)) {
+	private boolean isPalindrome(String s, int l, int r) {
+		while (l < r) {
+			if (s.charAt(l++) != s.charAt(r--)) {
 				return false;
 			}
 		}

@@ -43,13 +43,14 @@ public class Solution {
 	}
 
 	/**
-	 * solution2: 双指针
+	 * solution2: tow point
 	 * @param height
 	 * @return
 	 */
 	public int trap2(int[] height) {
-		if (height == null || height.length == 0) return 0;
-		int l = 1, r = height.length - 2, lmax = height[0], rmax = height[height.length - 1];
+		int n = height.length;
+		if (height == null || n == 0 || n == 1 || n == 2) return 0;
+		int l = 1, r = n - 2, lmax = height[0], rmax = height[n - 1];
 		int water = 0;
 		while (l <= r) {
 			if (lmax >= rmax) {

@@ -97,4 +97,43 @@ public class Solution {
 	private boolean inArea(int x, int y) {
 		return x >= 0 && x < rows && y >= 0 && y < cols;
 	}
+
+	/**
+	 * solution2:
+	 * @param board
+	 * @param word
+	 * @return
+	 */
+	public boolean exist2(char[][] board, String word) {
+		int n = board.length, m = board[0].length;
+		boolean[][] visited = new boolean[n][m];
+		for (int i = 0; i < n; i ++) {
+			for (int j = 0; j < m; j ++) {
+				if (search(board, 0, visited, word, i, j)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	private boolean search(char[][] board, int index, boolean[][] visited, String word, int i, int j) {
+		if (i < 0 || i >= board.length || j < 0 || j >= board[0].length || visited[i][j]) return false;
+
+		if (index == word.length() - 1) {
+			return board[i][j] == word.charAt(index);
+		}
+
+		if (board[i][j] != word.charAt(index)) {
+			return false;
+		}
+
+		visited[i][j] = true;
+		boolean ans =  search(board, index + 1, visited, word, i + 1, j) ||
+			search(board, index + 1, visited, word, i - 1, j) ||
+			search(board, index + 1, visited, word, i, j + 1) ||
+			search(board, index + 1, visited, word, i, j - 1);
+		visited[i][j] = false;
+		return ans;
+	}
 }
