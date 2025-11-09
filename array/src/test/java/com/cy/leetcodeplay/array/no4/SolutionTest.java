@@ -29,4 +29,10 @@ class SolutionTest {
 		Assertions.assertEquals(2, res1);
 	}
 
+	@Test
+	public void test4() {
+		int[] nums1 = {1,2,3}, nums2 = {3,4};
+		double res1 = solution.findMedianSortedArrays(nums1, nums2);
+		Assertions.assertEquals(3, res1);
+	}
 }

@@ -23,4 +23,12 @@ class SolutionTest {
 		boolean res1 = solution.searchMatrix(matrix, target);
 		Assertions.assertEquals(false, res1);
 	}
+
+	@Test
+	public void test3() {
+		int[][] matrix = {{1,1}};
+		int target = 2;
+		boolean res1 = solution.searchMatrix(matrix, target);
+		Assertions.assertEquals(false, res1);
+	}
 }

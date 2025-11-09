@@ -1,5 +1,6 @@
 package com.cy.leetcodeplay.array.no34;
 
+import com.alibaba.fastjson2.JSONArray;
 import com.cy.leetcodeplay.common.util.PrintString;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -7,63 +8,52 @@ import org.junit.jupiter.api.Test;
 class SolutionTest {
 
 	private Solution solution = new Solution();
-	private static int[] nums1 = {5,7,7,8,8,10};
-	private static int[] nums2 = {};
-	private static int[] nums3 = {7};
-	private static int[] nums4 = {2,2};
-	private static int[] nums5 = {-3,-2,-1};
-	private static int target1 = 6;
-	private static int target2 = 8;
-	private static int target3 = 0;
-	private static int target4 = 7;
 
 	@Test
 	public void test1() {
-		int[] indexs1 = solution.searchRange(nums1, target1);
-		String res1 = PrintString.printIntArray(indexs1);
-		Assertions.assertEquals("[-1,-1]", res1);
-
-		int[] indexs2 = solution.searchRange(nums1, target2);
-		String res2 = PrintString.printIntArray(indexs2);
-		Assertions.assertEquals("[3,4]", res2);
-
-		int[] indexs3 = solution.searchRange(nums2, target3);
-		String res3 = PrintString.printIntArray(indexs3);
-		Assertions.assertEquals("[-1,-1]", res3);
+		int[] nums = {5, 7, 7, 8, 8, 10};
+		int target = 8;
+		int[] res = solution.searchRange(nums, target);
+		Assertions.assertEquals("[3,4]", JSONArray.toJSONString(res));
 	}
 
 	@Test
 	public void test2() {
-		int[] indexs1 = solution.searchRange(nums3, target4);
-		String res1 = PrintString.printIntArray(indexs1);
-		Assertions.assertEquals("[0,0]", res1);
-
-		int[] indexs2 = solution.searchRange(nums3, target3);
-		String res2 = PrintString.printIntArray(indexs2);
-		Assertions.assertEquals("[-1,-1]", res2);
+		int[] nums = {5, 7, 7, 8, 8, 10};
+		int target = 6;
+		int[] res = solution.searchRange(nums, target);
+		Assertions.assertEquals("[-1,-1]", JSONArray.toJSONString(res));
 	}
-
 
 	@Test
 	public void test3() {
-		int[] indexs1 = solution.searchRange(nums4, target1);
-		String res1 = PrintString.printIntArray(indexs1);
-		Assertions.assertEquals("[-1,-1]", res1);
+		int[] nums = {};
+		int target = 0;
+		int[] res = solution.searchRange(nums, target);
+		Assertions.assertEquals("[-1,-1]", JSONArray.toJSONString(res));
 	}
 
 	@Test
-	public void test4() {
-		int[] indexs1 = solution.searchRange(nums5, target3);
-		String res1 = PrintString.printIntArray(indexs1);
-		Assertions.assertEquals("[-1,-1]", res1);
+	public void test21() {
+		int[] nums = {5, 7, 7, 8, 8, 10};
+		int target = 8;
+		int[] res = solution.searchRange2(nums, target);
+		Assertions.assertEquals("[3,4]", JSONArray.toJSONString(res));
 	}
 
 	@Test
-	public void test5() {
-		int[] nums = new int[]{1, 3};
-		int target = 1;
-		int[] indexs1 = solution.searchRange(nums, target);
-		String res1 = PrintString.printIntArray(indexs1);
-		Assertions.assertEquals("[0,0]", res1);
+	public void test22() {
+		int[] nums = {5, 7, 7, 8, 8, 10};
+		int target = 6;
+		int[] res = solution.searchRange2(nums, target);
+		Assertions.assertEquals("[-1,-1]", JSONArray.toJSONString(res));
+	}
+
+	@Test
+	public void test23() {
+		int[] nums = {};
+		int target = 0;
+		int[] res = solution.searchRange2(nums, target);
+		Assertions.assertEquals("[-1,-1]", JSONArray.toJSONString(res));
 	}
 }

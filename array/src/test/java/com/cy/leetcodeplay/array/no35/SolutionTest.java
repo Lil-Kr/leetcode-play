@@ -24,7 +24,6 @@ class SolutionTest {
 		Assertions.assertEquals(1, res1);
 	}
 
-
 	@Test
 	public void test3() {
 		int[] nums = {1, 3, 5, 6};

@@ -21,8 +21,8 @@ public class Solution {
 			return false; // 矩阵为空的情况
 		}
 
-		int m = matrix.length; // 列数
-		int n = matrix[0].length; // 每行的长度
+		int n = matrix.length; // 列数
+		int m = matrix[0].length; // 每行的长度
 		int l = 0, r = m * n - 1;
 
 		/**
@@ -37,7 +37,7 @@ public class Solution {
 			 * 行号: mid / n
 			 * 列号: mid % n
 			 */
-			int midValue = matrix[mid / n][mid % n];
+			int midValue = matrix[mid / m][mid % m];
 
 			if (midValue == target) {
 				return true; // 找到目标值
