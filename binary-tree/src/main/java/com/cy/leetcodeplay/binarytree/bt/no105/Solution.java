@@ -38,6 +38,8 @@ public class Solution {
 	 * @return
 	 */
 	public TreeNode buildTree(int[] preorder, int[] inorder) {
+		if (preorder == null || inorder == null || preorder.length != inorder.length) return null;
+
 		for (int i = 0; i < inorder.length; i++) {
 			inOrderMap.put(inorder[i], i);
 		}

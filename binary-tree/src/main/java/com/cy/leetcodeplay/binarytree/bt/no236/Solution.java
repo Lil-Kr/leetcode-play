@@ -36,7 +36,7 @@ public class Solution {
 			return root;
 		}
 
-		// 如果左子树找到 p 或 q, 返回左子树结果: 否则返回右子树结果
+		// 如果左子树找到 p 或 q, 返回左子树结果, 否则返回右子树结果
 		return left != null ? left : right;
 	}
 }

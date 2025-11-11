@@ -6,6 +6,7 @@ import com.cy.leetcodeplay.common.entity.TreeNode;
  * @Author: Lil-K
  * @Date: 2024/10/7
  * @Description: no.543. Diameter of Binary Tree
+ * link: https://leetcode.com/problems/diameter-of-binary-tree/
  */
 public class Solution {
 

@@ -7,7 +7,7 @@ package com.cy.leetcodeplay.common.entity;
  */
 public class TreeNode {
 
-	public Integer val;
+	public int val;
 	public TreeNode left, right;
 
 	public TreeNode() {

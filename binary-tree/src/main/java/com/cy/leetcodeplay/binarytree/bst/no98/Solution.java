@@ -13,7 +13,7 @@ public class Solution {
 	private TreeNode prev = null;
 
 	/**
-	 * 中序遍历
+	 * solution1: in-order
 	 * @param root
 	 * @return
 	 */
@@ -46,37 +46,19 @@ public class Solution {
 	}
 
 	/**
-	 * 解法二: 中序遍历
+	 * solution2: queue + in-order
 	 * @param root
 	 * @return
 	 */
 	public boolean isValidBST2(TreeNode root) {
-		return isValidBST2(root, null, null);
+		if (root == null) return true;
+		return validate(root, Long.MIN_VALUE, Long.MAX_VALUE);
 	}
 
-	private boolean isValidBST2(TreeNode node, Integer lower, Integer upper) {
-		if (node == null) {
-			return true; // 空树是合法的二叉搜索树
-		}
+	private boolean validate(TreeNode node, long left, long right) {
+		if (node == null) return true;
+		if (node.val <= left || node.val >= right) return false;
 
-		int val = node.val;
-
-		// 检查当前节点是否满足上下界的限制
-		if (lower != null && val <= lower) {
-			return false;
-		}
-		if (upper != null && val >= upper) {
-			return false;
-		}
-
-		// 递归检查左子树和右子树
-		if (!isValidBST2(node.left, lower, val)) {
-			return false;
-		}
-		if (!isValidBST2(node.right, val, upper)) {
-			return false;
-		}
-
-		return true;
+		return validate(node.left, left, node.val) && validate(node.right, node.val, right);
 	}
 }
