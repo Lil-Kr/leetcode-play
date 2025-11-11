@@ -6,6 +6,7 @@ import com.cy.leetcodeplay.common.entity.TreeNode;
  * @Author: Lil-K
  * @Date: 2024/10/17
  * @Description: no.99. Recover Binary Search Tree
+ * link: https://leetcode.com/problems/recover-binary-search-tree/description/
  */
 public class Solution {
 
@@ -25,7 +26,7 @@ public class Solution {
 	private TreeNode prev = new TreeNode(Integer.MIN_VALUE);
 
 	/**
-	 * 中序遍历
+	 * solution1: in-order
 	 * @param root
 	 */
 	public void recoverTree(TreeNode root) {
@@ -38,10 +39,6 @@ public class Solution {
 		second.val = temp;
 	}
 
-	/**
-	 * 中序遍历
-	 * @param node
-	 */
 	private void inOrder(TreeNode node) {
 		if (node == null) return;
 

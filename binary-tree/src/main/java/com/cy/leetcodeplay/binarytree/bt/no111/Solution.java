@@ -15,7 +15,7 @@ import java.util.Queue;
 public class Solution {
 
 	/**
-	 * 递归
+	 * solution1:
 	 * @param root
 	 * @return
 	 */
@@ -36,11 +36,33 @@ public class Solution {
 	}
 
 	/**
-	 * 利用队列
+	 * solution2:
 	 * @param root
 	 * @return
 	 */
 	public int minDepth2(TreeNode root) {
+		if (root == null) return 0;
+
+		if (root.left == null && root.right == null) return 1;
+
+		int l = Integer.MAX_VALUE, r = Integer.MAX_VALUE;
+		if (root.left != null) {
+			l = minDepth(root.left);
+		}
+
+		if (root.right != null) {
+			r = minDepth(root.right);
+		}
+
+		return 1 + Math.min(l, r);
+	}
+
+	/**
+	 * 利用队列
+	 * @param root
+	 * @return
+	 */
+	public int minDepth3(TreeNode root) {
 		if (root == null) return 0;
 
 		Queue<TreeNode> queue = new ArrayDeque<>();
