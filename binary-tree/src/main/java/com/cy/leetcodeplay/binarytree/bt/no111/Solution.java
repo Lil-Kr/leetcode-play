@@ -69,11 +69,11 @@ public class Solution {
 		queue.offer(root);
 		int depth = 1;
 		while (!queue.isEmpty()) {
-			int time = queue.size();
-			for (int i = 0; i < time; i++) {
+			int size = queue.size();
+			for (int i = 0; i < size; i++) {
 				TreeNode node = queue.poll();
 
-				// 如果遇到叶子节点, 直接返回当前深度
+				// 如果遇到叶子节点为 null, 直接返回当前深度
 				if (node.left == null && node.right == null) {
 					return depth;
 				}
@@ -85,10 +85,8 @@ public class Solution {
 					queue.offer(node.right);
 				}
 			}
-			depth++;
+			depth ++;
 		}
-
 		return depth;
 	}
-
 }

@@ -9,6 +9,7 @@ import java.util.Map;
  * @Author: Lil-K
  * @Date: 2024/10/19
  * @Description: no.105. Construct Binary Tree from Preorder and Inorder Traversal
+ * link: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
  *
  * 1.从前序遍历中提取根节点.
  * 2.根据根节点在中序遍历中的位置, 将中序遍历分割为左子树和右子树.
@@ -24,7 +25,6 @@ import java.util.Map;
  *    15   7
  */
 public class Solution {
-
 
 	private int preIndex = 0;
 
